@@ -1,7 +1,7 @@
 this=${PWD}
 j="App"
 pn=$1$j
-an="${1,,}"
+an="$(echo $1 | tr '[A-Z]' '[a-z]')"
 echo $an
 echo $pn
 cd ../../../
