@@ -11,7 +11,9 @@ In Linux systems, to make sure that everything works you should be able to call 
 Python 2 is required for the parser. Visit https://www.python.org/downloads/ to download and install python. 
 
 ### Python Lex Yacc (ply) 
-python-ply is a requirement, you can download it at http://www.dabeaz.com/ply/ and install it through distutils using the provided setup.py file. It might be required to provide the full installation path of python, in case the path variable is not set properly. Linux users can install it using `sudo apt-get install python-ply`.
+python-ply is a requirement, you can download it at http://www.dabeaz.com/ply/ and install it through distutils using the provided setup.py file by running the command `python setup.py install`. 
+
+It might be required to provide the full installation path of python, in case the path variable is not set properly. Linux users can install it using `sudo apt-get install python-ply`.
 
 ###Installation 
 Ensure that you have the execute permissions the scripts `generate-template` and `run`. 
