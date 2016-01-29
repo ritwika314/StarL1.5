@@ -219,14 +219,10 @@ A program written in the high level language can only be executed through StarL.
 1. `generate-template` : Execute this script to generate the corresponding StarL application. It will ask for the path of the StarL installation. Ensure that you are in the directory containing this script while running it. Also, ensure that the High Level Language program you are running is stored in the `HighLevelLanguage/examples` folder, in a folder with the same name as the program itself. For instance, `AddNums` is stored in `HighLevelLanguage/examples/AddNums`. 
 ```
 $./generate-template AddNums
-enter StarL installation path:
-/home/username/starl
 ```
 2. To run the application,
 ```
 $./run AddNums
-enter StarL installation path:
-/home/username/starl
 ```
 
 NOTE: The generated drawer files are basic. In order to get more sophisticated simulation drawings, the user has to modify the drawer files themselves, in the StarL application. For instance, to modify the drawer of the AddNums application, the user can modify to the AddNumsDrawer.java file, which can be located from the following directory structure of StarL (provided `generate-template` was already used) . 
