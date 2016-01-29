@@ -1,0 +1,32 @@
+this=${PWD}
+j="App"
+pn=$1$j
+an="${1,,}"
+echo $an
+echo $pn
+cd ../../../
+ip=${PWD}
+cd $this
+#echo "enter appname"
+#read pn
+#echo "enter packagename"
+#read an
+cd $ip/StarL1.5/trunk/android/$pn
+
+#/usr/lib/jvm/java-7-openjdk-amd64/bin/java -Dfile.encoding=UTF-8 -classpath $ip/StarL1.5/trunk/android/$pn/bin:$ip/StarL1.5/trunk/android/StarLib/bin/classes:$ip/StarL1.5/trunk/android/StarLib/lib/kd.jar:/home/mim/starl/StarL1.5/trunk/android/StarLSim/bin:$ip/StarL1.5/trunk/android/StarLSim/libs/gson-2.2.2.jar edu.illinois.mitra.demo.$an.main
+
+mkdir $ip/StarL1.5/trunk/android/$pn
+mkdir $ip/StarL1.5/trunk/android/$pn/bin
+mkdir $ip/StarL1.5/trunk/android/$pn/bin/classes
+mkdir $ip/StarL1.5/trunk/android/$pn/bin/edu/
+mkdir $ip/StarL1.5/trunk/android/$pn/bin/edu/illinois
+mkdir $ip/StarL1.5/trunk/android/$pn/bin/edu/illinois/mitra
+mkdir $ip/StarL1.5/trunk/android/$pn/bin/edu/illinois/mitra/demo
+mkdir $ip/StarL1.5/trunk/android/$pn/bin/edu/illinois/mitra/demo/$an
+
+javac -classpath $ip/StarL1.5/trunk/android/$pn/bin:$ip/StarL1.5/trunk/android/StarLib/bin/classes:$ip/StarL1.5/trunk/android/StarLib/lib/kd.jar:$ip/StarL1.5/trunk/android/StarLSim/bin:$ip/StarL1.5/trunk/android/StarLSim/libs/gson-2.2.2.jar $ip/StarL1.5/trunk/android/$pn/src/edu/illinois/mitra/demo/$an/*.java 
+
+
+mv $ip/StarL1.5/trunk/android/$pn/src/edu/illinois/mitra/demo/$an/*.class $ip/StarL1.5/trunk/android/$pn/bin/edu/illinois/mitra/demo/$an
+
+java -classpath $ip/StarL1.5/trunk/android/$pn/bin:$ip/StarL1.5/trunk/android/StarLib/bin/classes:$ip/StarL1.5/trunk/android/StarLib/lib/kd.jar:$ip/StarL1.5/trunk/android/StarLSim/bin:$ip/StarL1.5/trunk/android/StarLSim/libs/gson-2.2.2.jar edu.illinois.mitra.demo.$an.Main

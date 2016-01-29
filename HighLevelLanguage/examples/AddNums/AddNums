@@ -1,0 +1,43 @@
+Agent::AddNums	
+
+MW{
+	int NumAdded = 0; 
+	int CurrentTotal = 0;
+	
+
+}
+
+boolean isFinal = false;
+boolean Added = false;
+int FinalSum = 0;
+ 
+Init() {
+	getRobotIndex();
+	adding() {
+		pre(Added == false);
+		eff {
+			atomic{
+				Added = true;
+				CurrentTotal = CurrentTotal +robotIndex;
+				NumAdded = NumAdded+1;
+			}
+		}
+	}
+
+
+	allAdded() {
+		pre(NumAdded == NumBots && isFinal == false);
+		eff {
+			FinalSum = CurrentTotal; isFinal = true;
+		}
+	
+	}
+
+	exit() {
+		pre(isFinal);
+		eff {
+		}
+	}
+
+}
+ 
