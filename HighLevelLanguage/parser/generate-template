@@ -2,7 +2,8 @@ result=${PWD}
 cd ../../../
 installpath=${PWD}
 cd $installpath
-cd Starl1.5/trunk/android
+echo ${PWD}
+cd StarL1.5/trunk/android
 #echo "enter appname"
 #read appname
 j="App"
