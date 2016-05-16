@@ -1,13 +1,13 @@
 import ply.lex as lex 
 
 
-reserved = { "Agent" : 'AGENT' , "MW" : 'MW', 'Init' : 'INIT','pre': 'PRE','eff' : 'EFF', 'exit' : 'EXIT',
-	     "int" : 'INT', 'float' : 'FLOAT', 'boolean' : 'BOOL', 'true' : 'TRUE', 'false' : 'FALSE', 'shared': 'SHARED',
-	     "atomic" : 'ATOMIC', 'getRobotIndex' : 'ROBOT','if' : 'IF' , 'else':'ELSE'
+reserved = { "Agent" : 'AGENT' , "MW" : 'MW', 'Init' : 'INIT','pre': 'PRE','eff' : 'EFF', 'exit' : 'EXIT','ObstacleList' : 'OBSTACLELIST',
+	     	"int" : 'INT', 'float' : 'FLOAT', 'boolean' : 'BOOL', 'true' : 'TRUE', 'false' : 'FALSE', 'shared': 'SHARED', 'enum': 'ENUM', 'ItemPosition':'ITEMPOSITION', 'Map':'MAP', 'List': 'LIST','Queue':'QUEUE','Stack':'STACK','printLog':'PRINTLOG','isEmpty':'ISEMPTY','null':'NULL', 'return' : 'RETURN', 
+	    "log":'LOG','msg':'MSG', "atomic" : 'ATOMIC', 'getRobotIndex' : 'ROBOT','if' : 'IF' , 'else':'ELSE','getmypos' :'GETMYPOS', 'doReachAvoid': 'DOREACHAVOID', 'failFlag':'FAILFLAG', 'doneFlag':'DONEFLAG','remove':'REMOVE','getInput':'GETINPUT'
 	   }
 
 
-tokens = ['BR','SEMI',
+tokens = ['BR','SEMI','COMMA',
 	'CID','LID',
 	'RCURLY','LCURLY','RPAREN','LPAREN',
 	'INCR','PLUS','MINUS','TIMES','BY',
@@ -24,6 +24,7 @@ t_LCURLY = r'\{'
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_SEMI	 = r';'
+t_COMMA	 = r','
 
 
 #relational operators
@@ -51,13 +52,13 @@ t_BY 	= r'\/'
 
 #capitalized identifiers 
 def t_CID(t):
-	r'[A-Z][a-zA-Z0-9]*'
+	r'[A-Z][.a-zA-Z0-9]*'
 	t.type = reserved.get(t.value,'CID') #Check for reserved words 
 	return t
 
 #lowercase identifiers	
 def t_LID(t):
-	r'[a-z][a-zA-Z0-9]*'
+	r'[a-z][.a-zA-Z0-9]*'
 	t.type = reserved.get(t.value,'LID') #Check for reserved words 
 	return t
 
@@ -89,7 +90,6 @@ def t_error(t):
 
 #build lexer 
 lexer = lex.lex()
-
 '''
 #test
 s = raw_input("Enter filename\n:")
@@ -99,4 +99,4 @@ while(True):
 	if not tok:
 		break
 	print tok
-'''	
+'''

@@ -51,3 +51,8 @@ def get_scope(symtab,name):
 	for entry in symtab:
 		if entry.get_name() == name:
 			return entry.get_scope()
+
+def get_dtype(symtab,name):
+	for entry in symtab:
+		if entry.get_name() == name:
+			return entry.get_dtype()

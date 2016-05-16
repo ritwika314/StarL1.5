@@ -49,6 +49,7 @@ def p_events(p):
 
 def p_event(p):
 	'''event : robotinit
+		 | getpos SEMI
 		 | varname LPAREN RPAREN LCURLY pre eff RCURLY
 		 | EXIT LPAREN RPAREN LCURLY pre eff RCURLY
 	'''
@@ -56,8 +57,15 @@ def p_event(p):
 		global symtab
 		symtab.append(symEntry('int','robotIndex','local'))
 		p[0] = p[1]		 
+	elif len(p) is 3:
+		p[0] = getAst(p[1])
 	else:
 		p[0] = eventAst(p[1],p[5],p[6])
+
+
+def p_getpos(p):
+	'''getpos : varname EQLS GETMYPOS LPAREN RPAREN'''
+	p[0] = p[1]
 
 def p_robotinit(p):
 	'''robotinit : ROBOT LPAREN RPAREN SEMI'''
@@ -69,10 +77,13 @@ def p_pre(p):
 	'''
 	p[0] = p[3] 
 
+
 #condition
 def p_cond(p):
 	'''cond : rel
-		| expr 
+		| expr
+		| flag
+		| ISEMPTY LPAREN varname RPAREN
 		| cond AND cond
 		| cond OR cond
 	       	| NOT expr 
@@ -82,11 +93,18 @@ def p_cond(p):
 		p[0] = p[1]
 	elif len(p) is 3 :
 		p[0] = condAst(p[1],p[2])
+	elif len(p) is 5 :
+		p[0] = destAst(p[3])
 	elif p[1] is not "(":
 		p[0] = condAst(p[2],p[1],p[3])
 	else:
 		 p[0] = p[2]
 
+def p_flag(p):
+	'''flag : DONEFLAG 
+		| FAILFLAG
+	'''
+	p[0] = flagAst(p[1]) 
 def p_rel(p):
 	'''rel : expr EQ expr 
 	       | expr NEQ expr
@@ -116,21 +134,88 @@ def p_stmts(p):
 
 def p_stmt(p):
 	'''stmt : asgn
+		| exit
 		| ite 
 		| atomic
+		|  remove 
+		| msg
 		| funcCall
+		| getInput
+		| varname EQLS funcCall
+		| doreachavoid
+		| return 
+		| log 
+		
 	'''
-	p[0] = p[1]
+	if len(p) is 2:
+		p[0] = p[1]
+
+	else :
+		#print("Hellp"+str(p[3]))
+		p[0] = dirAst(p[1],p[2],p[3])
+
+def p_getInput(p):
+	'getInput : varname EQLS GETINPUT LPAREN RPAREN SEMI'
+	p[0] = inputBlock(p[1]); 
+
+def p_msg(p):
+	'''msg : MSG LPAREN varname RPAREN SEMI'''
+	p[0] = msgAst(p[3])
 
 
+def p_log(p):
+	'''log : LOG LPAREN RPAREN SEMI 
+		| LOG LPAREN DONEFLAG RPAREN SEMI 
+		| LOG LPAREN FAILFLAG RPAREN SEMI 
+	'''
+	if len(p) is 5 :
+		p[0] = logAst()
+	else :
+		p[0] = logAst(p[3])
+
+def p_remove(p):
+	'''remove : REMOVE LPAREN varname RPAREN SEMI '''
+	#print(p[3])
+	p[0] = removeAst(p[3])	
+
+
+def p_exit(p):
+	'''exit : EXIT SEMI'''
+	p[0]= breakAst();
+
+def p_return(p):
+	'''return : RETURN expr SEMI '''
+	p[0]= returnAst();	
+def p_callreachavoid(p):
+	'''doreachavoid : DOREACHAVOID LPAREN varname COMMA expr RPAREN SEMI
+	'''
+	p[0] = raAst(p[3],p[5])
 def p_ite(p):
 	'''ite : IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY'''
 	p[0] = ifAst(p[3],p[6],p[10])
 #function call 
 def p_funcCall(p):
-	'''funcCall : varname LPAREN RPAREN SEMI '''
-	p[0] = funcAst(p[1])
+	'''funcCall : varname LPAREN args RPAREN SEMI '''
+	p[0] = funcAst(p[1],p[3])
+	#print p[3]
+def p_args(p):
+	'''args : empty 
+		| neargs
+	'''
+	p[0] = p[1]
+	#print(p[0])
+
+def p_neargs(p):
+	'''neargs : expr
+		  | expr COMMA neargs'''
 	
+	if len(p) is not 4:
+		p[0] = [p[1]]
+		#print("list p ="+str(p[0]))		
+	else: 
+		p[1].extend(p[3])
+		p[0] = p[1]
+		#print("list p ="+str(p[0]))		
 #atomic statement
 def p_atomic(p):
 	'''atomic : ATOMIC LCURLY stmts RCURLY '''
@@ -144,7 +229,6 @@ def p_atomic(p):
 #assignment statement
 def p_asgn(p): 
 	'''asgn : varname EQLS expr SEMI
-		| varname EQLS funcCall 
    		| varname INCR SEMI
 		'''
 	if len(p) is 4:
@@ -158,14 +242,18 @@ def p_mwblock(p):
 	''' mwblock : MW LCURLY decls RCURLY '''
 	global symtab 
 	for decl in p[3]:
-		change_scope(symtab,decl.get_name(),'global')
-		decl.set_scope('global')
+		if ((decl.type())) != "map":
+			change_scope(symtab,decl.get_name(),'global')
+			decl.set_scope('global')
+
 	p[0] = mwAst(p[3])		
 
 #list of declarations
 def p_decls(p): 
 	''' decls : decl decls
 		  | sharedecl decls
+		  | enumdecl decls
+		  | mapdecl decls
 		  | empty
 	'''
 	dlist = []
@@ -194,6 +282,30 @@ def p_decl(p):
 	global symtab 	
 	symtab.append(p[0])
 
+def p_mapdecl(p):
+	'''mapdecl : MAP varname SEMI'''
+	p[0] = mapAst(p[2]);
+
+def p_enumdecl(p):
+	'''enumdecl : ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
+	'''
+	p[0] = declAst(p[2],p[6],p[8],'local',p[4])
+
+	global symtab 	
+	symtab.append(p[0])
+
+
+def p_varnames(p):
+	'''varnames : varname COMMA varnames 
+		    | varname 
+	'''
+	if len(p) is 4:
+		l = [p[1]]
+		l.extend(p[3])
+		p[0]= l
+	else:
+		p[0] = [p[1]]
+
 def p_sharedecl(p):
 	'''sharedecl : SHARED type varname SEMI
 		| SHARED type varname EQLS val SEMI
@@ -206,13 +318,13 @@ def p_sharedecl(p):
 	global symtab 	
 	symtab.append(p[0])
 
-
 #value types
 def p_val(p):
 	'''val : INUM
 	       | FNUM
 	       | TRUE
 	       | FALSE
+	       | NULL
 	'''
 	p[0] = exprAst(p[1]) 
 
@@ -246,6 +358,8 @@ def p_type(p):
 	'''type : INT 
 		| FLOAT 
 		| BOOL	
+		| ITEMPOSITION
+		| OBSTACLELIST
 		'''
 	p[0] = str(p[1])
 
@@ -272,21 +386,26 @@ def parse(infile):
 #	for decl in result.mwblock.decls:
 #		print str(decl.name)
 	myinfile.close()
-	astfile = str(infile)+".ast"
+	appname = str(infile)+"App"
+	astfile = appname+".ast"
 	open(astfile,"w").write(str(result))
-	javafile = str(infile)+".java"
+	javafile = appname+".java"
 	global symtab
 	open(javafile,"w").write(str(result.codegen(symtab,0)))
 	drawer = str(infile)+"Drawer.java"
 	drawcode = "package edu.illinois.mitra.demo."+infile.lower()+";\n"	
 	drawcode += "import java.awt.BasicStroke;\nimport java.awt.Color;\nimport java.awt.Graphics2D;\nimport java.awt.Stroke;\n\nimport edu.illinois.mitra.starl.interfaces.LogicThread;\nimport edu.illinois.mitra.starl.objects.ItemPosition;\nimport edu.illinois.mitra.starlSim.draw.Drawer;\n\npublic class "
-	drawcode+= str(infile)+"Drawer extends Drawer  {\n\n     private Stroke stroke = new BasicStroke(8);        private Color selectColor = new Color(0,0,255,100);\n        @Override\n        public void draw(LogicThread lt, Graphics2D g) {\n                "+str(infile)+" app = ("+str(infile)+") lt;\n                g.setColor(Color.RED);\n                g.setColor(selectColor);\n                g.setStroke(stroke);\n                if(app.position != null){\n                "
+	drawcode+= str(infile)+"Drawer extends Drawer  {\n\n     private Stroke stroke = new BasicStroke(8);        private Color selectColor = new Color(0,0,255,100);\n        @Override\n        public void draw(LogicThread lt, Graphics2D g) {\n                "+appname+" app = ("+appname+") lt;\n                g.setColor(Color.RED);\n                g.setColor(selectColor);\n                g.setStroke(stroke);\n                if(app.position != null){\n                "
 	position = 0
 	for decl in result.mwblock.decls:
-		drawcode+='			g.drawString("'+str(decl.name)+'"+" = "+String.valueOf(app.'+str(decl.name)+"),app.position.x,app.position.y+"+str(position)+");\n"					
-		position+=50
+		if (decl.type()) == "decl":
+		#	pass
+			drawcode+='			g.drawString("'+str(decl.name)+'"+" = "+String.valueOf(app.'+str(decl.name)+"),app.position.x,app.position.y+"+str(position)+");\n"					
+			position+=50
+	else:
+		print(type(decl))
 	drawcode+="\n                }\n        }\n\n}"
-	maincode = "package edu.illinois.mitra.demo."+str(infile).lower()+";\nimport edu.illinois.mitra.starlSim.main.SimSettings;\nimport edu.illinois.mitra.starlSim.main.Simulation;\n\npublic class Main {\n        public static void main(String[] args) {\n                SimSettings.Builder settings = new SimSettings.Builder();\n                settings.N_BOTS(4);\n                settings.TIC_TIME_RATE(1.5);\n        settings.WAYPOINT_FILE("+'"four.wpt"'+");\n                settings.DRAW_WAYPOINTS(false);\n                settings.DRAW_WAYPOINT_NAMES(false);\n                settings.DRAWER(new "+str(infile)+"Drawer());\n\n                Simulation sim = new Simulation("+str(infile)+".class, settings.build());\n                sim.start();\n        }\n}"
+	maincode = "package edu.illinois.mitra.demo."+str(infile).lower()+";\nimport edu.illinois.mitra.starlSim.main.SimSettings;\nimport edu.illinois.mitra.starlSim.main.Simulation;\n\npublic class Main {\n        public static void main(String[] args) {\n                SimSettings.Builder settings = new SimSettings.Builder();\n                settings.N_IROBOTS(4);\n                settings.TIC_TIME_RATE(1.5);\n        settings.WAYPOINT_FILE("+'"four.wpt"'+");\n                settings.DRAW_WAYPOINTS(false);\n                settings.DRAW_WAYPOINT_NAMES(false);\n                settings.DRAWER(new "+str(infile)+"Drawer());\n\n                Simulation sim = new Simulation("+str(infile)+"App.class, settings.build());\n                sim.start();\n        }\n}"
 	mainfile = "Main.java"	
 	open(mainfile,"w").write(maincode)
 	open(drawer,"w").write(drawcode)
