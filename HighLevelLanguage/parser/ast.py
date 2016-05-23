@@ -1,4 +1,98 @@
 from symtab import *
+#destinaions.isEmpty()
+
+class inputBlock(list):
+	def __init__(self,var):
+		self.var = var
+
+
+	def codegen(self,symtab,indent):
+			s= ""
+			s+="\t"*(indent)+"for(ItemPosition i : gvh.gps.getWaypointPositions()){\n"
+			s+="\t"*(indent+1)+str(self.var)+".put(i.getName(), i);\n"
+			s+="\t"*(indent)+"}\n"
+			return s
+	def type(self):
+		return "ib"
+	
+class dirAst(list):
+	def __init__(self,lhs, op,rhs):
+		self.lhs = lhs
+		self.op = op
+		self.rhs = rhs
+	def codegen(self,symtab,indent):
+		return "\t"*indent+str(self.lhs)+str(self.op)+str(self.rhs)+";\n"
+class logAst(list):
+	def __init__(self,var = ""):
+		self.var = var 
+
+
+	def codegen(self,symtab,indent):
+		if str(self.var)=='':
+			s = "\t"*(indent)+"System.out.println(gvh.log.getLog());\n"
+		else: 
+			s = "\t"*(indent)+'gvh.log.i("'+str(self.var).title() + '", "read");\n'
+
+		return s
+	def type(self):
+		return "log" 
+
+class mapAst(list):
+	def __init__(self,var):
+		self.var = var
+
+
+	def codegen(self,symtab,indent):
+		s = "\t"*(indent)+"final Map<String,ItemPosition> "+str(self.var)+" = new HashMap<String,ItemPosition>();\n"
+		return s
+
+	def type(self):
+		return "map"
+
+
+
+class msgAst(list):
+	def __init__(self,var):
+		self.var = var
+
+
+	def codegen(self,symtab,indent):
+		return '\t'*indent+'RobotMessage inform = new RobotMessage("ALL", name, ARRIVED_MSG,'+str(self.var)+'.getName());\n'+'\t'*indent+'gvh.comms.addOutgoingMessage(inform);\n'
+class removeAst(object):
+	def __init__(self,var=""):
+		self.var = var
+
+	def codegen(self,symtab,indent):
+		s = "\t"*(indent)+"destinations.remove("+str(self.var)+".getName());\n"
+		return s
+
+class breakAst(object):
+	def __init__(self):
+		pass
+	
+	def codegen(self,symtab,indent):
+		return "\t"*indent + "break;"
+
+	def type(self):
+		return "breakAst"
+
+class returnAst(object):
+	def __init__(self,value='null'):
+		self.value = value 
+	
+	def codegen(self,symtab,indent):
+		return "\t"*indent+ "return "+str(self.value)+";\n"
+
+	def type(self):
+		return "returnAst"
+class destAst(object):
+	def __init__(self,var):
+		self.var = var
+
+	def codegen(self,symtab,indent):
+		return str(self.var)+".isEmpty()"
+
+
 
 #declarations
 class declAst(list):
@@ -46,7 +140,11 @@ class declAst(list):
 
 			s.strip(',')
 			s+= "};\n";
+<<<<<<< HEAD
 		 	s+=  "\t"*indent+str(self.dtype)+" "+str(self.name)+" = "+str(self.dtype)+"."+str(self.value)+";\n"
+=======
+		 	s+=  "\t"*indent+str(self.dtype)+" "+str(self.name)+" = "+str(self.value)+";\n"
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 			return s
 		elif self.value is not None:
 			return str(self.dtype)+" "+str(self.name)+" = "+str(self.value)+";"
@@ -69,7 +167,11 @@ class ifAst(object):
 #code generation
 	def codegen(self,symtab,indent):
 		s = ""
+<<<<<<< HEAD
 		s+= "//if then else condition"
+=======
+		s+= "//if then else condition\n"
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		if type(self.condition) is str:
 			s+= "\t"*indent+"if("+exprAst(self.condition).codegen(symtab,indent)+") {\n"
 		else:
@@ -87,8 +189,19 @@ class ifAst(object):
 def mkentry(decl):
 	return symEntry(decl.get_dtype(),decl.get_name(),decl.get_scope())
 
+class flagAst(list):
+	def __init__(self,val):
+		self.val = val 
+
+	def __repr__(self):
+		return str(val)
+	
+	def codegen(self,symtab,indent):
+		return "gvh.plat.reachAvoid."+str(self.val)
+
+
 #expressions
-class exprAst(object):
+class exprAst(list):
 	def __init__(self,lvalue,op = None,rvalue = None):
 		self.lvalue = lvalue
 		self.op = op
@@ -153,19 +266,35 @@ class robotDecl(object):
 	def codegen(self,symtab,indent):
 		return ""
 
+<<<<<<< HEAD
 
+=======
+	def type(self):
+		return "robotdecl"
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 #function
 class funcAst(object):
-	def __init__(self,name,params = None):
+	def __init__(self,name,params):
 		self.name = name
 		self.params = params
 
 	def __repr__(self):
-		return str(self.name)+"()"
-	
+		s = str(self.name)+"("
+		for p in range(len(self.params)):
+			s+=str(self.params[p])
+			if p == len(self.params) -1 :
+				break;
+			else:
+				s+= ","
+			print(p)
+		s+= ")"
+		return s
+			
 	def codegen(self,symtab,indent):
 		return "\t"*(indent)+str(self)+";"
 
+	def type(self):
+		return "func"
 #relational expressions :
 class relAst(object):
 	def __init__(self,relop,e1,e2):
@@ -173,6 +302,8 @@ class relAst(object):
 		self.e1 = e1
 		self.e2 = e2
 
+	def type(self):
+		return "relast" 
 #string representation
 	def __repr__(self):
 		return str(self.e1)+" "+str(self.relop)+" "+str(self.e2)
@@ -203,6 +334,8 @@ class condAst(object):
 		else:
 			return str(self.condop)+"("+self.e1.codegen(symtab,indent)+")"
 
+	def type(self):
+		return "codast" 
 #if then else statements
 #atomic statements
 class atomicAst(object):
@@ -238,7 +371,11 @@ class atomicAst(object):
 			s+= stmt.codegen(symtab,indent+1)+"\n"
 		s+= "\t"*(indent+1)+"mutex.exit(0);\n"
 		s+= "\t"*indent+"}\n"
-		return s 
+		return s
+
+ 
+	def type(self):
+		return "atomicast" 
 #assignment statements : 
 class asgnAst(object):
 	def __init__(self,name,expr):
@@ -304,11 +441,11 @@ class mwAst(object):
 		return s
 #event class
 class eventAst(object):
-	def __init__(self,name,pre,eff):
+	def __init__(self,name,pre,eff,endflag = False):
 		self.name = name
 		self.pre = pre
 		self.eff = eff
-
+		self.endflag = endflag
 #string representation
 	def __repr__(self):
 		s = "event "+str(self.name)+":\n"
@@ -327,11 +464,30 @@ class eventAst(object):
 		else:
 			s+= "\t"*indent+"if("+(self.pre).codegen(symtab,indent)+") {\n"
 		for stmt in self.eff :
-			s+= stmt.codegen(symtab,indent+1)+"\n"
-		s+= "\t"*(indent+1)+"continue;\n"
+						
+			if stmt.type() == "breakAst" or stmt.type() == "returnAst" :
+				self.endflag = True;	
+			if stmt.type() == "ib":
+				pass
+			else:
+				s+= stmt.codegen(symtab,indent+1)+"\n"
+		if not self.endflag:
+			s+= "\t"*(indent+1)+"continue;\n"
 		s+= "\t"*indent+"}\n"
 		return s
 
+<<<<<<< HEAD
+=======
+	def get_ib(self):
+		libs = []
+		for stmt in self.eff :
+			if stmt.type() == "ib":
+				libs.append(stmt)
+		return libs 
+
+	def type(self):
+		return "event"
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 class getAst(object):
 	def __init__(self,name):
 		self.name = name 
@@ -354,11 +510,23 @@ class initAst(object):
 
 		return s 
 
-
+	def get_ib(self):
+		libs = []
+		for event in self.events:
+			if event.type() == "event":
+				libs.extend(event.get_ib())
+		return libs
+		
 #code generation
 	def codegen(self,symtab,indent):
 		s = "\t"*(indent)+"while(true) {\n"
 		s+= "\t"*(indent+1)+"sleep(100);\n"
+<<<<<<< HEAD
+=======
+		s+= "\t"*(indent+1)+"if(gvh.plat.model instanceof Model_quadcopter){\n"
+		s+= "\t"*(indent+2)+'gvh.log.i("WIND", ((Model_quadcopter)gvh.plat.model).windxNoise + " " +  ((Model_quadcopter)gvh.plat.model).windyNoise);\n'
+		s+="\t"*(indent+1)+"}\n"
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		amotionflag = False
 		for entry in symtab :
 			if entry.get_dtype() == 'ItemPosition':
@@ -375,7 +543,16 @@ class raAst(object):
 		self.unsafe = unsafe
 	
 	def codegen(self,symtab,indent):
+<<<<<<< HEAD
 		return genreachavoid(indent)
+=======
+		s = ""
+		s+= "\t"*(indent)+"gvh.plat.reachAvoid.doReachAvoid(gvh.gps.getMyPosition(),"+str(self.target)+","+str(self.unsafe)+");\n"
+		s+= "\t"*(indent)+"kdTree = gvh.plat.reachAvoid.kdTree;\n"
+		s+= "\t"*(indent)+'gvh.log.i("DoReachAvoid",'+ str(self.target)+'.x + " " +'+str(self.target)+'.y);\n'
+		s+= '\t'*(indent)+'''doReachavoidCalls.update(new ItemPosition(name + "'s " + "doReachAvoid Call to destination: " +'''+str(self.target)+'.name, gvh.gps.getMyPosition().x,gvh.gps.getMyPosition().y));\n'
+		return s
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 #program
 class pgmAst(object):
 	def __init__(self,name,mwblock,decls,initblock):
@@ -400,12 +577,24 @@ class pgmAst(object):
 		globalflag = False
 		motionflag = False
 
+<<<<<<< HEAD
+=======
+		obslist = []
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		for entry in symtab :
 			if entry.get_dtype() == 'atomic':
 				atomicflag = True
 			if entry.get_name() == 'robotIndex':
 				robotflag = True
+<<<<<<< HEAD
 	
+=======
+		
+			if entry.get_dtype() == 'ObstacleList':
+				obsflag = True
+				#print("hello"+entry.get_name())	
+				obslist.append(entry.get_name());
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 			if entry.get_dtype() == 'ItemPosition':
 				motionflag = True	
 		if atomicflag == True:
@@ -413,7 +602,7 @@ class pgmAst(object):
 			symtab.append(symEntry('int','Numbots','local'))	
 
 		s= initcode(self.name)
-		s+= "\n\npublic class "+str(self.name)+" extends LogicThread {\n\n"
+		s+= "\n\npublic class "+str(self.name)+"App extends LogicThread {\n\n"
 		if self.mwblock.get_decls() is not []:
 			s+= "\t"*(indent+1)+"private DSM dsm;\n"
 		s+= (self.mwblock).codegen(symtab,indent+1)
@@ -424,6 +613,7 @@ class pgmAst(object):
 			s+= "\t"*(indent+1)+"int robotIndex = 0;\n"
 	
 		if motionflag:
+<<<<<<< HEAD
 			s+="\t"*(indent+1)+"private int [] destArray;\n"
 			s+="\t"*(indent+1)+'private static final boolean RANDOM_DESTINATION = false;\n'
 			s+="\t"*(indent+1)+'public static final int ARRIVED_MSG = 22;\n'
@@ -438,6 +628,18 @@ class pgmAst(object):
 		
 		s+="\t"*(indent+1)+'ItemPosition position ;\n'
 		s+= "\t"*(indent+1)+"public "+str(self.name)+"(GlobalVarHolder gvh) {\n"
+=======
+			s+="\t"*(indent+1)+'private static final boolean RANDOM_DESTINATION = false;\n'
+			s+="\t"*(indent+1)+'public static final int ARRIVED_MSG = 22;\n'
+			s+="\t"*(indent+1)+'PositionList<ItemPosition> destinationsHistory = new PositionList<ItemPosition>();\n'
+			s+= "\t"*(indent+1)+'PositionList<ItemPosition> doReachavoidCalls = new PositionList<ItemPosition>();\n'
+			s+="\t"*(indent+1)+'public RRTNode kdTree;\n'	
+			s+="\t"*(indent+1)+'public ItemPosition position;\n'	
+		for decl in self.decls:
+			s+= "\t"*(indent+1)+"public "+decl.codegen(symtab,indent+1)+"\n"
+
+		s+= "\t"*(indent+1)+"public "+str(self.name)+"App(GlobalVarHolder gvh) {\n"
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		s+= "\t"*(indent+2)+"super(gvh);\n"
 		if robotflag:
 			s+="\t"*(indent+2)+'robotIndex = Integer.parseInt(name.replaceAll("[^0-9]",""));\n'
@@ -450,10 +652,20 @@ class pgmAst(object):
 			s+="\t"*(indent+2)+"settings.COLAVOID_MODE(COLAVOID_MODE_TYPE.USE_COLAVOID);\n"
 			s+="\t"*(indent+2)+"MotionParameters param = settings.build();\n"
 			s+="\t"*(indent+2)+"gvh.plat.moat.setParameters(param);\n"
+<<<<<<< HEAD
 			s+="\t"*(indent+2)+"for(ItemPosition i : gvh.gps.getWaypointPositions()){\n"
 			s+="\t"*(indent+3)+"destinations.put(i.getName(), i);\n"
 			s+="\t"*(indent+3)+"destinationsHistory.update(i);\n"
 			s+="\t"*(indent+2)+"}\n"
+=======
+			ibs = self.initblock.get_ib()
+			for ib in ibs:
+				s+= ib.codegen(symtab,indent+2)
+			s+="\t"*(indent+2)+"gvh.comms.addMsgListener(this,ARRIVED_MSG);\n"
+			for obs in obslist:
+				s+= "\t"*(indent+2)+str(obs)+"= gvh.gps.getObspointPositions();\n"
+			
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		s+= "\t"*(indent+1)+"}\n"
 	
 		s+= "\t"*(indent+2)+"@Override\n"
@@ -462,16 +674,23 @@ class pgmAst(object):
 		s+= "\t"*(indent+3)+"position = gvh.gps.getMyPosition();\n"
 		s+= self.initblock.codegen(symtab,indent+3)	
 		s+= "\t"*(indent+2)+"}\n"
-		s+= endcode(indent+1)
+		s+= endcode(indent+1,"Stage.PICK",motionflag)
 		s+= "}"
+		#print obslist
 		return s 
 		
 def initcode(name):
 	s = "package edu.illinois.mitra.demo."+str(name).lower()+";\n\n"
 	
+<<<<<<< HEAD
 	s+="import java.util.HashMap;"
 	s+="import java.util.Map;"
 	s+="import java.util.Random;"
+=======
+	s+="import java.util.HashMap;\n"
+	s+="import java.util.Map;\n"
+	s+="import java.util.Random;\n"
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 	s+= "import java.util.List;\n\n"
 	s+= "import edu.illinois.mitra.starl.comms.RobotMessage;\n"
 	s+= "import edu.illinois.mitra.starl.functions.DSMMultipleAttr;\n"
@@ -490,6 +709,7 @@ def initcode(name):
 	s+="import edu.illinois.mitra.starl.objects.PositionList;\n"
 	return s 
 
+<<<<<<< HEAD
 def genreachavoid(indent):
 	s= ""
 	s+= 'currentDestination = Target;\n'
@@ -500,10 +720,42 @@ def genreachavoid(indent):
 
 def endcode(indent):
 	return "\t"*indent+"@Override\n"+"\t"*indent+"protected void receive(RobotMessage m) {\n"+"\t"*indent+"}\n"
+=======
+>>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
+
+def endcode(indent,stage,motionflag):
+	if not motionflag :
+		return "\t"*indent+"@Override\n"+"\t"*indent+"protected void receive(RobotMessage m) {\n"+"\t"*indent+"}\n"
+	else :
+		s =  "\t"*indent+"@Override\n"+"\t"*indent+"protected void receive(RobotMessage m) {\n"
+		s+= "\t"*indent+"String posName = m.getContents(0);\n"
+		s+= "\t"*indent+"if(destinations.containsKey(posName))\n"
+		s+= "\t"*indent+"		destinations.remove(posName);\n"
+	
+		s+= "\t"*indent+"if(currentDestination.getName().equals(posName)) {\n"
+		s+= "\t"*indent+"	//	gvh.plat.moat.cancel();\n"
+		s+= "\t"*indent+"		gvh.plat.reachAvoid.cancel();\n"
+		s+= "\t"*indent+"		stage = "+str(stage)+ ";\n"
+		s+= "\t"*indent+"	}\n"
+		s+= 	"\t"*indent+"}\n"
+		s+= "private static final Random rand = new Random();\n"
+
+		s+="\t"*indent+'@SuppressWarnings("unchecked")\n'
+		s+="\t"*indent+"private <X, T> T getRandomElement(Map<X, T> map) {\n "
+		s+="\t"*indent+"	if(RANDOM_DESTINATION)\n"
+		s+="\t"*indent+"		return (T) map.values().toArray()[rand.nextInt(map.size())];\n"
+		s+="\t"*indent+"	else\n"
+		s+="\t"*indent+"		return (T) map.values().toArray()[0];\n"
+		s+="\t"*indent+"}\n"
+
+		return s 	
 def createDSMs(mwblock,indent):
 	s = ""
 	decls = mwblock.get_decls()
 	for decl in decls:
-		s+= "\t"*(indent)+"dsm.createMW("+'"'+str(decl.get_name())+'", 0);\n'
+		if (decl.type()) == "map":
+			pass
+		else: 
+			s+= "\t"*(indent)+"dsm.createMW("+'"'+str(decl.get_name())+'", 0);\n'
 	return s

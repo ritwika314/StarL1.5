@@ -7,7 +7,7 @@ MW{
 
 }
 
-
+	ItemPosition position;
 
 	int LeaderId = -1;
 	boolean elected = false;

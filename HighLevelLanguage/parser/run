@@ -30,3 +30,4 @@ javac -classpath $ip/StarL1.5/trunk/android/$pn/bin:$ip/StarL1.5/trunk/android/S
 mv $ip/StarL1.5/trunk/android/$pn/src/edu/illinois/mitra/demo/$an/*.class $ip/StarL1.5/trunk/android/$pn/bin/edu/illinois/mitra/demo/$an
 
 java -classpath $ip/StarL1.5/trunk/android/$pn/bin:$ip/StarL1.5/trunk/android/StarLib/bin/classes:$ip/StarL1.5/trunk/android/StarLib/lib/kd.jar:$ip/StarL1.5/trunk/android/StarLSim/bin:$ip/StarL1.5/trunk/android/StarLSim/libs/gson-2.2.2.jar edu.illinois.mitra.demo.$an.Main
+#java -classpath $ip/StarL1.5/trunk/android/$pn/bin:$ip/StarL1.5/trunk/android/StarLib/bin/classes:$ip/StarL1.5/trunk/android/StarLib/lib/kd.jar:$ip/StarL1.5/trunk/android/StarLSim/bin:$ip/StarL1.5/trunk/android/StarLSim/libs/gson-2.2.2.jar edu.illinois.mitra.demo.$an.Main
