@@ -26,8 +26,8 @@ public class DummyApp extends LogicThread {
 
 	private DSM dsm;
 	public int NumAdded = 0;
-	public int Changed = 0;
 	public int CurrentTotal = 0;
+	public int Changed = 0;
 	public 	final Map<String,ItemPosition> destinations = new HashMap<String,ItemPosition>();
 
 	private MutualExclusion mutex;
@@ -41,12 +41,13 @@ public class DummyApp extends LogicThread {
 	public ItemPosition position;
 	public boolean isFinal = false;
 	public boolean Added = false;
-	public ItemPosition currentDestination;
-	public ObstacleList obs;
 	public int FinalSum = 0;
 	public enum Stage {PICK,GO,FAIL,DONE,};
 	Stage stage = Stage.PICK;
 
+	public ItemPosition Target;
+	public ItemPosition currentDestination;
+	public ObstacleList obs;
 	public boolean wait0 = false;
 	public DummyApp(GlobalVarHolder gvh) {
 		super(gvh);
@@ -66,8 +67,8 @@ public class DummyApp extends LogicThread {
 		@Override
 		public List<Object> callStarL() {
 			dsm.createMW("NumAdded", 0);
-			dsm.createMW("Changed", 0);
 			dsm.createMW("CurrentTotal", 0);
+			dsm.createMW("Changed", 0);
 			position = gvh.gps.getMyPosition();
 			while(true) {
 				sleep(100);

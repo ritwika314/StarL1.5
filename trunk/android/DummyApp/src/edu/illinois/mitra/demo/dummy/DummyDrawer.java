@@ -19,8 +19,8 @@ public class DummyDrawer extends Drawer  {
                 g.setStroke(stroke);
                 if(app.position != null){
                 			g.drawString("NumAdded"+" = "+String.valueOf(app.NumAdded),app.position.x,app.position.y+0);
-			g.drawString("Changed"+" = "+String.valueOf(app.Changed),app.position.x,app.position.y+50);
-			g.drawString("CurrentTotal"+" = "+String.valueOf(app.CurrentTotal),app.position.x,app.position.y+100);
+			g.drawString("CurrentTotal"+" = "+String.valueOf(app.CurrentTotal),app.position.x,app.position.y+50);
+			g.drawString("Changed"+" = "+String.valueOf(app.Changed),app.position.x,app.position.y+100);
 
                 }
         }

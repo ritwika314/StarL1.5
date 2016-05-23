@@ -5,7 +5,6 @@ MW{
 	int CurrentTotal = 0;
 	
 	int Changed = 0;
-	int CurrentTotal = 0;
 	Map destinations;	
 
 }
@@ -13,18 +12,14 @@ MW{
 boolean isFinal = false;
 boolean Added = false;
 int FinalSum = 0;
-enum Stage  {PICK,GO,FAIL,DONE} stage = PICK;
-ItemPosition position;
+enum Stage  {PICK,GO,FAIL,DONE} stage = Stage.PICK;
 ItemPosition Target;
 ItemPosition currentDestination;
 ObstacleList obs;
-int FinalSum = 0;
-enum Stage  {PICK,GO,FAIL,DONE} stage = Stage.PICK;
 
 
 Init() {
 	getRobotIndex();
-	position = getmypos();
 	adding() {
 		pre(Added == false);
 		eff {
@@ -49,13 +44,6 @@ Init() {
 	ra1(){
 		pre(stage == Stage.PICK);
 		eff{
-			if(emptydest()){
-				stage = Stage.DONE;
-			}
-			else{
-				currentdestination.x = position.getX()+400;
-				currentdestination.y = position.getY()+400;
-				doreachavoid(currentdestination,0)
 			destinations = getInput();
 			if(isEmpty(destinations)){
 				stage = Stage.DONE;
@@ -72,12 +60,6 @@ Init() {
 
 		pre(stage == Stage.GO);
 		eff{
-			if(doneflag){
-				stage = Stage.PICK;
-			}
-			else if(failflag){
-				stage - Stage.FAIL;
-			}
 			if(doneFlag){
 				stage = Stage.PICK;
 			}
