@@ -13,7 +13,7 @@ public class AddNumsDrawer extends Drawer  {
      private Stroke stroke = new BasicStroke(8);        private Color selectColor = new Color(0,0,255,100);
         @Override
         public void draw(LogicThread lt, Graphics2D g) {
-                AddNums app = (AddNums) lt;
+                AddNumsApp app = (AddNumsApp) lt;
                 g.setColor(Color.RED);
                 g.setColor(selectColor);
                 g.setStroke(stroke);

@@ -140,16 +140,12 @@ def p_stmt(p):
 		|  remove 
 		| msg
 		| funcCall
-<<<<<<< HEAD
-		| callreachavoid
-=======
 		| getInput
 		| varname EQLS funcCall
 		| doreachavoid
 		| return 
 		| log 
 		
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 	'''
 	if len(p) is 2:
 		p[0] = p[1]
@@ -166,10 +162,6 @@ def p_msg(p):
 	'''msg : MSG LPAREN varname RPAREN SEMI'''
 	p[0] = msgAst(p[3])
 
-def p_callreachavoid(p):
-	'''callreachavoid : REACHAVOID LPAREN varname COMMA val RPAREN
-	'''
-	p[0] = raAst(p[3],p[5])
 
 def p_log(p):
 	'''log : LOG LPAREN RPAREN SEMI 
@@ -261,10 +253,7 @@ def p_decls(p):
 	''' decls : decl decls
 		  | sharedecl decls
 		  | enumdecl decls
-<<<<<<< HEAD
-=======
 		  | mapdecl decls
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		  | empty
 	'''
 	dlist = []
@@ -293,12 +282,6 @@ def p_decl(p):
 	global symtab 	
 	symtab.append(p[0])
 
-<<<<<<< HEAD
-def p_enumdecl(p):
-	'''enumdecl : ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
-	'''
-	print(p[4])
-=======
 def p_mapdecl(p):
 	'''mapdecl : MAP varname SEMI'''
 	p[0] = mapAst(p[2]);
@@ -306,7 +289,6 @@ def p_mapdecl(p):
 def p_enumdecl(p):
 	'''enumdecl : ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
 	'''
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 	p[0] = declAst(p[2],p[6],p[8],'local',p[4])
 
 	global symtab 	
@@ -377,10 +359,7 @@ def p_type(p):
 		| FLOAT 
 		| BOOL	
 		| ITEMPOSITION
-<<<<<<< HEAD
-=======
 		| OBSTACLELIST
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		'''
 	p[0] = str(p[1])
 
@@ -426,11 +405,7 @@ def parse(infile):
 	else:
 		print(type(decl))
 	drawcode+="\n                }\n        }\n\n}"
-<<<<<<< HEAD
-	maincode = "package edu.illinois.mitra.demo."+str(infile).lower()+";\nimport edu.illinois.mitra.starlSim.main.SimSettings;\nimport edu.illinois.mitra.starlSim.main.Simulation;\n\npublic class Main {\n        public static void main(String[] args) {\n                SimSettings.Builder settings = new SimSettings.Builder();\n                settings.N_IROBOTS(4);\n                settings.TIC_TIME_RATE(1.5);\n        settings.WAYPOINT_FILE("+'"four.wpt"'+");\n                settings.DRAW_WAYPOINTS(false);\n                settings.DRAW_WAYPOINT_NAMES(false);\n                settings.DRAWER(new "+str(infile)+"Drawer());\n\n                Simulation sim = new Simulation("+str(infile)+".class, settings.build());\n                sim.start();\n        }\n}"
-=======
 	maincode = "package edu.illinois.mitra.demo."+str(infile).lower()+";\nimport edu.illinois.mitra.starlSim.main.SimSettings;\nimport edu.illinois.mitra.starlSim.main.Simulation;\n\npublic class Main {\n        public static void main(String[] args) {\n                SimSettings.Builder settings = new SimSettings.Builder();\n                settings.N_IROBOTS(4);\n                settings.TIC_TIME_RATE(1.5);\n        settings.WAYPOINT_FILE("+'"four.wpt"'+");\n                settings.DRAW_WAYPOINTS(false);\n                settings.DRAW_WAYPOINT_NAMES(false);\n                settings.DRAWER(new "+str(infile)+"Drawer());\n\n                Simulation sim = new Simulation("+str(infile)+"App.class, settings.build());\n                sim.start();\n        }\n}"
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 	mainfile = "Main.java"	
 	open(mainfile,"w").write(maincode)
 	open(drawer,"w").write(drawcode)

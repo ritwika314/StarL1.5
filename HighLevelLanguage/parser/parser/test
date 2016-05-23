@@ -1,4 +1,0 @@
-read a
-b="$(echo $a | tr '[A-Z]' '[a-z]')"
-
-echo $b

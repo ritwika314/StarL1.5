@@ -140,11 +140,7 @@ class declAst(list):
 
 			s.strip(',')
 			s+= "};\n";
-<<<<<<< HEAD
-		 	s+=  "\t"*indent+str(self.dtype)+" "+str(self.name)+" = "+str(self.dtype)+"."+str(self.value)+";\n"
-=======
 		 	s+=  "\t"*indent+str(self.dtype)+" "+str(self.name)+" = "+str(self.value)+";\n"
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 			return s
 		elif self.value is not None:
 			return str(self.dtype)+" "+str(self.name)+" = "+str(self.value)+";"
@@ -167,11 +163,7 @@ class ifAst(object):
 #code generation
 	def codegen(self,symtab,indent):
 		s = ""
-<<<<<<< HEAD
-		s+= "//if then else condition"
-=======
 		s+= "//if then else condition\n"
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		if type(self.condition) is str:
 			s+= "\t"*indent+"if("+exprAst(self.condition).codegen(symtab,indent)+") {\n"
 		else:
@@ -266,12 +258,8 @@ class robotDecl(object):
 	def codegen(self,symtab,indent):
 		return ""
 
-<<<<<<< HEAD
-
-=======
 	def type(self):
 		return "robotdecl"
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 #function
 class funcAst(object):
 	def __init__(self,name,params):
@@ -476,8 +464,6 @@ class eventAst(object):
 		s+= "\t"*indent+"}\n"
 		return s
 
-<<<<<<< HEAD
-=======
 	def get_ib(self):
 		libs = []
 		for stmt in self.eff :
@@ -487,7 +473,6 @@ class eventAst(object):
 
 	def type(self):
 		return "event"
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 class getAst(object):
 	def __init__(self,name):
 		self.name = name 
@@ -521,12 +506,9 @@ class initAst(object):
 	def codegen(self,symtab,indent):
 		s = "\t"*(indent)+"while(true) {\n"
 		s+= "\t"*(indent+1)+"sleep(100);\n"
-<<<<<<< HEAD
-=======
 		s+= "\t"*(indent+1)+"if(gvh.plat.model instanceof Model_quadcopter){\n"
 		s+= "\t"*(indent+2)+'gvh.log.i("WIND", ((Model_quadcopter)gvh.plat.model).windxNoise + " " +  ((Model_quadcopter)gvh.plat.model).windyNoise);\n'
 		s+="\t"*(indent+1)+"}\n"
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		amotionflag = False
 		for entry in symtab :
 			if entry.get_dtype() == 'ItemPosition':
@@ -543,16 +525,12 @@ class raAst(object):
 		self.unsafe = unsafe
 	
 	def codegen(self,symtab,indent):
-<<<<<<< HEAD
-		return genreachavoid(indent)
-=======
 		s = ""
 		s+= "\t"*(indent)+"gvh.plat.reachAvoid.doReachAvoid(gvh.gps.getMyPosition(),"+str(self.target)+","+str(self.unsafe)+");\n"
 		s+= "\t"*(indent)+"kdTree = gvh.plat.reachAvoid.kdTree;\n"
 		s+= "\t"*(indent)+'gvh.log.i("DoReachAvoid",'+ str(self.target)+'.x + " " +'+str(self.target)+'.y);\n'
 		s+= '\t'*(indent)+'''doReachavoidCalls.update(new ItemPosition(name + "'s " + "doReachAvoid Call to destination: " +'''+str(self.target)+'.name, gvh.gps.getMyPosition().x,gvh.gps.getMyPosition().y));\n'
 		return s
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 #program
 class pgmAst(object):
 	def __init__(self,name,mwblock,decls,initblock):
@@ -575,26 +553,19 @@ class pgmAst(object):
 		atomicflag = False;
 		robotflag = False;
 		globalflag = False
-		motionflag = False
+		motionflag = False;
 
-<<<<<<< HEAD
-=======
 		obslist = []
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		for entry in symtab :
 			if entry.get_dtype() == 'atomic':
 				atomicflag = True
 			if entry.get_name() == 'robotIndex':
 				robotflag = True
-<<<<<<< HEAD
-	
-=======
 		
 			if entry.get_dtype() == 'ObstacleList':
 				obsflag = True
 				#print("hello"+entry.get_name())	
 				obslist.append(entry.get_name());
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 			if entry.get_dtype() == 'ItemPosition':
 				motionflag = True	
 		if atomicflag == True:
@@ -613,33 +584,16 @@ class pgmAst(object):
 			s+= "\t"*(indent+1)+"int robotIndex = 0;\n"
 	
 		if motionflag:
-<<<<<<< HEAD
-			s+="\t"*(indent+1)+"private int [] destArray;\n"
-			s+="\t"*(indent+1)+'private static final boolean RANDOM_DESTINATION = false;\n'
-			s+="\t"*(indent+1)+'public static final int ARRIVED_MSG = 22;\n'
-			s+="\t"*(indent+1)+"final Map<String, ItemPosition> destinations = new HashMap<String, ItemPosition>();\n"
-			s+="\t"*(indent+1)+'ItemPosition currentDestination = new ItemPosition("cur", 0,0);\n'
-			s+="\t"*(indent+1)+'PositionList<ItemPosition> destinationsHistory = new PositionList<ItemPosition>();\n'
-			s+= "\t"*(indent+1)+'PositionList<ItemPosition> doReachavoidCalls = new PositionList<ItemPosition>();\n'
-			s+="\t"*(indent+1)+'ObstacleList obs;\n'
-			s+="\t"*(indent+1)+'public RRTNode kdTree;\n'	
-		for decl in self.decls:
-			s+= "\t"*(indent+1)+"public "+decl.codegen(symtab,indent+1)+"\n"
-		
-		s+="\t"*(indent+1)+'ItemPosition position ;\n'
-		s+= "\t"*(indent+1)+"public "+str(self.name)+"(GlobalVarHolder gvh) {\n"
-=======
 			s+="\t"*(indent+1)+'private static final boolean RANDOM_DESTINATION = false;\n'
 			s+="\t"*(indent+1)+'public static final int ARRIVED_MSG = 22;\n'
 			s+="\t"*(indent+1)+'PositionList<ItemPosition> destinationsHistory = new PositionList<ItemPosition>();\n'
 			s+= "\t"*(indent+1)+'PositionList<ItemPosition> doReachavoidCalls = new PositionList<ItemPosition>();\n'
 			s+="\t"*(indent+1)+'public RRTNode kdTree;\n'	
-			s+="\t"*(indent+1)+'public ItemPosition position;\n'	
+		s+="\t"*(indent+1)+'public ItemPosition position;\n'	
 		for decl in self.decls:
 			s+= "\t"*(indent+1)+"public "+decl.codegen(symtab,indent+1)+"\n"
 
 		s+= "\t"*(indent+1)+"public "+str(self.name)+"App(GlobalVarHolder gvh) {\n"
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		s+= "\t"*(indent+2)+"super(gvh);\n"
 		if robotflag:
 			s+="\t"*(indent+2)+'robotIndex = Integer.parseInt(name.replaceAll("[^0-9]",""));\n'
@@ -652,12 +606,6 @@ class pgmAst(object):
 			s+="\t"*(indent+2)+"settings.COLAVOID_MODE(COLAVOID_MODE_TYPE.USE_COLAVOID);\n"
 			s+="\t"*(indent+2)+"MotionParameters param = settings.build();\n"
 			s+="\t"*(indent+2)+"gvh.plat.moat.setParameters(param);\n"
-<<<<<<< HEAD
-			s+="\t"*(indent+2)+"for(ItemPosition i : gvh.gps.getWaypointPositions()){\n"
-			s+="\t"*(indent+3)+"destinations.put(i.getName(), i);\n"
-			s+="\t"*(indent+3)+"destinationsHistory.update(i);\n"
-			s+="\t"*(indent+2)+"}\n"
-=======
 			ibs = self.initblock.get_ib()
 			for ib in ibs:
 				s+= ib.codegen(symtab,indent+2)
@@ -665,7 +613,6 @@ class pgmAst(object):
 			for obs in obslist:
 				s+= "\t"*(indent+2)+str(obs)+"= gvh.gps.getObspointPositions();\n"
 			
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 		s+= "\t"*(indent+1)+"}\n"
 	
 		s+= "\t"*(indent+2)+"@Override\n"
@@ -682,15 +629,9 @@ class pgmAst(object):
 def initcode(name):
 	s = "package edu.illinois.mitra.demo."+str(name).lower()+";\n\n"
 	
-<<<<<<< HEAD
-	s+="import java.util.HashMap;"
-	s+="import java.util.Map;"
-	s+="import java.util.Random;"
-=======
 	s+="import java.util.HashMap;\n"
 	s+="import java.util.Map;\n"
 	s+="import java.util.Random;\n"
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 	s+= "import java.util.List;\n\n"
 	s+= "import edu.illinois.mitra.starl.comms.RobotMessage;\n"
 	s+= "import edu.illinois.mitra.starl.functions.DSMMultipleAttr;\n"
@@ -709,19 +650,6 @@ def initcode(name):
 	s+="import edu.illinois.mitra.starl.objects.PositionList;\n"
 	return s 
 
-<<<<<<< HEAD
-def genreachavoid(indent):
-	s= ""
-	s+= 'currentDestination = Target;\n'
-	s+='gvh.plat.reachAvoid.doReachAvoid(gvh.gps.getMyPosition(), currentDestination, obs);\n'
-	s+='kdTree = gvh.plat.reachAvoid.kdTree;\n'
-	s+='gvh.log.i("DoReachAvoid", currentDestination.x + " " +currentDestination.y);\n'
-	s+='''doReachavoidCalls.update(new ItemPosition(name + "'s " + "doReachAvoid Call to destination: " + currentDestination.name, gvh.gps.getMyPosition().x,gvh.gps.getMyPosition().y));\n'''
-
-def endcode(indent):
-	return "\t"*indent+"@Override\n"+"\t"*indent+"protected void receive(RobotMessage m) {\n"+"\t"*indent+"}\n"
-=======
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 def endcode(indent,stage,motionflag):

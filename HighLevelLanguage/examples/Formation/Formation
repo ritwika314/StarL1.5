@@ -59,7 +59,6 @@ Init() {
 	pre(stage == Stage.DONE);
 	eff{
 		log();
-		return null;
 	}
 	}
 	}

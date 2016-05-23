@@ -1,15 +1,9 @@
 import ply.lex as lex 
 
 
-<<<<<<< HEAD
-reserved = { "Agent" : 'AGENT' , "MW" : 'MW', 'Init' : 'INIT','pre': 'PRE','eff' : 'EFF', 'exit' : 'EXIT',
-	     "int" : 'INT', 'float' : 'FLOAT', 'boolean' : 'BOOL', 'true' : 'TRUE', 'false' : 'FALSE', 'shared': 'SHARED', 'enum': 'ENUM', 'ItemPosition':'ITEMPOSITION',
-	     "atomic" : 'ATOMIC', 'getRobotIndex' : 'ROBOT','if' : 'IF' , 'else':'ELSE','getmypos' :'GETMYPOS', 'reachavoid': 'REACHAVOID', 'failflag':'FAILFLAG', 'doneflag':'DONEFLAG',
-=======
 reserved = { "Agent" : 'AGENT' , "MW" : 'MW', 'Init' : 'INIT','pre': 'PRE','eff' : 'EFF', 'exit' : 'EXIT','ObstacleList' : 'OBSTACLELIST',
 	     	"int" : 'INT', 'float' : 'FLOAT', 'boolean' : 'BOOL', 'true' : 'TRUE', 'false' : 'FALSE', 'shared': 'SHARED', 'enum': 'ENUM', 'ItemPosition':'ITEMPOSITION', 'Map':'MAP', 'List': 'LIST','Queue':'QUEUE','Stack':'STACK','printLog':'PRINTLOG','isEmpty':'ISEMPTY','null':'NULL', 'return' : 'RETURN', 
 	    "log":'LOG','msg':'MSG', "atomic" : 'ATOMIC', 'getRobotIndex' : 'ROBOT','if' : 'IF' , 'else':'ELSE','getmypos' :'GETMYPOS', 'doReachAvoid': 'DOREACHAVOID', 'failFlag':'FAILFLAG', 'doneFlag':'DONEFLAG','remove':'REMOVE','getInput':'GETINPUT'
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 	   }
 
 

@@ -12,7 +12,7 @@ public class Main {
                 settings.DRAW_WAYPOINT_NAMES(false);
                 settings.DRAWER(new AddNumsDrawer());
 
-                Simulation sim = new Simulation(AddNums.class, settings.build());
+                Simulation sim = new Simulation(AddNumsApp.class, settings.build());
                 sim.start();
         }
 }

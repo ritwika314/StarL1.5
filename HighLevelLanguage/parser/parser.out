@@ -2,15 +2,10 @@ Created by PLY version 3.4 (http://www.dabeaz.com/ply)
 
 Unused terminals:
 
-<<<<<<< HEAD
-    FAILFLAG
-    DONEFLAG
-=======
     QUEUE
     STACK
     LIST
     PRINTLOG
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 Grammar
 
@@ -30,63 +25,6 @@ Rule 12    pre -> PRE LPAREN cond RPAREN SEMI
 Rule 13    pre -> PRE LPAREN TRUE RPAREN SEMI
 Rule 14    cond -> rel
 Rule 15    cond -> expr
-<<<<<<< HEAD
-Rule 16    cond -> cond AND cond
-Rule 17    cond -> cond OR cond
-Rule 18    cond -> NOT expr
-Rule 19    cond -> LPAREN cond RPAREN
-Rule 20    rel -> expr EQ expr
-Rule 21    rel -> expr NEQ expr
-Rule 22    rel -> expr GEQ expr
-Rule 23    rel -> expr LEQ expr
-Rule 24    rel -> expr GE expr
-Rule 25    rel -> expr LE expr
-Rule 26    eff -> EFF LCURLY stmts RCURLY
-Rule 27    stmts -> stmt stmts
-Rule 28    stmts -> empty
-Rule 29    stmt -> asgn
-Rule 30    stmt -> ite
-Rule 31    stmt -> atomic
-Rule 32    stmt -> funcCall
-Rule 33    stmt -> callreachavoid
-Rule 34    callreachavoid -> REACHAVOID LPAREN varname COMMA val RPAREN
-Rule 35    ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-Rule 36    funcCall -> varname LPAREN RPAREN SEMI
-Rule 37    atomic -> ATOMIC LCURLY stmts RCURLY
-Rule 38    asgn -> varname EQLS expr SEMI
-Rule 39    asgn -> varname EQLS funcCall
-Rule 40    asgn -> varname INCR SEMI
-Rule 41    mwblock -> MW LCURLY decls RCURLY
-Rule 42    decls -> decl decls
-Rule 43    decls -> sharedecl decls
-Rule 44    decls -> enumdecl decls
-Rule 45    decls -> empty
-Rule 46    empty -> <empty>
-Rule 47    decl -> type varname SEMI
-Rule 48    decl -> type varname EQLS val SEMI
-Rule 49    enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
-Rule 50    varnames -> varname COMMA varnames
-Rule 51    varnames -> varname
-Rule 52    sharedecl -> SHARED type varname SEMI
-Rule 53    sharedecl -> SHARED type varname EQLS val SEMI
-Rule 54    val -> INUM
-Rule 55    val -> FNUM
-Rule 56    val -> TRUE
-Rule 57    val -> FALSE
-Rule 58    expr -> val
-Rule 59    expr -> varname
-Rule 60    expr -> expr PLUS expr
-Rule 61    expr -> expr MINUS expr
-Rule 62    expr -> expr TIMES expr
-Rule 63    expr -> expr BY expr
-Rule 64    expr -> LPAREN expr RPAREN
-Rule 65    type -> INT
-Rule 66    type -> FLOAT
-Rule 67    type -> BOOL
-Rule 68    type -> ITEMPOSITION
-Rule 69    varname -> LID
-Rule 70    varname -> CID
-=======
 Rule 16    cond -> flag
 Rule 17    cond -> ISEMPTY LPAREN varname RPAREN
 Rule 18    cond -> cond AND cond
@@ -168,60 +106,10 @@ Rule 93    type -> ITEMPOSITION
 Rule 94    type -> OBSTACLELIST
 Rule 95    varname -> LID
 Rule 96    varname -> CID
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 Terminals, with rules where they appear
 
 AGENT                : 2
-<<<<<<< HEAD
-AND                  : 16
-ATOMIC               : 37
-BOOL                 : 67
-BR                   : 2
-BY                   : 63
-CID                  : 2 70
-COMMA                : 34 50
-DONEFLAG             : 
-EFF                  : 26
-ELSE                 : 35
-ENUM                 : 49
-EQ                   : 20
-EQLS                 : 10 38 39 48 49 53
-EXIT                 : 9
-FAILFLAG             : 
-FALSE                : 57
-FLOAT                : 66
-FNUM                 : 55
-GE                   : 24
-GEQ                  : 22
-GETMYPOS             : 10
-IF                   : 35
-INCR                 : 40
-INIT                 : 3
-INT                  : 65
-INUM                 : 54
-ITEMPOSITION         : 68
-LCURLY               : 3 8 9 26 35 35 37 41 49
-LE                   : 25
-LEQ                  : 23
-LID                  : 69
-LPAREN               : 3 8 9 10 11 12 13 19 34 35 36 64
-MINUS                : 61
-MW                   : 41
-NEQ                  : 21
-NOT                  : 18
-OR                   : 17
-PLUS                 : 60
-PRE                  : 12 13
-RCURLY               : 3 8 9 26 35 35 37 41 49
-REACHAVOID           : 34
-ROBOT                : 11
-RPAREN               : 3 8 9 10 11 12 13 19 34 35 36 64
-SEMI                 : 7 11 12 13 36 38 40 47 48 49 52 53
-SHARED               : 52 53
-TIMES                : 62
-TRUE                 : 13 56
-=======
 AND                  : 18
 ATOMIC               : 60
 BOOL                 : 92
@@ -282,30 +170,11 @@ SHARED               : 76 77
 STACK                : 
 TIMES                : 87
 TRUE                 : 13 80
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 error                : 
 
 Nonterminals, with rules where they appear
 
 agentDecl            : 1
-<<<<<<< HEAD
-asgn                 : 29
-atomic               : 31
-callreachavoid       : 33
-cond                 : 12 16 16 17 17 19 35
-decl                 : 42
-decls                : 1 41 42 43 44
-eff                  : 8 9
-empty                : 5 28 45
-enumdecl             : 44
-event                : 4
-events               : 3 4
-expr                 : 15 18 20 20 21 21 22 22 23 23 24 24 25 25 38 60 60 61 61 62 62 63 63 64
-funcCall             : 32 39
-getpos               : 7
-initblock            : 1
-ite                  : 30
-=======
 args                 : 55
 asgn                 : 33
 atomic               : 36
@@ -329,22 +198,11 @@ ite                  : 35
 log                  : 44
 mapdecl              : 67
 msg                  : 38
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 mwblock              : 1
 neargs               : 57 59
 pgm                  : 0
 pre                  : 8 9
 rel                  : 14
-<<<<<<< HEAD
-robotinit            : 6
-sharedecl            : 43
-stmt                 : 27
-stmts                : 26 27 35 35 37
-type                 : 47 48 52 53
-val                  : 34 48 53 58
-varname              : 8 10 34 36 38 39 40 47 48 49 49 49 50 51 52 53 59
-varnames             : 49 50
-=======
 remove               : 37
 return               : 43
 robotinit            : 6
@@ -355,7 +213,6 @@ type                 : 70 71 76 77
 val                  : 71 77 83
 varname              : 8 10 17 41 45 46 50 53 55 61 62 70 71 72 73 73 73 74 75 76 77 84
 varnames             : 73 74
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 Parsing method: LALR
 
@@ -386,11 +243,7 @@ state 2
 state 3
 
     (1) pgm -> agentDecl . mwblock decls initblock
-<<<<<<< HEAD
-    (41) mwblock -> . MW LCURLY decls RCURLY
-=======
     (63) mwblock -> . MW LCURLY decls RCURLY
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     MW              shift and go to state 6
 
@@ -406,43 +259,6 @@ state 4
 state 5
 
     (1) pgm -> agentDecl mwblock . decls initblock
-<<<<<<< HEAD
-    (42) decls -> . decl decls
-    (43) decls -> . sharedecl decls
-    (44) decls -> . enumdecl decls
-    (45) decls -> . empty
-    (47) decl -> . type varname SEMI
-    (48) decl -> . type varname EQLS val SEMI
-    (52) sharedecl -> . SHARED type varname SEMI
-    (53) sharedecl -> . SHARED type varname EQLS val SEMI
-    (49) enumdecl -> . ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
-    (46) empty -> .
-    (65) type -> . INT
-    (66) type -> . FLOAT
-    (67) type -> . BOOL
-    (68) type -> . ITEMPOSITION
-
-    SHARED          shift and go to state 18
-    ENUM            shift and go to state 13
-    INIT            reduce using rule 46 (empty -> .)
-    INT             shift and go to state 14
-    FLOAT           shift and go to state 15
-    BOOL            shift and go to state 17
-    ITEMPOSITION    shift and go to state 9
-
-    decl                           shift and go to state 8
-    enumdecl                       shift and go to state 16
-    sharedecl                      shift and go to state 10
-    decls                          shift and go to state 19
-    type                           shift and go to state 11
-    empty                          shift and go to state 12
-
-state 6
-
-    (41) mwblock -> MW . LCURLY decls RCURLY
-
-    LCURLY          shift and go to state 20
-=======
     (64) decls -> . decl decls
     (65) decls -> . sharedecl decls
     (66) decls -> . enumdecl decls
@@ -484,7 +300,6 @@ state 6
     (63) mwblock -> MW . LCURLY decls RCURLY
 
     LCURLY          shift and go to state 23
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 7
@@ -496,46 +311,6 @@ state 7
 
 state 8
 
-<<<<<<< HEAD
-    (42) decls -> decl . decls
-    (42) decls -> . decl decls
-    (43) decls -> . sharedecl decls
-    (44) decls -> . enumdecl decls
-    (45) decls -> . empty
-    (47) decl -> . type varname SEMI
-    (48) decl -> . type varname EQLS val SEMI
-    (52) sharedecl -> . SHARED type varname SEMI
-    (53) sharedecl -> . SHARED type varname EQLS val SEMI
-    (49) enumdecl -> . ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
-    (46) empty -> .
-    (65) type -> . INT
-    (66) type -> . FLOAT
-    (67) type -> . BOOL
-    (68) type -> . ITEMPOSITION
-
-    SHARED          shift and go to state 18
-    ENUM            shift and go to state 13
-    INIT            reduce using rule 46 (empty -> .)
-    RCURLY          reduce using rule 46 (empty -> .)
-    INT             shift and go to state 14
-    FLOAT           shift and go to state 15
-    BOOL            shift and go to state 17
-    ITEMPOSITION    shift and go to state 9
-
-    decl                           shift and go to state 8
-    sharedecl                      shift and go to state 10
-    enumdecl                       shift and go to state 16
-    decls                          shift and go to state 21
-    type                           shift and go to state 11
-    empty                          shift and go to state 12
-
-state 9
-
-    (68) type -> ITEMPOSITION .
-
-    LID             reduce using rule 68 (type -> ITEMPOSITION .)
-    CID             reduce using rule 68 (type -> ITEMPOSITION .)
-=======
     (64) decls -> decl . decls
     (64) decls -> . decl decls
     (65) decls -> . sharedecl decls
@@ -580,89 +355,18 @@ state 9
 
     LID             reduce using rule 94 (type -> OBSTACLELIST .)
     CID             reduce using rule 94 (type -> OBSTACLELIST .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 10
 
-<<<<<<< HEAD
-    (43) decls -> sharedecl . decls
-    (42) decls -> . decl decls
-    (43) decls -> . sharedecl decls
-    (44) decls -> . enumdecl decls
-    (45) decls -> . empty
-    (47) decl -> . type varname SEMI
-    (48) decl -> . type varname EQLS val SEMI
-    (52) sharedecl -> . SHARED type varname SEMI
-    (53) sharedecl -> . SHARED type varname EQLS val SEMI
-    (49) enumdecl -> . ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
-    (46) empty -> .
-    (65) type -> . INT
-    (66) type -> . FLOAT
-    (67) type -> . BOOL
-    (68) type -> . ITEMPOSITION
-
-    SHARED          shift and go to state 18
-    ENUM            shift and go to state 13
-    INIT            reduce using rule 46 (empty -> .)
-    RCURLY          reduce using rule 46 (empty -> .)
-    INT             shift and go to state 14
-    FLOAT           shift and go to state 15
-    BOOL            shift and go to state 17
-    ITEMPOSITION    shift and go to state 9
-=======
     (93) type -> ITEMPOSITION .
 
     LID             reduce using rule 93 (type -> ITEMPOSITION .)
     CID             reduce using rule 93 (type -> ITEMPOSITION .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    decl                           shift and go to state 8
-    sharedecl                      shift and go to state 10
-    enumdecl                       shift and go to state 16
-    decls                          shift and go to state 22
-    type                           shift and go to state 11
-    empty                          shift and go to state 12
 
 state 11
 
-<<<<<<< HEAD
-    (47) decl -> type . varname SEMI
-    (48) decl -> type . varname EQLS val SEMI
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    varname                        shift and go to state 25
-
-state 12
-
-    (45) decls -> empty .
-
-    RCURLY          reduce using rule 45 (decls -> empty .)
-    INIT            reduce using rule 45 (decls -> empty .)
-
-
-state 13
-
-    (49) enumdecl -> ENUM . varname LCURLY varnames RCURLY varname EQLS varname SEMI
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    varname                        shift and go to state 26
-
-state 14
-
-    (65) type -> INT .
-
-    LID             reduce using rule 65 (type -> INT .)
-    CID             reduce using rule 65 (type -> INT .)
-=======
     (67) decls -> mapdecl . decls
     (64) decls -> . decl decls
     (65) decls -> . sharedecl decls
@@ -759,59 +463,10 @@ state 14
 
     INIT            reduce using rule 68 (decls -> empty .)
     RCURLY          reduce using rule 68 (decls -> empty .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 15
 
-<<<<<<< HEAD
-    (66) type -> FLOAT .
-
-    LID             reduce using rule 66 (type -> FLOAT .)
-    CID             reduce using rule 66 (type -> FLOAT .)
-
-
-state 16
-
-    (44) decls -> enumdecl . decls
-    (42) decls -> . decl decls
-    (43) decls -> . sharedecl decls
-    (44) decls -> . enumdecl decls
-    (45) decls -> . empty
-    (47) decl -> . type varname SEMI
-    (48) decl -> . type varname EQLS val SEMI
-    (52) sharedecl -> . SHARED type varname SEMI
-    (53) sharedecl -> . SHARED type varname EQLS val SEMI
-    (49) enumdecl -> . ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
-    (46) empty -> .
-    (65) type -> . INT
-    (66) type -> . FLOAT
-    (67) type -> . BOOL
-    (68) type -> . ITEMPOSITION
-
-    SHARED          shift and go to state 18
-    ENUM            shift and go to state 13
-    INIT            reduce using rule 46 (empty -> .)
-    RCURLY          reduce using rule 46 (empty -> .)
-    INT             shift and go to state 14
-    FLOAT           shift and go to state 15
-    BOOL            shift and go to state 17
-    ITEMPOSITION    shift and go to state 9
-
-    decl                           shift and go to state 8
-    sharedecl                      shift and go to state 10
-    enumdecl                       shift and go to state 16
-    decls                          shift and go to state 27
-    type                           shift and go to state 11
-    empty                          shift and go to state 12
-
-state 17
-
-    (67) type -> BOOL .
-
-    LID             reduce using rule 67 (type -> BOOL .)
-    CID             reduce using rule 67 (type -> BOOL .)
-=======
     (73) enumdecl -> ENUM . varname LCURLY varnames RCURLY varname EQLS varname SEMI
     (95) varname -> . LID
     (96) varname -> . CID
@@ -838,68 +493,18 @@ state 17
 
     LID             reduce using rule 90 (type -> INT .)
     CID             reduce using rule 90 (type -> INT .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 18
 
-<<<<<<< HEAD
-    (52) sharedecl -> SHARED . type varname SEMI
-    (53) sharedecl -> SHARED . type varname EQLS val SEMI
-    (65) type -> . INT
-    (66) type -> . FLOAT
-    (67) type -> . BOOL
-    (68) type -> . ITEMPOSITION
-
-    INT             shift and go to state 14
-    FLOAT           shift and go to state 15
-    BOOL            shift and go to state 17
-    ITEMPOSITION    shift and go to state 9
-=======
     (91) type -> FLOAT .
 
     LID             reduce using rule 91 (type -> FLOAT .)
     CID             reduce using rule 91 (type -> FLOAT .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    type                           shift and go to state 28
 
 state 19
 
-<<<<<<< HEAD
-    (1) pgm -> agentDecl mwblock decls . initblock
-    (3) initblock -> . INIT LPAREN RPAREN LCURLY events RCURLY
-
-    INIT            shift and go to state 30
-
-    initblock                      shift and go to state 29
-
-state 20
-
-    (41) mwblock -> MW LCURLY . decls RCURLY
-    (42) decls -> . decl decls
-    (43) decls -> . sharedecl decls
-    (44) decls -> . enumdecl decls
-    (45) decls -> . empty
-    (47) decl -> . type varname SEMI
-    (48) decl -> . type varname EQLS val SEMI
-    (52) sharedecl -> . SHARED type varname SEMI
-    (53) sharedecl -> . SHARED type varname EQLS val SEMI
-    (49) enumdecl -> . ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
-    (46) empty -> .
-    (65) type -> . INT
-    (66) type -> . FLOAT
-    (67) type -> . BOOL
-    (68) type -> . ITEMPOSITION
-
-    SHARED          shift and go to state 18
-    ENUM            shift and go to state 13
-    RCURLY          reduce using rule 46 (empty -> .)
-    INT             shift and go to state 14
-    FLOAT           shift and go to state 15
-    BOOL            shift and go to state 17
-    ITEMPOSITION    shift and go to state 9
-=======
     (66) decls -> enumdecl . decls
     (64) decls -> . decl decls
     (65) decls -> . sharedecl decls
@@ -944,23 +549,10 @@ state 20
 
     LID             reduce using rule 92 (type -> BOOL .)
     CID             reduce using rule 92 (type -> BOOL .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    decl                           shift and go to state 8
-    sharedecl                      shift and go to state 10
-    enumdecl                       shift and go to state 16
-    decls                          shift and go to state 31
-    type                           shift and go to state 11
-    empty                          shift and go to state 12
 
 state 21
 
-<<<<<<< HEAD
-    (42) decls -> decl decls .
-
-    RCURLY          reduce using rule 42 (decls -> decl decls .)
-    INIT            reduce using rule 42 (decls -> decl decls .)
-=======
     (76) sharedecl -> SHARED . type varname SEMI
     (77) sharedecl -> SHARED . type varname EQLS val SEMI
     (90) type -> . INT
@@ -974,52 +566,20 @@ state 21
     BOOL            shift and go to state 20
     ITEMPOSITION    shift and go to state 10
     OBSTACLELIST    shift and go to state 9
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     type                           shift and go to state 33
 
 state 22
 
-<<<<<<< HEAD
-    (43) decls -> sharedecl decls .
-
-    RCURLY          reduce using rule 43 (decls -> sharedecl decls .)
-    INIT            reduce using rule 43 (decls -> sharedecl decls .)
-=======
     (1) pgm -> agentDecl mwblock decls . initblock
     (3) initblock -> . INIT LPAREN RPAREN LCURLY events RCURLY
 
     INIT            shift and go to state 35
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     initblock                      shift and go to state 34
 
 state 23
 
-<<<<<<< HEAD
-    (69) varname -> LID .
-
-    PLUS            reduce using rule 69 (varname -> LID .)
-    MINUS           reduce using rule 69 (varname -> LID .)
-    TIMES           reduce using rule 69 (varname -> LID .)
-    BY              reduce using rule 69 (varname -> LID .)
-    RPAREN          reduce using rule 69 (varname -> LID .)
-    AND             reduce using rule 69 (varname -> LID .)
-    OR              reduce using rule 69 (varname -> LID .)
-    EQ              reduce using rule 69 (varname -> LID .)
-    NEQ             reduce using rule 69 (varname -> LID .)
-    GEQ             reduce using rule 69 (varname -> LID .)
-    LEQ             reduce using rule 69 (varname -> LID .)
-    GE              reduce using rule 69 (varname -> LID .)
-    LE              reduce using rule 69 (varname -> LID .)
-    COMMA           reduce using rule 69 (varname -> LID .)
-    SEMI            reduce using rule 69 (varname -> LID .)
-    EQLS            reduce using rule 69 (varname -> LID .)
-    INCR            reduce using rule 69 (varname -> LID .)
-    LPAREN          reduce using rule 69 (varname -> LID .)
-    RCURLY          reduce using rule 69 (varname -> LID .)
-    LCURLY          reduce using rule 69 (varname -> LID .)
-=======
     (63) mwblock -> MW LCURLY . decls RCURLY
     (64) decls -> . decl decls
     (65) decls -> . sharedecl decls
@@ -1048,7 +608,6 @@ state 23
     BOOL            shift and go to state 20
     ITEMPOSITION    shift and go to state 10
     OBSTACLELIST    shift and go to state 9
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     decl                           shift and go to state 8
     sharedecl                      shift and go to state 12
@@ -1060,75 +619,30 @@ state 23
 
 state 24
 
-<<<<<<< HEAD
-    (70) varname -> CID .
-
-    PLUS            reduce using rule 70 (varname -> CID .)
-    MINUS           reduce using rule 70 (varname -> CID .)
-    TIMES           reduce using rule 70 (varname -> CID .)
-    BY              reduce using rule 70 (varname -> CID .)
-    RPAREN          reduce using rule 70 (varname -> CID .)
-    AND             reduce using rule 70 (varname -> CID .)
-    OR              reduce using rule 70 (varname -> CID .)
-    EQ              reduce using rule 70 (varname -> CID .)
-    NEQ             reduce using rule 70 (varname -> CID .)
-    GEQ             reduce using rule 70 (varname -> CID .)
-    LEQ             reduce using rule 70 (varname -> CID .)
-    GE              reduce using rule 70 (varname -> CID .)
-    LE              reduce using rule 70 (varname -> CID .)
-    COMMA           reduce using rule 70 (varname -> CID .)
-    SEMI            reduce using rule 70 (varname -> CID .)
-    EQLS            reduce using rule 70 (varname -> CID .)
-    INCR            reduce using rule 70 (varname -> CID .)
-    LPAREN          reduce using rule 70 (varname -> CID .)
-    RCURLY          reduce using rule 70 (varname -> CID .)
-    LCURLY          reduce using rule 70 (varname -> CID .)
-=======
     (64) decls -> decl decls .
 
     INIT            reduce using rule 64 (decls -> decl decls .)
     RCURLY          reduce using rule 64 (decls -> decl decls .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 25
 
-<<<<<<< HEAD
-    (47) decl -> type varname . SEMI
-    (48) decl -> type varname . EQLS val SEMI
-
-    SEMI            shift and go to state 33
-    EQLS            shift and go to state 32
-=======
     (67) decls -> mapdecl decls .
 
     INIT            reduce using rule 67 (decls -> mapdecl decls .)
     RCURLY          reduce using rule 67 (decls -> mapdecl decls .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 26
 
-<<<<<<< HEAD
-    (49) enumdecl -> ENUM varname . LCURLY varnames RCURLY varname EQLS varname SEMI
-
-    LCURLY          shift and go to state 34
-=======
     (65) decls -> sharedecl decls .
 
     INIT            reduce using rule 65 (decls -> sharedecl decls .)
     RCURLY          reduce using rule 65 (decls -> sharedecl decls .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 27
 
-<<<<<<< HEAD
-    (44) decls -> enumdecl decls .
-
-    RCURLY          reduce using rule 44 (decls -> enumdecl decls .)
-    INIT            reduce using rule 44 (decls -> enumdecl decls .)
-=======
     (95) varname -> LID .
 
     EQLS            reduce using rule 95 (varname -> LID .)
@@ -1151,20 +665,10 @@ state 27
     COMMA           reduce using rule 95 (varname -> LID .)
     RCURLY          reduce using rule 95 (varname -> LID .)
     LCURLY          reduce using rule 95 (varname -> LID .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 28
 
-<<<<<<< HEAD
-    (52) sharedecl -> SHARED type . varname SEMI
-    (53) sharedecl -> SHARED type . varname EQLS val SEMI
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (96) varname -> CID .
 
     EQLS            reduce using rule 96 (varname -> CID .)
@@ -1187,99 +691,41 @@ state 28
     COMMA           reduce using rule 96 (varname -> CID .)
     RCURLY          reduce using rule 96 (varname -> CID .)
     LCURLY          reduce using rule 96 (varname -> CID .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    varname                        shift and go to state 35
 
 state 29
 
-<<<<<<< HEAD
-    (1) pgm -> agentDecl mwblock decls initblock .
-
-    $end            reduce using rule 1 (pgm -> agentDecl mwblock decls initblock .)
-=======
     (70) decl -> type varname . SEMI
     (71) decl -> type varname . EQLS val SEMI
 
     SEMI            shift and go to state 38
     EQLS            shift and go to state 37
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 30
 
-<<<<<<< HEAD
-    (3) initblock -> INIT . LPAREN RPAREN LCURLY events RCURLY
-
-    LPAREN          shift and go to state 36
-=======
     (73) enumdecl -> ENUM varname . LCURLY varnames RCURLY varname EQLS varname SEMI
 
     LCURLY          shift and go to state 39
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 31
 
-<<<<<<< HEAD
-    (41) mwblock -> MW LCURLY decls . RCURLY
-
-    RCURLY          shift and go to state 37
-=======
     (72) mapdecl -> MAP varname . SEMI
 
     SEMI            shift and go to state 40
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 32
 
-<<<<<<< HEAD
-    (48) decl -> type varname EQLS . val SEMI
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-=======
     (66) decls -> enumdecl decls .
 
     INIT            reduce using rule 66 (decls -> enumdecl decls .)
     RCURLY          reduce using rule 66 (decls -> enumdecl decls .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    val                            shift and go to state 39
 
 state 33
 
-<<<<<<< HEAD
-    (47) decl -> type varname SEMI .
-
-    SHARED          reduce using rule 47 (decl -> type varname SEMI .)
-    ENUM            reduce using rule 47 (decl -> type varname SEMI .)
-    INT             reduce using rule 47 (decl -> type varname SEMI .)
-    FLOAT           reduce using rule 47 (decl -> type varname SEMI .)
-    BOOL            reduce using rule 47 (decl -> type varname SEMI .)
-    ITEMPOSITION    reduce using rule 47 (decl -> type varname SEMI .)
-    INIT            reduce using rule 47 (decl -> type varname SEMI .)
-    RCURLY          reduce using rule 47 (decl -> type varname SEMI .)
-
-
-state 34
-
-    (49) enumdecl -> ENUM varname LCURLY . varnames RCURLY varname EQLS varname SEMI
-    (50) varnames -> . varname COMMA varnames
-    (51) varnames -> . varname
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (76) sharedecl -> SHARED type . varname SEMI
     (77) sharedecl -> SHARED type . varname EQLS val SEMI
     (95) varname -> . LID
@@ -1295,52 +741,24 @@ state 34
     (1) pgm -> agentDecl mwblock decls initblock .
 
     $end            reduce using rule 1 (pgm -> agentDecl mwblock decls initblock .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    varname                        shift and go to state 43
-    varnames                       shift and go to state 44
 
 state 35
 
-<<<<<<< HEAD
-    (52) sharedecl -> SHARED type varname . SEMI
-    (53) sharedecl -> SHARED type varname . EQLS val SEMI
-
-    SEMI            shift and go to state 45
-    EQLS            shift and go to state 46
-=======
     (3) initblock -> INIT . LPAREN RPAREN LCURLY events RCURLY
 
     LPAREN          shift and go to state 42
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 36
 
-<<<<<<< HEAD
-    (3) initblock -> INIT LPAREN . RPAREN LCURLY events RCURLY
-
-    RPAREN          shift and go to state 47
-=======
     (63) mwblock -> MW LCURLY decls . RCURLY
 
     RCURLY          shift and go to state 43
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 37
 
-<<<<<<< HEAD
-    (41) mwblock -> MW LCURLY decls RCURLY .
-
-    SHARED          reduce using rule 41 (mwblock -> MW LCURLY decls RCURLY .)
-    ENUM            reduce using rule 41 (mwblock -> MW LCURLY decls RCURLY .)
-    INT             reduce using rule 41 (mwblock -> MW LCURLY decls RCURLY .)
-    FLOAT           reduce using rule 41 (mwblock -> MW LCURLY decls RCURLY .)
-    BOOL            reduce using rule 41 (mwblock -> MW LCURLY decls RCURLY .)
-    ITEMPOSITION    reduce using rule 41 (mwblock -> MW LCURLY decls RCURLY .)
-    INIT            reduce using rule 41 (mwblock -> MW LCURLY decls RCURLY .)
-=======
     (71) decl -> type varname EQLS . val SEMI
     (78) val -> . INUM
     (79) val -> . FNUM
@@ -1353,30 +771,11 @@ state 37
     TRUE            shift and go to state 49
     FALSE           shift and go to state 44
     NULL            shift and go to state 48
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     val                            shift and go to state 45
 
 state 38
 
-<<<<<<< HEAD
-    (57) val -> FALSE .
-
-    EQ              reduce using rule 57 (val -> FALSE .)
-    NEQ             reduce using rule 57 (val -> FALSE .)
-    GEQ             reduce using rule 57 (val -> FALSE .)
-    LEQ             reduce using rule 57 (val -> FALSE .)
-    GE              reduce using rule 57 (val -> FALSE .)
-    LE              reduce using rule 57 (val -> FALSE .)
-    PLUS            reduce using rule 57 (val -> FALSE .)
-    MINUS           reduce using rule 57 (val -> FALSE .)
-    TIMES           reduce using rule 57 (val -> FALSE .)
-    BY              reduce using rule 57 (val -> FALSE .)
-    AND             reduce using rule 57 (val -> FALSE .)
-    OR              reduce using rule 57 (val -> FALSE .)
-    RPAREN          reduce using rule 57 (val -> FALSE .)
-    SEMI            reduce using rule 57 (val -> FALSE .)
-=======
     (70) decl -> type varname SEMI .
 
     SHARED          reduce using rule 70 (decl -> type varname SEMI .)
@@ -1389,16 +788,10 @@ state 38
     OBSTACLELIST    reduce using rule 70 (decl -> type varname SEMI .)
     INIT            reduce using rule 70 (decl -> type varname SEMI .)
     RCURLY          reduce using rule 70 (decl -> type varname SEMI .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 39
 
-<<<<<<< HEAD
-    (48) decl -> type varname EQLS val . SEMI
-
-    SEMI            shift and go to state 48
-=======
     (73) enumdecl -> ENUM varname LCURLY . varnames RCURLY varname EQLS varname SEMI
     (74) varnames -> . varname COMMA varnames
     (75) varnames -> . varname
@@ -1407,31 +800,12 @@ state 39
 
     LID             shift and go to state 27
     CID             shift and go to state 28
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     varname                        shift and go to state 50
     varnames                       shift and go to state 51
 
 state 40
 
-<<<<<<< HEAD
-    (55) val -> FNUM .
-
-    EQ              reduce using rule 55 (val -> FNUM .)
-    NEQ             reduce using rule 55 (val -> FNUM .)
-    GEQ             reduce using rule 55 (val -> FNUM .)
-    LEQ             reduce using rule 55 (val -> FNUM .)
-    GE              reduce using rule 55 (val -> FNUM .)
-    LE              reduce using rule 55 (val -> FNUM .)
-    PLUS            reduce using rule 55 (val -> FNUM .)
-    MINUS           reduce using rule 55 (val -> FNUM .)
-    TIMES           reduce using rule 55 (val -> FNUM .)
-    BY              reduce using rule 55 (val -> FNUM .)
-    AND             reduce using rule 55 (val -> FNUM .)
-    OR              reduce using rule 55 (val -> FNUM .)
-    RPAREN          reduce using rule 55 (val -> FNUM .)
-    SEMI            reduce using rule 55 (val -> FNUM .)
-=======
     (72) mapdecl -> MAP varname SEMI .
 
     SHARED          reduce using rule 72 (mapdecl -> MAP varname SEMI .)
@@ -1444,72 +818,26 @@ state 40
     OBSTACLELIST    reduce using rule 72 (mapdecl -> MAP varname SEMI .)
     INIT            reduce using rule 72 (mapdecl -> MAP varname SEMI .)
     RCURLY          reduce using rule 72 (mapdecl -> MAP varname SEMI .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 41
 
-<<<<<<< HEAD
-    (54) val -> INUM .
-
-    EQ              reduce using rule 54 (val -> INUM .)
-    NEQ             reduce using rule 54 (val -> INUM .)
-    GEQ             reduce using rule 54 (val -> INUM .)
-    LEQ             reduce using rule 54 (val -> INUM .)
-    GE              reduce using rule 54 (val -> INUM .)
-    LE              reduce using rule 54 (val -> INUM .)
-    PLUS            reduce using rule 54 (val -> INUM .)
-    MINUS           reduce using rule 54 (val -> INUM .)
-    TIMES           reduce using rule 54 (val -> INUM .)
-    BY              reduce using rule 54 (val -> INUM .)
-    AND             reduce using rule 54 (val -> INUM .)
-    OR              reduce using rule 54 (val -> INUM .)
-    RPAREN          reduce using rule 54 (val -> INUM .)
-    SEMI            reduce using rule 54 (val -> INUM .)
-=======
     (76) sharedecl -> SHARED type varname . SEMI
     (77) sharedecl -> SHARED type varname . EQLS val SEMI
 
     SEMI            shift and go to state 52
     EQLS            shift and go to state 53
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 42
 
-<<<<<<< HEAD
-    (56) val -> TRUE .
-
-    EQ              reduce using rule 56 (val -> TRUE .)
-    NEQ             reduce using rule 56 (val -> TRUE .)
-    GEQ             reduce using rule 56 (val -> TRUE .)
-    LEQ             reduce using rule 56 (val -> TRUE .)
-    GE              reduce using rule 56 (val -> TRUE .)
-    LE              reduce using rule 56 (val -> TRUE .)
-    PLUS            reduce using rule 56 (val -> TRUE .)
-    MINUS           reduce using rule 56 (val -> TRUE .)
-    TIMES           reduce using rule 56 (val -> TRUE .)
-    BY              reduce using rule 56 (val -> TRUE .)
-    AND             reduce using rule 56 (val -> TRUE .)
-    OR              reduce using rule 56 (val -> TRUE .)
-    RPAREN          reduce using rule 56 (val -> TRUE .)
-    SEMI            reduce using rule 56 (val -> TRUE .)
-=======
     (3) initblock -> INIT LPAREN . RPAREN LCURLY events RCURLY
 
     RPAREN          shift and go to state 54
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 43
 
-<<<<<<< HEAD
-    (50) varnames -> varname . COMMA varnames
-    (51) varnames -> varname .
-
-    COMMA           shift and go to state 49
-    RCURLY          reduce using rule 51 (varnames -> varname .)
-=======
     (63) mwblock -> MW LCURLY decls RCURLY .
 
     SHARED          reduce using rule 63 (mwblock -> MW LCURLY decls RCURLY .)
@@ -1521,16 +849,10 @@ state 43
     ITEMPOSITION    reduce using rule 63 (mwblock -> MW LCURLY decls RCURLY .)
     OBSTACLELIST    reduce using rule 63 (mwblock -> MW LCURLY decls RCURLY .)
     INIT            reduce using rule 63 (mwblock -> MW LCURLY decls RCURLY .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 44
 
-<<<<<<< HEAD
-    (49) enumdecl -> ENUM varname LCURLY varnames . RCURLY varname EQLS varname SEMI
-
-    RCURLY          shift and go to state 50
-=======
     (81) val -> FALSE .
 
     SEMI            reduce using rule 81 (val -> FALSE .)
@@ -1548,43 +870,17 @@ state 44
     LEQ             reduce using rule 81 (val -> FALSE .)
     GE              reduce using rule 81 (val -> FALSE .)
     LE              reduce using rule 81 (val -> FALSE .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 45
 
-<<<<<<< HEAD
-    (52) sharedecl -> SHARED type varname SEMI .
-
-    SHARED          reduce using rule 52 (sharedecl -> SHARED type varname SEMI .)
-    ENUM            reduce using rule 52 (sharedecl -> SHARED type varname SEMI .)
-    INT             reduce using rule 52 (sharedecl -> SHARED type varname SEMI .)
-    FLOAT           reduce using rule 52 (sharedecl -> SHARED type varname SEMI .)
-    BOOL            reduce using rule 52 (sharedecl -> SHARED type varname SEMI .)
-    ITEMPOSITION    reduce using rule 52 (sharedecl -> SHARED type varname SEMI .)
-    RCURLY          reduce using rule 52 (sharedecl -> SHARED type varname SEMI .)
-    INIT            reduce using rule 52 (sharedecl -> SHARED type varname SEMI .)
-=======
     (71) decl -> type varname EQLS val . SEMI
 
     SEMI            shift and go to state 55
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 46
 
-<<<<<<< HEAD
-    (53) sharedecl -> SHARED type varname EQLS . val SEMI
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-=======
     (79) val -> FNUM .
 
     SEMI            reduce using rule 79 (val -> FNUM .)
@@ -1602,18 +898,10 @@ state 46
     LEQ             reduce using rule 79 (val -> FNUM .)
     GE              reduce using rule 79 (val -> FNUM .)
     LE              reduce using rule 79 (val -> FNUM .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    val                            shift and go to state 51
 
 state 47
 
-<<<<<<< HEAD
-    (3) initblock -> INIT LPAREN RPAREN . LCURLY events RCURLY
-
-    LCURLY          shift and go to state 52
-
-=======
     (78) val -> INUM .
 
     SEMI            reduce using rule 78 (val -> INUM .)
@@ -1631,21 +919,8 @@ state 47
     LEQ             reduce using rule 78 (val -> INUM .)
     GE              reduce using rule 78 (val -> INUM .)
     LE              reduce using rule 78 (val -> INUM .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
-<<<<<<< HEAD
-    (48) decl -> type varname EQLS val SEMI .
-
-    SHARED          reduce using rule 48 (decl -> type varname EQLS val SEMI .)
-    ENUM            reduce using rule 48 (decl -> type varname EQLS val SEMI .)
-    INT             reduce using rule 48 (decl -> type varname EQLS val SEMI .)
-    FLOAT           reduce using rule 48 (decl -> type varname EQLS val SEMI .)
-    BOOL            reduce using rule 48 (decl -> type varname EQLS val SEMI .)
-    ITEMPOSITION    reduce using rule 48 (decl -> type varname EQLS val SEMI .)
-    INIT            reduce using rule 48 (decl -> type varname EQLS val SEMI .)
-    RCURLY          reduce using rule 48 (decl -> type varname EQLS val SEMI .)
-=======
 state 48
 
     (82) val -> NULL .
@@ -1665,21 +940,10 @@ state 48
     LEQ             reduce using rule 82 (val -> NULL .)
     GE              reduce using rule 82 (val -> NULL .)
     LE              reduce using rule 82 (val -> NULL .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 49
 
-<<<<<<< HEAD
-    (50) varnames -> varname COMMA . varnames
-    (50) varnames -> . varname COMMA varnames
-    (51) varnames -> . varname
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (80) val -> TRUE .
 
     SEMI            reduce using rule 80 (val -> TRUE .)
@@ -1697,65 +961,26 @@ state 49
     LEQ             reduce using rule 80 (val -> TRUE .)
     GE              reduce using rule 80 (val -> TRUE .)
     LE              reduce using rule 80 (val -> TRUE .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    varname                        shift and go to state 43
-    varnames                       shift and go to state 53
 
 state 50
 
-<<<<<<< HEAD
-    (49) enumdecl -> ENUM varname LCURLY varnames RCURLY . varname EQLS varname SEMI
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (74) varnames -> varname . COMMA varnames
     (75) varnames -> varname .
 
     COMMA           shift and go to state 56
     RCURLY          reduce using rule 75 (varnames -> varname .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    varname                        shift and go to state 54
 
 state 51
 
-<<<<<<< HEAD
-    (53) sharedecl -> SHARED type varname EQLS val . SEMI
-
-    SEMI            shift and go to state 55
-=======
     (73) enumdecl -> ENUM varname LCURLY varnames . RCURLY varname EQLS varname SEMI
 
     RCURLY          shift and go to state 57
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 52
 
-<<<<<<< HEAD
-    (3) initblock -> INIT LPAREN RPAREN LCURLY . events RCURLY
-    (4) events -> . event events
-    (5) events -> . empty
-    (6) event -> . robotinit
-    (7) event -> . getpos SEMI
-    (8) event -> . varname LPAREN RPAREN LCURLY pre eff RCURLY
-    (9) event -> . EXIT LPAREN RPAREN LCURLY pre eff RCURLY
-    (46) empty -> .
-    (11) robotinit -> . ROBOT LPAREN RPAREN SEMI
-    (10) getpos -> . varname EQLS GETMYPOS LPAREN RPAREN
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    EXIT            shift and go to state 60
-    RCURLY          reduce using rule 46 (empty -> .)
-    ROBOT           shift and go to state 58
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (76) sharedecl -> SHARED type varname SEMI .
 
     SHARED          reduce using rule 76 (sharedecl -> SHARED type varname SEMI .)
@@ -1768,22 +993,10 @@ state 52
     OBSTACLELIST    reduce using rule 76 (sharedecl -> SHARED type varname SEMI .)
     INIT            reduce using rule 76 (sharedecl -> SHARED type varname SEMI .)
     RCURLY          reduce using rule 76 (sharedecl -> SHARED type varname SEMI .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    getpos                         shift and go to state 61
-    robotinit                      shift and go to state 57
-    varname                        shift and go to state 56
-    event                          shift and go to state 59
-    events                         shift and go to state 62
-    empty                          shift and go to state 63
 
 state 53
 
-<<<<<<< HEAD
-    (50) varnames -> varname COMMA varnames .
-
-    RCURLY          reduce using rule 50 (varnames -> varname COMMA varnames .)
-=======
     (77) sharedecl -> SHARED type varname EQLS . val SEMI
     (78) val -> . INUM
     (79) val -> . FNUM
@@ -1796,37 +1009,18 @@ state 53
     TRUE            shift and go to state 49
     FALSE           shift and go to state 44
     NULL            shift and go to state 48
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     val                            shift and go to state 58
 
 state 54
 
-<<<<<<< HEAD
-    (49) enumdecl -> ENUM varname LCURLY varnames RCURLY varname . EQLS varname SEMI
-
-    EQLS            shift and go to state 64
-=======
     (3) initblock -> INIT LPAREN RPAREN . LCURLY events RCURLY
 
     LCURLY          shift and go to state 59
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 55
 
-<<<<<<< HEAD
-    (53) sharedecl -> SHARED type varname EQLS val SEMI .
-
-    SHARED          reduce using rule 53 (sharedecl -> SHARED type varname EQLS val SEMI .)
-    ENUM            reduce using rule 53 (sharedecl -> SHARED type varname EQLS val SEMI .)
-    INT             reduce using rule 53 (sharedecl -> SHARED type varname EQLS val SEMI .)
-    FLOAT           reduce using rule 53 (sharedecl -> SHARED type varname EQLS val SEMI .)
-    BOOL            reduce using rule 53 (sharedecl -> SHARED type varname EQLS val SEMI .)
-    ITEMPOSITION    reduce using rule 53 (sharedecl -> SHARED type varname EQLS val SEMI .)
-    RCURLY          reduce using rule 53 (sharedecl -> SHARED type varname EQLS val SEMI .)
-    INIT            reduce using rule 53 (sharedecl -> SHARED type varname EQLS val SEMI .)
-=======
     (71) decl -> type varname EQLS val SEMI .
 
     SHARED          reduce using rule 71 (decl -> type varname EQLS val SEMI .)
@@ -1839,18 +1033,10 @@ state 55
     OBSTACLELIST    reduce using rule 71 (decl -> type varname EQLS val SEMI .)
     INIT            reduce using rule 71 (decl -> type varname EQLS val SEMI .)
     RCURLY          reduce using rule 71 (decl -> type varname EQLS val SEMI .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 56
 
-<<<<<<< HEAD
-    (8) event -> varname . LPAREN RPAREN LCURLY pre eff RCURLY
-    (10) getpos -> varname . EQLS GETMYPOS LPAREN RPAREN
-
-    LPAREN          shift and go to state 66
-    EQLS            shift and go to state 65
-=======
     (74) varnames -> varname COMMA . varnames
     (74) varnames -> . varname COMMA varnames
     (75) varnames -> . varname
@@ -1859,84 +1045,37 @@ state 56
 
     LID             shift and go to state 27
     CID             shift and go to state 28
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     varname                        shift and go to state 50
     varnames                       shift and go to state 60
 
 state 57
 
-<<<<<<< HEAD
-    (6) event -> robotinit .
-
-    EXIT            reduce using rule 6 (event -> robotinit .)
-    ROBOT           reduce using rule 6 (event -> robotinit .)
-    LID             reduce using rule 6 (event -> robotinit .)
-    CID             reduce using rule 6 (event -> robotinit .)
-    RCURLY          reduce using rule 6 (event -> robotinit .)
-=======
     (73) enumdecl -> ENUM varname LCURLY varnames RCURLY . varname EQLS varname SEMI
     (95) varname -> . LID
     (96) varname -> . CID
 
     LID             shift and go to state 27
     CID             shift and go to state 28
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     varname                        shift and go to state 61
 
 state 58
 
-<<<<<<< HEAD
-    (11) robotinit -> ROBOT . LPAREN RPAREN SEMI
-
-    LPAREN          shift and go to state 67
-=======
     (77) sharedecl -> SHARED type varname EQLS val . SEMI
 
     SEMI            shift and go to state 62
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 59
 
-<<<<<<< HEAD
-    (4) events -> event . events
-=======
     (3) initblock -> INIT LPAREN RPAREN LCURLY . events RCURLY
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
     (4) events -> . event events
     (5) events -> . empty
     (6) event -> . robotinit
     (7) event -> . getpos SEMI
     (8) event -> . varname LPAREN RPAREN LCURLY pre eff RCURLY
     (9) event -> . EXIT LPAREN RPAREN LCURLY pre eff RCURLY
-<<<<<<< HEAD
-    (46) empty -> .
-    (11) robotinit -> . ROBOT LPAREN RPAREN SEMI
-    (10) getpos -> . varname EQLS GETMYPOS LPAREN RPAREN
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    EXIT            shift and go to state 60
-    RCURLY          reduce using rule 46 (empty -> .)
-    ROBOT           shift and go to state 58
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    getpos                         shift and go to state 61
-    robotinit                      shift and go to state 57
-    varname                        shift and go to state 56
-    events                         shift and go to state 68
-    event                          shift and go to state 59
-    empty                          shift and go to state 63
-
-state 60
-
-    (9) event -> EXIT . LPAREN RPAREN LCURLY pre eff RCURLY
-
-    LPAREN          shift and go to state 69
-=======
     (69) empty -> .
     (11) robotinit -> . ROBOT LPAREN RPAREN SEMI
     (10) getpos -> . varname EQLS GETMYPOS LPAREN RPAREN
@@ -1961,29 +1100,17 @@ state 60
     (74) varnames -> varname COMMA varnames .
 
     RCURLY          reduce using rule 74 (varnames -> varname COMMA varnames .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 61
 
-<<<<<<< HEAD
-    (7) event -> getpos . SEMI
-
-    SEMI            shift and go to state 70
-=======
     (73) enumdecl -> ENUM varname LCURLY varnames RCURLY varname . EQLS varname SEMI
 
     EQLS            shift and go to state 71
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 62
 
-<<<<<<< HEAD
-    (3) initblock -> INIT LPAREN RPAREN LCURLY events . RCURLY
-
-    RCURLY          shift and go to state 71
-=======
     (77) sharedecl -> SHARED type varname EQLS val SEMI .
 
     SHARED          reduce using rule 77 (sharedecl -> SHARED type varname EQLS val SEMI .)
@@ -1996,42 +1123,19 @@ state 62
     OBSTACLELIST    reduce using rule 77 (sharedecl -> SHARED type varname EQLS val SEMI .)
     INIT            reduce using rule 77 (sharedecl -> SHARED type varname EQLS val SEMI .)
     RCURLY          reduce using rule 77 (sharedecl -> SHARED type varname EQLS val SEMI .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 63
 
-<<<<<<< HEAD
-    (5) events -> empty .
-
-    RCURLY          reduce using rule 5 (events -> empty .)
-=======
     (8) event -> varname . LPAREN RPAREN LCURLY pre eff RCURLY
     (10) getpos -> varname . EQLS GETMYPOS LPAREN RPAREN
 
     LPAREN          shift and go to state 73
     EQLS            shift and go to state 72
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 64
 
-<<<<<<< HEAD
-    (49) enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS . varname SEMI
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    varname                        shift and go to state 72
-
-state 65
-
-    (10) getpos -> varname EQLS . GETMYPOS LPAREN RPAREN
-
-    GETMYPOS        shift and go to state 73
-=======
     (6) event -> robotinit .
 
     EXIT            reduce using rule 6 (event -> robotinit .)
@@ -2046,16 +1150,10 @@ state 65
     (11) robotinit -> ROBOT . LPAREN RPAREN SEMI
 
     LPAREN          shift and go to state 74
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 66
 
-<<<<<<< HEAD
-    (8) event -> varname LPAREN . RPAREN LCURLY pre eff RCURLY
-
-    RPAREN          shift and go to state 74
-=======
     (4) events -> event . events
     (4) events -> . event events
     (5) events -> . empty
@@ -2083,159 +1181,81 @@ state 66
     empty                          shift and go to state 70
 
 state 67
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     (9) event -> EXIT . LPAREN RPAREN LCURLY pre eff RCURLY
 
     LPAREN          shift and go to state 76
 
-<<<<<<< HEAD
-    (11) robotinit -> ROBOT LPAREN . RPAREN SEMI
-
-    RPAREN          shift and go to state 75
-
-
-state 68
-
-    (4) events -> event events .
-
-    RCURLY          reduce using rule 4 (events -> event events .)
-=======
 
 state 68
 
     (7) event -> getpos . SEMI
 
     SEMI            shift and go to state 77
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 69
 
-<<<<<<< HEAD
-    (9) event -> EXIT LPAREN . RPAREN LCURLY pre eff RCURLY
-
-    RPAREN          shift and go to state 76
-=======
     (3) initblock -> INIT LPAREN RPAREN LCURLY events . RCURLY
 
     RCURLY          shift and go to state 78
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 70
 
-<<<<<<< HEAD
-    (7) event -> getpos SEMI .
-
-    EXIT            reduce using rule 7 (event -> getpos SEMI .)
-    ROBOT           reduce using rule 7 (event -> getpos SEMI .)
-    LID             reduce using rule 7 (event -> getpos SEMI .)
-    CID             reduce using rule 7 (event -> getpos SEMI .)
-    RCURLY          reduce using rule 7 (event -> getpos SEMI .)
-=======
     (5) events -> empty .
 
     RCURLY          reduce using rule 5 (events -> empty .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 71
 
-<<<<<<< HEAD
-    (3) initblock -> INIT LPAREN RPAREN LCURLY events RCURLY .
-
-    $end            reduce using rule 3 (initblock -> INIT LPAREN RPAREN LCURLY events RCURLY .)
-=======
     (73) enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS . varname SEMI
     (95) varname -> . LID
     (96) varname -> . CID
 
     LID             shift and go to state 27
     CID             shift and go to state 28
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     varname                        shift and go to state 79
 
 state 72
 
-<<<<<<< HEAD
-    (49) enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname . SEMI
-
-    SEMI            shift and go to state 77
-=======
     (10) getpos -> varname EQLS . GETMYPOS LPAREN RPAREN
 
     GETMYPOS        shift and go to state 80
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 73
 
-<<<<<<< HEAD
-    (10) getpos -> varname EQLS GETMYPOS . LPAREN RPAREN
-
-    LPAREN          shift and go to state 78
-=======
     (8) event -> varname LPAREN . RPAREN LCURLY pre eff RCURLY
 
     RPAREN          shift and go to state 81
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 74
 
-<<<<<<< HEAD
-    (8) event -> varname LPAREN RPAREN . LCURLY pre eff RCURLY
-
-    LCURLY          shift and go to state 79
-=======
     (11) robotinit -> ROBOT LPAREN . RPAREN SEMI
 
     RPAREN          shift and go to state 82
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 75
 
-<<<<<<< HEAD
-    (11) robotinit -> ROBOT LPAREN RPAREN . SEMI
-
-    SEMI            shift and go to state 80
-=======
     (4) events -> event events .
 
     RCURLY          reduce using rule 4 (events -> event events .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 76
 
-<<<<<<< HEAD
-    (9) event -> EXIT LPAREN RPAREN . LCURLY pre eff RCURLY
-
-    LCURLY          shift and go to state 81
-=======
     (9) event -> EXIT LPAREN . RPAREN LCURLY pre eff RCURLY
 
     RPAREN          shift and go to state 83
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 77
 
-<<<<<<< HEAD
-    (49) enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .
-
-    SHARED          reduce using rule 49 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
-    ENUM            reduce using rule 49 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
-    INT             reduce using rule 49 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
-    FLOAT           reduce using rule 49 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
-    BOOL            reduce using rule 49 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
-    ITEMPOSITION    reduce using rule 49 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
-    INIT            reduce using rule 49 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
-    RCURLY          reduce using rule 49 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
-=======
     (7) event -> getpos SEMI .
 
     EXIT            reduce using rule 7 (event -> getpos SEMI .)
@@ -2243,107 +1263,52 @@ state 77
     LID             reduce using rule 7 (event -> getpos SEMI .)
     CID             reduce using rule 7 (event -> getpos SEMI .)
     RCURLY          reduce using rule 7 (event -> getpos SEMI .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 78
 
-<<<<<<< HEAD
-    (10) getpos -> varname EQLS GETMYPOS LPAREN . RPAREN
-
-    RPAREN          shift and go to state 82
-=======
     (3) initblock -> INIT LPAREN RPAREN LCURLY events RCURLY .
 
     $end            reduce using rule 3 (initblock -> INIT LPAREN RPAREN LCURLY events RCURLY .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 79
 
-<<<<<<< HEAD
-    (8) event -> varname LPAREN RPAREN LCURLY . pre eff RCURLY
-    (12) pre -> . PRE LPAREN cond RPAREN SEMI
-    (13) pre -> . PRE LPAREN TRUE RPAREN SEMI
-
-    PRE             shift and go to state 84
-=======
     (73) enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname . SEMI
 
     SEMI            shift and go to state 84
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    pre                            shift and go to state 83
 
 state 80
 
-<<<<<<< HEAD
-    (11) robotinit -> ROBOT LPAREN RPAREN SEMI .
-
-    EXIT            reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
-    ROBOT           reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
-    LID             reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
-    CID             reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
-    RCURLY          reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
-=======
     (10) getpos -> varname EQLS GETMYPOS . LPAREN RPAREN
 
     LPAREN          shift and go to state 85
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 81
 
-<<<<<<< HEAD
-    (9) event -> EXIT LPAREN RPAREN LCURLY . pre eff RCURLY
-    (12) pre -> . PRE LPAREN cond RPAREN SEMI
-    (13) pre -> . PRE LPAREN TRUE RPAREN SEMI
-
-    PRE             shift and go to state 84
-=======
     (8) event -> varname LPAREN RPAREN . LCURLY pre eff RCURLY
 
     LCURLY          shift and go to state 86
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    pre                            shift and go to state 85
 
 state 82
 
-<<<<<<< HEAD
-    (10) getpos -> varname EQLS GETMYPOS LPAREN RPAREN .
-
-    SEMI            reduce using rule 10 (getpos -> varname EQLS GETMYPOS LPAREN RPAREN .)
-=======
     (11) robotinit -> ROBOT LPAREN RPAREN . SEMI
 
     SEMI            shift and go to state 87
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 83
 
-<<<<<<< HEAD
-    (8) event -> varname LPAREN RPAREN LCURLY pre . eff RCURLY
-    (26) eff -> . EFF LCURLY stmts RCURLY
-
-    EFF             shift and go to state 86
-=======
     (9) event -> EXIT LPAREN RPAREN . LCURLY pre eff RCURLY
 
     LCURLY          shift and go to state 88
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    eff                            shift and go to state 87
 
 state 84
 
-<<<<<<< HEAD
-    (12) pre -> PRE . LPAREN cond RPAREN SEMI
-    (13) pre -> PRE . LPAREN TRUE RPAREN SEMI
-
-    LPAREN          shift and go to state 88
-=======
     (73) enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .
 
     SHARED          reduce using rule 73 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
@@ -2356,25 +1321,10 @@ state 84
     OBSTACLELIST    reduce using rule 73 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
     INIT            reduce using rule 73 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
     RCURLY          reduce using rule 73 (enumdecl -> ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 85
 
-<<<<<<< HEAD
-    (9) event -> EXIT LPAREN RPAREN LCURLY pre . eff RCURLY
-    (26) eff -> . EFF LCURLY stmts RCURLY
-
-    EFF             shift and go to state 86
-
-    eff                            shift and go to state 89
-
-state 86
-
-    (26) eff -> EFF . LCURLY stmts RCURLY
-
-    LCURLY          shift and go to state 90
-=======
     (10) getpos -> varname EQLS GETMYPOS LPAREN . RPAREN
 
     RPAREN          shift and go to state 89
@@ -2387,17 +1337,11 @@ state 86
     (13) pre -> . PRE LPAREN TRUE RPAREN SEMI
 
     PRE             shift and go to state 91
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     pre                            shift and go to state 90
 
 state 87
 
-<<<<<<< HEAD
-    (8) event -> varname LPAREN RPAREN LCURLY pre eff . RCURLY
-
-    RCURLY          shift and go to state 91
-=======
     (11) robotinit -> ROBOT LPAREN RPAREN SEMI .
 
     EXIT            reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
@@ -2405,61 +1349,10 @@ state 87
     LID             reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
     CID             reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
     RCURLY          reduce using rule 11 (robotinit -> ROBOT LPAREN RPAREN SEMI .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 88
 
-<<<<<<< HEAD
-    (12) pre -> PRE LPAREN . cond RPAREN SEMI
-    (13) pre -> PRE LPAREN . TRUE RPAREN SEMI
-    (14) cond -> . rel
-    (15) cond -> . expr
-    (16) cond -> . cond AND cond
-    (17) cond -> . cond OR cond
-    (18) cond -> . NOT expr
-    (19) cond -> . LPAREN cond RPAREN
-    (20) rel -> . expr EQ expr
-    (21) rel -> . expr NEQ expr
-    (22) rel -> . expr GEQ expr
-    (23) rel -> . expr LEQ expr
-    (24) rel -> . expr GE expr
-    (25) rel -> . expr LE expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    TRUE            shift and go to state 93
-    NOT             shift and go to state 99
-    LPAREN          shift and go to state 95
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    expr                           shift and go to state 97
-    cond                           shift and go to state 92
-    val                            shift and go to state 96
-    rel                            shift and go to state 94
-    varname                        shift and go to state 98
-
-state 89
-
-    (9) event -> EXIT LPAREN RPAREN LCURLY pre eff . RCURLY
-
-    RCURLY          shift and go to state 100
-=======
     (9) event -> EXIT LPAREN RPAREN LCURLY . pre eff RCURLY
     (12) pre -> . PRE LPAREN cond RPAREN SEMI
     (13) pre -> . PRE LPAREN TRUE RPAREN SEMI
@@ -2473,58 +1366,10 @@ state 89
     (10) getpos -> varname EQLS GETMYPOS LPAREN RPAREN .
 
     SEMI            reduce using rule 10 (getpos -> varname EQLS GETMYPOS LPAREN RPAREN .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 90
 
-<<<<<<< HEAD
-    (26) eff -> EFF LCURLY . stmts RCURLY
-    (27) stmts -> . stmt stmts
-    (28) stmts -> . empty
-    (29) stmt -> . asgn
-    (30) stmt -> . ite
-    (31) stmt -> . atomic
-    (32) stmt -> . funcCall
-    (33) stmt -> . callreachavoid
-    (46) empty -> .
-    (38) asgn -> . varname EQLS expr SEMI
-    (39) asgn -> . varname EQLS funcCall
-    (40) asgn -> . varname INCR SEMI
-    (35) ite -> . IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-    (37) atomic -> . ATOMIC LCURLY stmts RCURLY
-    (36) funcCall -> . varname LPAREN RPAREN SEMI
-    (34) callreachavoid -> . REACHAVOID LPAREN varname COMMA val RPAREN
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    RCURLY          reduce using rule 46 (empty -> .)
-    IF              shift and go to state 107
-    ATOMIC          shift and go to state 102
-    REACHAVOID      shift and go to state 111
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    funcCall                       shift and go to state 108
-    stmts                          shift and go to state 103
-    varname                        shift and go to state 109
-    ite                            shift and go to state 101
-    stmt                           shift and go to state 106
-    asgn                           shift and go to state 104
-    atomic                         shift and go to state 112
-    callreachavoid                 shift and go to state 110
-    empty                          shift and go to state 105
-
-state 91
-
-    (8) event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .
-
-    EXIT            reduce using rule 8 (event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .)
-    ROBOT           reduce using rule 8 (event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .)
-    LID             reduce using rule 8 (event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .)
-    CID             reduce using rule 8 (event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .)
-    RCURLY          reduce using rule 8 (event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .)
-=======
     (8) event -> varname LPAREN RPAREN LCURLY pre . eff RCURLY
     (30) eff -> . EFF LCURLY stmts RCURLY
 
@@ -2538,43 +1383,10 @@ state 91
     (13) pre -> PRE . LPAREN TRUE RPAREN SEMI
 
     LPAREN          shift and go to state 95
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 92
 
-<<<<<<< HEAD
-    (12) pre -> PRE LPAREN cond . RPAREN SEMI
-    (16) cond -> cond . AND cond
-    (17) cond -> cond . OR cond
-
-    RPAREN          shift and go to state 114
-    AND             shift and go to state 113
-    OR              shift and go to state 115
-
-
-state 93
-
-    (13) pre -> PRE LPAREN TRUE . RPAREN SEMI
-    (56) val -> TRUE .
-
-  ! shift/reduce conflict for RPAREN resolved as shift
-    RPAREN          shift and go to state 116
-    EQ              reduce using rule 56 (val -> TRUE .)
-    NEQ             reduce using rule 56 (val -> TRUE .)
-    GEQ             reduce using rule 56 (val -> TRUE .)
-    LEQ             reduce using rule 56 (val -> TRUE .)
-    GE              reduce using rule 56 (val -> TRUE .)
-    LE              reduce using rule 56 (val -> TRUE .)
-    PLUS            reduce using rule 56 (val -> TRUE .)
-    MINUS           reduce using rule 56 (val -> TRUE .)
-    TIMES           reduce using rule 56 (val -> TRUE .)
-    BY              reduce using rule 56 (val -> TRUE .)
-    AND             reduce using rule 56 (val -> TRUE .)
-    OR              reduce using rule 56 (val -> TRUE .)
-
-  ! RPAREN          [ reduce using rule 56 (val -> TRUE .) ]
-=======
     (9) event -> EXIT LPAREN RPAREN LCURLY pre . eff RCURLY
     (30) eff -> . EFF LCURLY stmts RCURLY
 
@@ -2587,70 +1399,17 @@ state 93
     (30) eff -> EFF . LCURLY stmts RCURLY
 
     LCURLY          shift and go to state 97
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 94
 
-<<<<<<< HEAD
-    (14) cond -> rel .
-
-    RPAREN          reduce using rule 14 (cond -> rel .)
-    AND             reduce using rule 14 (cond -> rel .)
-    OR              reduce using rule 14 (cond -> rel .)
-=======
     (8) event -> varname LPAREN RPAREN LCURLY pre eff . RCURLY
 
     RCURLY          shift and go to state 98
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 95
 
-<<<<<<< HEAD
-    (19) cond -> LPAREN . cond RPAREN
-    (64) expr -> LPAREN . expr RPAREN
-    (14) cond -> . rel
-    (15) cond -> . expr
-    (16) cond -> . cond AND cond
-    (17) cond -> . cond OR cond
-    (18) cond -> . NOT expr
-    (19) cond -> . LPAREN cond RPAREN
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (20) rel -> . expr EQ expr
-    (21) rel -> . expr NEQ expr
-    (22) rel -> . expr GEQ expr
-    (23) rel -> . expr LEQ expr
-    (24) rel -> . expr GE expr
-    (25) rel -> . expr LE expr
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    NOT             shift and go to state 99
-    LPAREN          shift and go to state 95
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    expr                           shift and go to state 118
-    cond                           shift and go to state 117
-    val                            shift and go to state 96
-    rel                            shift and go to state 94
-    varname                        shift and go to state 98
-=======
     (12) pre -> PRE LPAREN . cond RPAREN SEMI
     (13) pre -> PRE LPAREN . TRUE RPAREN SEMI
     (14) cond -> . rel
@@ -2707,77 +1466,9 @@ state 95
 state 96
 
     (9) event -> EXIT LPAREN RPAREN LCURLY pre eff . RCURLY
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     RCURLY          shift and go to state 111
 
-<<<<<<< HEAD
-    (58) expr -> val .
-
-    PLUS            reduce using rule 58 (expr -> val .)
-    MINUS           reduce using rule 58 (expr -> val .)
-    TIMES           reduce using rule 58 (expr -> val .)
-    BY              reduce using rule 58 (expr -> val .)
-    EQ              reduce using rule 58 (expr -> val .)
-    NEQ             reduce using rule 58 (expr -> val .)
-    GEQ             reduce using rule 58 (expr -> val .)
-    LEQ             reduce using rule 58 (expr -> val .)
-    GE              reduce using rule 58 (expr -> val .)
-    LE              reduce using rule 58 (expr -> val .)
-    RPAREN          reduce using rule 58 (expr -> val .)
-    AND             reduce using rule 58 (expr -> val .)
-    OR              reduce using rule 58 (expr -> val .)
-    SEMI            reduce using rule 58 (expr -> val .)
-
-
-state 97
-
-    (15) cond -> expr .
-    (20) rel -> expr . EQ expr
-    (21) rel -> expr . NEQ expr
-    (22) rel -> expr . GEQ expr
-    (23) rel -> expr . LEQ expr
-    (24) rel -> expr . GE expr
-    (25) rel -> expr . LE expr
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    AND             reduce using rule 15 (cond -> expr .)
-    OR              reduce using rule 15 (cond -> expr .)
-    RPAREN          reduce using rule 15 (cond -> expr .)
-    EQ              shift and go to state 126
-    NEQ             shift and go to state 128
-    GEQ             shift and go to state 119
-    LEQ             shift and go to state 123
-    GE              shift and go to state 124
-    LE              shift and go to state 120
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-
-state 98
-
-    (59) expr -> varname .
-
-    PLUS            reduce using rule 59 (expr -> varname .)
-    MINUS           reduce using rule 59 (expr -> varname .)
-    TIMES           reduce using rule 59 (expr -> varname .)
-    BY              reduce using rule 59 (expr -> varname .)
-    EQ              reduce using rule 59 (expr -> varname .)
-    NEQ             reduce using rule 59 (expr -> varname .)
-    GEQ             reduce using rule 59 (expr -> varname .)
-    LEQ             reduce using rule 59 (expr -> varname .)
-    GE              reduce using rule 59 (expr -> varname .)
-    LE              reduce using rule 59 (expr -> varname .)
-    RPAREN          reduce using rule 59 (expr -> varname .)
-    AND             reduce using rule 59 (expr -> varname .)
-    OR              reduce using rule 59 (expr -> varname .)
-    SEMI            reduce using rule 59 (expr -> varname .)
-=======
 
 state 97
 
@@ -2851,49 +1542,10 @@ state 98
     LID             reduce using rule 8 (event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .)
     CID             reduce using rule 8 (event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .)
     RCURLY          reduce using rule 8 (event -> varname LPAREN RPAREN LCURLY pre eff RCURLY .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 99
 
-<<<<<<< HEAD
-    (18) cond -> NOT . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    expr                           shift and go to state 129
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
-
-state 100
-
-    (9) event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .
-
-    EXIT            reduce using rule 9 (event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .)
-    ROBOT           reduce using rule 9 (event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .)
-    LID             reduce using rule 9 (event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .)
-    CID             reduce using rule 9 (event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .)
-    RCURLY          reduce using rule 9 (event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .)
-=======
     (12) pre -> PRE LPAREN cond . RPAREN SEMI
     (18) cond -> cond . AND cond
     (19) cond -> cond . OR cond
@@ -2924,76 +1576,35 @@ state 100
     OR              reduce using rule 80 (val -> TRUE .)
 
   ! RPAREN          [ reduce using rule 80 (val -> TRUE .) ]
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 101
 
-<<<<<<< HEAD
-    (30) stmt -> ite .
-
-    IF              reduce using rule 30 (stmt -> ite .)
-    ATOMIC          reduce using rule 30 (stmt -> ite .)
-    REACHAVOID      reduce using rule 30 (stmt -> ite .)
-    LID             reduce using rule 30 (stmt -> ite .)
-    CID             reduce using rule 30 (stmt -> ite .)
-    RCURLY          reduce using rule 30 (stmt -> ite .)
-=======
     (14) cond -> rel .
 
     RPAREN          reduce using rule 14 (cond -> rel .)
     AND             reduce using rule 14 (cond -> rel .)
     OR              reduce using rule 14 (cond -> rel .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 102
 
-<<<<<<< HEAD
-    (37) atomic -> ATOMIC . LCURLY stmts RCURLY
-
-    LCURLY          shift and go to state 131
-=======
     (17) cond -> ISEMPTY . LPAREN varname RPAREN
 
     LPAREN          shift and go to state 139
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 103
 
-<<<<<<< HEAD
-    (26) eff -> EFF LCURLY stmts . RCURLY
-
-    RCURLY          shift and go to state 132
-=======
     (23) flag -> FAILFLAG .
 
     AND             reduce using rule 23 (flag -> FAILFLAG .)
     OR              reduce using rule 23 (flag -> FAILFLAG .)
     RPAREN          reduce using rule 23 (flag -> FAILFLAG .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 104
 
-<<<<<<< HEAD
-    (29) stmt -> asgn .
-
-    IF              reduce using rule 29 (stmt -> asgn .)
-    ATOMIC          reduce using rule 29 (stmt -> asgn .)
-    REACHAVOID      reduce using rule 29 (stmt -> asgn .)
-    LID             reduce using rule 29 (stmt -> asgn .)
-    CID             reduce using rule 29 (stmt -> asgn .)
-    RCURLY          reduce using rule 29 (stmt -> asgn .)
-
-
-state 105
-
-    (28) stmts -> empty .
-
-    RCURLY          reduce using rule 28 (stmts -> empty .)
-=======
     (21) cond -> LPAREN . cond RPAREN
     (89) expr -> LPAREN . expr RPAREN
     (14) cond -> . rel
@@ -3066,38 +1677,10 @@ state 105
     GE              reduce using rule 83 (expr -> val .)
     LE              reduce using rule 83 (expr -> val .)
     SEMI            reduce using rule 83 (expr -> val .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 106
 
-<<<<<<< HEAD
-    (27) stmts -> stmt . stmts
-    (27) stmts -> . stmt stmts
-    (28) stmts -> . empty
-    (29) stmt -> . asgn
-    (30) stmt -> . ite
-    (31) stmt -> . atomic
-    (32) stmt -> . funcCall
-    (33) stmt -> . callreachavoid
-    (46) empty -> .
-    (38) asgn -> . varname EQLS expr SEMI
-    (39) asgn -> . varname EQLS funcCall
-    (40) asgn -> . varname INCR SEMI
-    (35) ite -> . IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-    (37) atomic -> . ATOMIC LCURLY stmts RCURLY
-    (36) funcCall -> . varname LPAREN RPAREN SEMI
-    (34) callreachavoid -> . REACHAVOID LPAREN varname COMMA val RPAREN
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    RCURLY          reduce using rule 46 (empty -> .)
-    IF              shift and go to state 107
-    ATOMIC          shift and go to state 102
-    REACHAVOID      shift and go to state 111
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (15) cond -> expr .
     (24) rel -> expr . EQ expr
     (25) rel -> expr . NEQ expr
@@ -3123,63 +1706,25 @@ state 106
     MINUS           shift and go to state 150
     TIMES           shift and go to state 145
     BY              shift and go to state 144
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    funcCall                       shift and go to state 108
-    stmts                          shift and go to state 133
-    varname                        shift and go to state 109
-    ite                            shift and go to state 101
-    stmt                           shift and go to state 106
-    asgn                           shift and go to state 104
-    atomic                         shift and go to state 112
-    callreachavoid                 shift and go to state 110
-    empty                          shift and go to state 105
 
 state 107
 
-<<<<<<< HEAD
-    (35) ite -> IF . LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-
-    LPAREN          shift and go to state 134
-=======
     (16) cond -> flag .
 
     RPAREN          reduce using rule 16 (cond -> flag .)
     AND             reduce using rule 16 (cond -> flag .)
     OR              reduce using rule 16 (cond -> flag .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 108
 
-<<<<<<< HEAD
-    (32) stmt -> funcCall .
-
-    IF              reduce using rule 32 (stmt -> funcCall .)
-    ATOMIC          reduce using rule 32 (stmt -> funcCall .)
-    REACHAVOID      reduce using rule 32 (stmt -> funcCall .)
-    LID             reduce using rule 32 (stmt -> funcCall .)
-    CID             reduce using rule 32 (stmt -> funcCall .)
-    RCURLY          reduce using rule 32 (stmt -> funcCall .)
-
-=======
     (22) flag -> DONEFLAG .
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     AND             reduce using rule 22 (flag -> DONEFLAG .)
     OR              reduce using rule 22 (flag -> DONEFLAG .)
     RPAREN          reduce using rule 22 (flag -> DONEFLAG .)
 
-<<<<<<< HEAD
-    (38) asgn -> varname . EQLS expr SEMI
-    (39) asgn -> varname . EQLS funcCall
-    (40) asgn -> varname . INCR SEMI
-    (36) funcCall -> varname . LPAREN RPAREN SEMI
-
-    EQLS            shift and go to state 136
-    INCR            shift and go to state 135
-    LPAREN          shift and go to state 137
-=======
 
 state 109
 
@@ -3200,21 +1745,10 @@ state 109
     GE              reduce using rule 84 (expr -> varname .)
     LE              reduce using rule 84 (expr -> varname .)
     SEMI            reduce using rule 84 (expr -> varname .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 110
 
-<<<<<<< HEAD
-    (33) stmt -> callreachavoid .
-
-    IF              reduce using rule 33 (stmt -> callreachavoid .)
-    ATOMIC          reduce using rule 33 (stmt -> callreachavoid .)
-    REACHAVOID      reduce using rule 33 (stmt -> callreachavoid .)
-    LID             reduce using rule 33 (stmt -> callreachavoid .)
-    CID             reduce using rule 33 (stmt -> callreachavoid .)
-    RCURLY          reduce using rule 33 (stmt -> callreachavoid .)
-=======
     (20) cond -> NOT . expr
     (83) expr -> . val
     (84) expr -> . varname
@@ -3245,7 +1779,6 @@ state 110
     varname                        shift and go to state 109
 
 state 111
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     (9) event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .
 
@@ -3255,23 +1788,6 @@ state 111
     CID             reduce using rule 9 (event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .)
     RCURLY          reduce using rule 9 (event -> EXIT LPAREN RPAREN LCURLY pre eff RCURLY .)
 
-<<<<<<< HEAD
-    (34) callreachavoid -> REACHAVOID . LPAREN varname COMMA val RPAREN
-
-    LPAREN          shift and go to state 138
-
-
-state 112
-
-    (31) stmt -> atomic .
-
-    IF              reduce using rule 31 (stmt -> atomic .)
-    ATOMIC          reduce using rule 31 (stmt -> atomic .)
-    REACHAVOID      reduce using rule 31 (stmt -> atomic .)
-    LID             reduce using rule 31 (stmt -> atomic .)
-    CID             reduce using rule 31 (stmt -> atomic .)
-    RCURLY          reduce using rule 31 (stmt -> atomic .)
-=======
 
 state 112
 
@@ -3305,7 +1821,6 @@ state 112
     varname                        shift and go to state 109
 
 state 113
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     (47) log -> LOG . LPAREN RPAREN SEMI
     (48) log -> LOG . LPAREN DONEFLAG RPAREN SEMI
@@ -3313,103 +1828,16 @@ state 113
 
     LPAREN          shift and go to state 155
 
-<<<<<<< HEAD
-    (16) cond -> cond AND . cond
-    (14) cond -> . rel
-    (15) cond -> . expr
-    (16) cond -> . cond AND cond
-    (17) cond -> . cond OR cond
-    (18) cond -> . NOT expr
-    (19) cond -> . LPAREN cond RPAREN
-    (20) rel -> . expr EQ expr
-    (21) rel -> . expr NEQ expr
-    (22) rel -> . expr GEQ expr
-    (23) rel -> . expr LEQ expr
-    (24) rel -> . expr GE expr
-    (25) rel -> . expr LE expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    NOT             shift and go to state 99
-    LPAREN          shift and go to state 95
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    expr                           shift and go to state 97
-    cond                           shift and go to state 139
-    val                            shift and go to state 96
-    rel                            shift and go to state 94
-    varname                        shift and go to state 98
-
-state 114
-
-    (12) pre -> PRE LPAREN cond RPAREN . SEMI
-
-    SEMI            shift and go to state 140
-=======
 
 state 114
 
     (53) doreachavoid -> DOREACHAVOID . LPAREN varname COMMA expr RPAREN SEMI
 
     LPAREN          shift and go to state 156
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 115
 
-<<<<<<< HEAD
-    (17) cond -> cond OR . cond
-    (14) cond -> . rel
-    (15) cond -> . expr
-    (16) cond -> . cond AND cond
-    (17) cond -> . cond OR cond
-    (18) cond -> . NOT expr
-    (19) cond -> . LPAREN cond RPAREN
-    (20) rel -> . expr EQ expr
-    (21) rel -> . expr NEQ expr
-    (22) rel -> . expr GEQ expr
-    (23) rel -> . expr LEQ expr
-    (24) rel -> . expr GE expr
-    (25) rel -> . expr LE expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    NOT             shift and go to state 99
-    LPAREN          shift and go to state 95
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (35) stmt -> ite .
 
     EXIT            reduce using rule 35 (stmt -> ite .)
@@ -3423,21 +1851,10 @@ state 115
     RETURN          reduce using rule 35 (stmt -> ite .)
     LOG             reduce using rule 35 (stmt -> ite .)
     RCURLY          reduce using rule 35 (stmt -> ite .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 97
-    cond                           shift and go to state 141
-    val                            shift and go to state 96
-    rel                            shift and go to state 94
-    varname                        shift and go to state 98
 
 state 116
 
-<<<<<<< HEAD
-    (13) pre -> PRE LPAREN TRUE RPAREN . SEMI
-
-    SEMI            shift and go to state 142
-=======
     (36) stmt -> atomic .
 
     EXIT            reduce using rule 36 (stmt -> atomic .)
@@ -3451,20 +1868,10 @@ state 116
     RETURN          reduce using rule 36 (stmt -> atomic .)
     LOG             reduce using rule 36 (stmt -> atomic .)
     RCURLY          reduce using rule 36 (stmt -> atomic .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 117
 
-<<<<<<< HEAD
-    (19) cond -> LPAREN cond . RPAREN
-    (16) cond -> cond . AND cond
-    (17) cond -> cond . OR cond
-
-    RPAREN          shift and go to state 143
-    AND             shift and go to state 113
-    OR              shift and go to state 115
-=======
     (40) stmt -> getInput .
 
     EXIT            reduce using rule 40 (stmt -> getInput .)
@@ -3478,42 +1885,10 @@ state 117
     RETURN          reduce using rule 40 (stmt -> getInput .)
     LOG             reduce using rule 40 (stmt -> getInput .)
     RCURLY          reduce using rule 40 (stmt -> getInput .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 118
 
-<<<<<<< HEAD
-    (64) expr -> LPAREN expr . RPAREN
-    (15) cond -> expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-    (20) rel -> expr . EQ expr
-    (21) rel -> expr . NEQ expr
-    (22) rel -> expr . GEQ expr
-    (23) rel -> expr . LEQ expr
-    (24) rel -> expr . GE expr
-    (25) rel -> expr . LE expr
-
-  ! shift/reduce conflict for RPAREN resolved as shift
-    RPAREN          shift and go to state 144
-    AND             reduce using rule 15 (cond -> expr .)
-    OR              reduce using rule 15 (cond -> expr .)
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-    EQ              shift and go to state 126
-    NEQ             shift and go to state 128
-    GEQ             shift and go to state 119
-    LEQ             shift and go to state 123
-    GE              shift and go to state 124
-    LE              shift and go to state 120
-
-  ! RPAREN          [ reduce using rule 15 (cond -> expr .) ]
-=======
     (42) stmt -> doreachavoid .
 
     EXIT            reduce using rule 42 (stmt -> doreachavoid .)
@@ -3527,35 +1902,10 @@ state 118
     RETURN          reduce using rule 42 (stmt -> doreachavoid .)
     LOG             reduce using rule 42 (stmt -> doreachavoid .)
     RCURLY          reduce using rule 42 (stmt -> doreachavoid .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 119
 
-<<<<<<< HEAD
-    (22) rel -> expr GEQ . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (44) stmt -> log .
 
     EXIT            reduce using rule 44 (stmt -> log .)
@@ -3569,73 +1919,17 @@ state 119
     RETURN          reduce using rule 44 (stmt -> log .)
     LOG             reduce using rule 44 (stmt -> log .)
     RCURLY          reduce using rule 44 (stmt -> log .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 145
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 120
 
-<<<<<<< HEAD
-    (25) rel -> expr LE . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (30) eff -> EFF LCURLY stmts . RCURLY
 
     RCURLY          shift and go to state 157
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 146
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 121
 
-<<<<<<< HEAD
-    (63) expr -> expr BY . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (33) stmt -> asgn .
 
     EXIT            reduce using rule 33 (stmt -> asgn .)
@@ -3649,38 +1943,10 @@ state 121
     RETURN          reduce using rule 33 (stmt -> asgn .)
     LOG             reduce using rule 33 (stmt -> asgn .)
     RCURLY          reduce using rule 33 (stmt -> asgn .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 147
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 122
 
-<<<<<<< HEAD
-    (62) expr -> expr TIMES . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (34) stmt -> exit .
 
     EXIT            reduce using rule 34 (stmt -> exit .)
@@ -3694,38 +1960,10 @@ state 122
     RETURN          reduce using rule 34 (stmt -> exit .)
     LOG             reduce using rule 34 (stmt -> exit .)
     RCURLY          reduce using rule 34 (stmt -> exit .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 148
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 123
 
-<<<<<<< HEAD
-    (23) rel -> expr LEQ . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (38) stmt -> msg .
 
     EXIT            reduce using rule 38 (stmt -> msg .)
@@ -3739,73 +1977,17 @@ state 123
     RETURN          reduce using rule 38 (stmt -> msg .)
     LOG             reduce using rule 38 (stmt -> msg .)
     RCURLY          reduce using rule 38 (stmt -> msg .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 149
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 124
 
-<<<<<<< HEAD
-    (24) rel -> expr GE . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (32) stmts -> empty .
 
     RCURLY          reduce using rule 32 (stmts -> empty .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 150
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 125
 
-<<<<<<< HEAD
-    (60) expr -> expr PLUS . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (43) stmt -> return .
 
     EXIT            reduce using rule 43 (stmt -> return .)
@@ -3819,67 +2001,10 @@ state 125
     RETURN          reduce using rule 43 (stmt -> return .)
     LOG             reduce using rule 43 (stmt -> return .)
     RCURLY          reduce using rule 43 (stmt -> return .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 151
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 126
 
-<<<<<<< HEAD
-    (20) rel -> expr EQ . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    expr                           shift and go to state 152
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
-
-state 127
-
-    (61) expr -> expr MINUS . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (31) stmts -> stmt . stmts
     (31) stmts -> . stmt stmts
     (32) stmts -> . empty
@@ -3946,96 +2071,24 @@ state 127
     (46) msg -> MSG . LPAREN varname RPAREN SEMI
 
     LPAREN          shift and go to state 159
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 153
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 128
 
-<<<<<<< HEAD
-    (21) rel -> expr NEQ . expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (54) ite -> IF . LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
 
     LPAREN          shift and go to state 160
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 154
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 129
 
-<<<<<<< HEAD
-    (18) cond -> NOT expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-=======
     (50) remove -> REMOVE . LPAREN varname RPAREN SEMI
 
     LPAREN          shift and go to state 161
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
-
-    RPAREN          reduce using rule 18 (cond -> NOT expr .)
-    AND             reduce using rule 18 (cond -> NOT expr .)
-    OR              reduce using rule 18 (cond -> NOT expr .)
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
 
 
-<<<<<<< HEAD
 state 130
 
-    (64) expr -> LPAREN . expr RPAREN
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (39) stmt -> funcCall .
 
     EXIT            reduce using rule 39 (stmt -> funcCall .)
@@ -4049,41 +2102,10 @@ state 130
     RETURN          reduce using rule 39 (stmt -> funcCall .)
     LOG             reduce using rule 39 (stmt -> funcCall .)
     RCURLY          reduce using rule 39 (stmt -> funcCall .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    expr                           shift and go to state 155
-    val                            shift and go to state 96
-    varname                        shift and go to state 98
 
 state 131
 
-<<<<<<< HEAD
-    (37) atomic -> ATOMIC LCURLY . stmts RCURLY
-    (27) stmts -> . stmt stmts
-    (28) stmts -> . empty
-    (29) stmt -> . asgn
-    (30) stmt -> . ite
-    (31) stmt -> . atomic
-    (32) stmt -> . funcCall
-    (33) stmt -> . callreachavoid
-    (46) empty -> .
-    (38) asgn -> . varname EQLS expr SEMI
-    (39) asgn -> . varname EQLS funcCall
-    (40) asgn -> . varname INCR SEMI
-    (35) ite -> . IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-    (37) atomic -> . ATOMIC LCURLY stmts RCURLY
-    (36) funcCall -> . varname LPAREN RPAREN SEMI
-    (34) callreachavoid -> . REACHAVOID LPAREN varname COMMA val RPAREN
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    RCURLY          reduce using rule 46 (empty -> .)
-    IF              shift and go to state 107
-    ATOMIC          shift and go to state 102
-    REACHAVOID      shift and go to state 111
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (41) stmt -> varname . EQLS funcCall
     (61) asgn -> varname . EQLS expr SEMI
     (62) asgn -> varname . INCR SEMI
@@ -4093,25 +2115,10 @@ state 131
     EQLS            shift and go to state 163
     INCR            shift and go to state 162
     LPAREN          shift and go to state 164
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    funcCall                       shift and go to state 108
-    stmts                          shift and go to state 156
-    varname                        shift and go to state 109
-    ite                            shift and go to state 101
-    stmt                           shift and go to state 106
-    asgn                           shift and go to state 104
-    atomic                         shift and go to state 112
-    callreachavoid                 shift and go to state 110
-    empty                          shift and go to state 105
 
 state 132
 
-<<<<<<< HEAD
-    (26) eff -> EFF LCURLY stmts RCURLY .
-
-    RCURLY          reduce using rule 26 (eff -> EFF LCURLY stmts RCURLY .)
-=======
     (37) stmt -> remove .
 
     EXIT            reduce using rule 37 (stmt -> remove .)
@@ -4125,107 +2132,24 @@ state 132
     RETURN          reduce using rule 37 (stmt -> remove .)
     LOG             reduce using rule 37 (stmt -> remove .)
     RCURLY          reduce using rule 37 (stmt -> remove .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 133
 
-<<<<<<< HEAD
-    (27) stmts -> stmt stmts .
-
-    RCURLY          reduce using rule 27 (stmts -> stmt stmts .)
-=======
     (51) exit -> EXIT . SEMI
 
     SEMI            shift and go to state 165
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 134
 
-<<<<<<< HEAD
-    (35) ite -> IF LPAREN . cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-    (14) cond -> . rel
-    (15) cond -> . expr
-    (16) cond -> . cond AND cond
-    (17) cond -> . cond OR cond
-    (18) cond -> . NOT expr
-    (19) cond -> . LPAREN cond RPAREN
-    (20) rel -> . expr EQ expr
-    (21) rel -> . expr NEQ expr
-    (22) rel -> . expr GEQ expr
-    (23) rel -> . expr LEQ expr
-    (24) rel -> . expr GE expr
-    (25) rel -> . expr LE expr
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    NOT             shift and go to state 99
-    LPAREN          shift and go to state 95
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (60) atomic -> ATOMIC . LCURLY stmts RCURLY
 
     LCURLY          shift and go to state 166
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    val                            shift and go to state 96
-    expr                           shift and go to state 97
-    cond                           shift and go to state 157
-    rel                            shift and go to state 94
-    varname                        shift and go to state 98
 
 state 135
 
-<<<<<<< HEAD
-    (40) asgn -> varname INCR . SEMI
-
-    SEMI            shift and go to state 158
-
-
-state 136
-
-    (38) asgn -> varname EQLS . expr SEMI
-    (39) asgn -> varname EQLS . funcCall
-    (58) expr -> . val
-    (59) expr -> . varname
-    (60) expr -> . expr PLUS expr
-    (61) expr -> . expr MINUS expr
-    (62) expr -> . expr TIMES expr
-    (63) expr -> . expr BY expr
-    (64) expr -> . LPAREN expr RPAREN
-    (36) funcCall -> . varname LPAREN RPAREN SEMI
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LPAREN          shift and go to state 130
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (18) cond -> cond AND . cond
     (14) cond -> . rel
     (15) cond -> . expr
@@ -4283,30 +2207,10 @@ state 136
     (12) pre -> PRE LPAREN cond RPAREN . SEMI
 
     SEMI            shift and go to state 168
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    varname                        shift and go to state 160
-    val                            shift and go to state 96
-    funcCall                       shift and go to state 159
-    expr                           shift and go to state 161
 
 state 137
 
-<<<<<<< HEAD
-    (36) funcCall -> varname LPAREN . RPAREN SEMI
-
-    RPAREN          shift and go to state 162
-
-
-state 138
-
-    (34) callreachavoid -> REACHAVOID LPAREN . varname COMMA val RPAREN
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-=======
     (19) cond -> cond OR . cond
     (14) cond -> . rel
     (15) cond -> . expr
@@ -4364,43 +2268,21 @@ state 138
     (13) pre -> PRE LPAREN TRUE RPAREN . SEMI
 
     SEMI            shift and go to state 170
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
-    varname                        shift and go to state 163
 
 state 139
 
-<<<<<<< HEAD
-    (16) cond -> cond AND cond .
-    (16) cond -> cond . AND cond
-    (17) cond -> cond . OR cond
-
-  ! shift/reduce conflict for AND resolved as shift
-  ! shift/reduce conflict for OR resolved as shift
-    RPAREN          reduce using rule 16 (cond -> cond AND cond .)
-    AND             shift and go to state 113
-    OR              shift and go to state 115
-
-  ! AND             [ reduce using rule 16 (cond -> cond AND cond .) ]
-  ! OR              [ reduce using rule 16 (cond -> cond AND cond .) ]
-=======
     (17) cond -> ISEMPTY LPAREN . varname RPAREN
     (95) varname -> . LID
     (96) varname -> . CID
 
     LID             shift and go to state 27
     CID             shift and go to state 28
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     varname                        shift and go to state 171
 
 state 140
 
-<<<<<<< HEAD
-    (12) pre -> PRE LPAREN cond RPAREN SEMI .
-
-    EFF             reduce using rule 12 (pre -> PRE LPAREN cond RPAREN SEMI .)
-=======
     (21) cond -> LPAREN cond . RPAREN
     (18) cond -> cond . AND cond
     (19) cond -> cond . OR cond
@@ -4408,25 +2290,10 @@ state 140
     RPAREN          shift and go to state 172
     AND             shift and go to state 135
     OR              shift and go to state 137
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 141
 
-<<<<<<< HEAD
-    (17) cond -> cond OR cond .
-    (16) cond -> cond . AND cond
-    (17) cond -> cond . OR cond
-
-  ! shift/reduce conflict for AND resolved as shift
-  ! shift/reduce conflict for OR resolved as shift
-    RPAREN          reduce using rule 17 (cond -> cond OR cond .)
-    AND             shift and go to state 113
-    OR              shift and go to state 115
-
-  ! AND             [ reduce using rule 17 (cond -> cond OR cond .) ]
-  ! OR              [ reduce using rule 17 (cond -> cond OR cond .) ]
-=======
     (89) expr -> LPAREN expr . RPAREN
     (15) cond -> expr .
     (85) expr -> expr . PLUS expr
@@ -4456,45 +2323,10 @@ state 141
     LE              shift and go to state 143
 
   ! RPAREN          [ reduce using rule 15 (cond -> expr .) ]
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 
 state 142
 
-<<<<<<< HEAD
-    (13) pre -> PRE LPAREN TRUE RPAREN SEMI .
-
-    EFF             reduce using rule 13 (pre -> PRE LPAREN TRUE RPAREN SEMI .)
-
-
-state 143
-
-    (19) cond -> LPAREN cond RPAREN .
-
-    RPAREN          reduce using rule 19 (cond -> LPAREN cond RPAREN .)
-    AND             reduce using rule 19 (cond -> LPAREN cond RPAREN .)
-    OR              reduce using rule 19 (cond -> LPAREN cond RPAREN .)
-
-
-state 144
-
-    (64) expr -> LPAREN expr RPAREN .
-
-    PLUS            reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    MINUS           reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    TIMES           reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    BY              reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    EQ              reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    NEQ             reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    GEQ             reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    LEQ             reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    GE              reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    LE              reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    RPAREN          reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    AND             reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    OR              reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-    SEMI            reduce using rule 64 (expr -> LPAREN expr RPAREN .)
-=======
     (26) rel -> expr GEQ . expr
     (83) expr -> . val
     (84) expr -> . varname
@@ -4587,7 +2419,6 @@ state 144
     varname                        shift and go to state 109
 
 state 145
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     (87) expr -> expr TIMES . expr
     (83) expr -> . val
@@ -4620,21 +2451,6 @@ state 145
 
 state 146
 
-<<<<<<< HEAD
-    (22) rel -> expr GEQ expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    AND             reduce using rule 22 (rel -> expr GEQ expr .)
-    OR              reduce using rule 22 (rel -> expr GEQ expr .)
-    RPAREN          reduce using rule 22 (rel -> expr GEQ expr .)
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-=======
     (27) rel -> expr LEQ . expr
     (83) expr -> . val
     (84) expr -> . varname
@@ -4665,7 +2481,6 @@ state 146
     varname                        shift and go to state 109
 
 state 147
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     (28) rel -> expr GE . expr
     (83) expr -> . val
@@ -4698,21 +2513,6 @@ state 147
 
 state 148
 
-<<<<<<< HEAD
-    (25) rel -> expr LE expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    AND             reduce using rule 25 (rel -> expr LE expr .)
-    OR              reduce using rule 25 (rel -> expr LE expr .)
-    RPAREN          reduce using rule 25 (rel -> expr LE expr .)
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-=======
     (85) expr -> expr PLUS . expr
     (83) expr -> . val
     (84) expr -> . varname
@@ -4743,7 +2543,6 @@ state 148
     varname                        shift and go to state 109
 
 state 149
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     (24) rel -> expr EQ . expr
     (83) expr -> . val
@@ -5186,390 +2985,6 @@ state 167
     AND             shift and go to state 135
     OR              shift and go to state 137
 
-<<<<<<< HEAD
-    (63) expr -> expr BY expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    PLUS            reduce using rule 63 (expr -> expr BY expr .)
-    MINUS           reduce using rule 63 (expr -> expr BY expr .)
-    TIMES           reduce using rule 63 (expr -> expr BY expr .)
-    BY              reduce using rule 63 (expr -> expr BY expr .)
-    EQ              reduce using rule 63 (expr -> expr BY expr .)
-    NEQ             reduce using rule 63 (expr -> expr BY expr .)
-    GEQ             reduce using rule 63 (expr -> expr BY expr .)
-    LEQ             reduce using rule 63 (expr -> expr BY expr .)
-    GE              reduce using rule 63 (expr -> expr BY expr .)
-    LE              reduce using rule 63 (expr -> expr BY expr .)
-    RPAREN          reduce using rule 63 (expr -> expr BY expr .)
-    AND             reduce using rule 63 (expr -> expr BY expr .)
-    OR              reduce using rule 63 (expr -> expr BY expr .)
-    SEMI            reduce using rule 63 (expr -> expr BY expr .)
-
-  ! PLUS            [ shift and go to state 125 ]
-  ! MINUS           [ shift and go to state 127 ]
-  ! TIMES           [ shift and go to state 122 ]
-  ! BY              [ shift and go to state 121 ]
-
-
-state 148
-
-    (62) expr -> expr TIMES expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    PLUS            reduce using rule 62 (expr -> expr TIMES expr .)
-    MINUS           reduce using rule 62 (expr -> expr TIMES expr .)
-    TIMES           reduce using rule 62 (expr -> expr TIMES expr .)
-    BY              reduce using rule 62 (expr -> expr TIMES expr .)
-    EQ              reduce using rule 62 (expr -> expr TIMES expr .)
-    NEQ             reduce using rule 62 (expr -> expr TIMES expr .)
-    GEQ             reduce using rule 62 (expr -> expr TIMES expr .)
-    LEQ             reduce using rule 62 (expr -> expr TIMES expr .)
-    GE              reduce using rule 62 (expr -> expr TIMES expr .)
-    LE              reduce using rule 62 (expr -> expr TIMES expr .)
-    RPAREN          reduce using rule 62 (expr -> expr TIMES expr .)
-    AND             reduce using rule 62 (expr -> expr TIMES expr .)
-    OR              reduce using rule 62 (expr -> expr TIMES expr .)
-    SEMI            reduce using rule 62 (expr -> expr TIMES expr .)
-
-  ! PLUS            [ shift and go to state 125 ]
-  ! MINUS           [ shift and go to state 127 ]
-  ! TIMES           [ shift and go to state 122 ]
-  ! BY              [ shift and go to state 121 ]
-
-
-state 149
-
-    (23) rel -> expr LEQ expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    AND             reduce using rule 23 (rel -> expr LEQ expr .)
-    OR              reduce using rule 23 (rel -> expr LEQ expr .)
-    RPAREN          reduce using rule 23 (rel -> expr LEQ expr .)
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-
-state 150
-
-    (24) rel -> expr GE expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    AND             reduce using rule 24 (rel -> expr GE expr .)
-    OR              reduce using rule 24 (rel -> expr GE expr .)
-    RPAREN          reduce using rule 24 (rel -> expr GE expr .)
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-
-state 151
-
-    (60) expr -> expr PLUS expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    PLUS            reduce using rule 60 (expr -> expr PLUS expr .)
-    MINUS           reduce using rule 60 (expr -> expr PLUS expr .)
-    EQ              reduce using rule 60 (expr -> expr PLUS expr .)
-    NEQ             reduce using rule 60 (expr -> expr PLUS expr .)
-    GEQ             reduce using rule 60 (expr -> expr PLUS expr .)
-    LEQ             reduce using rule 60 (expr -> expr PLUS expr .)
-    GE              reduce using rule 60 (expr -> expr PLUS expr .)
-    LE              reduce using rule 60 (expr -> expr PLUS expr .)
-    RPAREN          reduce using rule 60 (expr -> expr PLUS expr .)
-    AND             reduce using rule 60 (expr -> expr PLUS expr .)
-    OR              reduce using rule 60 (expr -> expr PLUS expr .)
-    SEMI            reduce using rule 60 (expr -> expr PLUS expr .)
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-  ! TIMES           [ reduce using rule 60 (expr -> expr PLUS expr .) ]
-  ! BY              [ reduce using rule 60 (expr -> expr PLUS expr .) ]
-  ! PLUS            [ shift and go to state 125 ]
-  ! MINUS           [ shift and go to state 127 ]
-
-
-state 152
-
-    (20) rel -> expr EQ expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    AND             reduce using rule 20 (rel -> expr EQ expr .)
-    OR              reduce using rule 20 (rel -> expr EQ expr .)
-    RPAREN          reduce using rule 20 (rel -> expr EQ expr .)
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-
-state 153
-
-    (61) expr -> expr MINUS expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    PLUS            reduce using rule 61 (expr -> expr MINUS expr .)
-    MINUS           reduce using rule 61 (expr -> expr MINUS expr .)
-    EQ              reduce using rule 61 (expr -> expr MINUS expr .)
-    NEQ             reduce using rule 61 (expr -> expr MINUS expr .)
-    GEQ             reduce using rule 61 (expr -> expr MINUS expr .)
-    LEQ             reduce using rule 61 (expr -> expr MINUS expr .)
-    GE              reduce using rule 61 (expr -> expr MINUS expr .)
-    LE              reduce using rule 61 (expr -> expr MINUS expr .)
-    RPAREN          reduce using rule 61 (expr -> expr MINUS expr .)
-    AND             reduce using rule 61 (expr -> expr MINUS expr .)
-    OR              reduce using rule 61 (expr -> expr MINUS expr .)
-    SEMI            reduce using rule 61 (expr -> expr MINUS expr .)
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-  ! TIMES           [ reduce using rule 61 (expr -> expr MINUS expr .) ]
-  ! BY              [ reduce using rule 61 (expr -> expr MINUS expr .) ]
-  ! PLUS            [ shift and go to state 125 ]
-  ! MINUS           [ shift and go to state 127 ]
-
-
-state 154
-
-    (21) rel -> expr NEQ expr .
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    AND             reduce using rule 21 (rel -> expr NEQ expr .)
-    OR              reduce using rule 21 (rel -> expr NEQ expr .)
-    RPAREN          reduce using rule 21 (rel -> expr NEQ expr .)
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-
-state 155
-
-    (64) expr -> LPAREN expr . RPAREN
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    RPAREN          shift and go to state 144
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-
-state 156
-
-    (37) atomic -> ATOMIC LCURLY stmts . RCURLY
-
-    RCURLY          shift and go to state 164
-
-
-state 157
-
-    (35) ite -> IF LPAREN cond . RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-    (16) cond -> cond . AND cond
-    (17) cond -> cond . OR cond
-
-    RPAREN          shift and go to state 165
-    AND             shift and go to state 113
-    OR              shift and go to state 115
-
-
-state 158
-
-    (40) asgn -> varname INCR SEMI .
-
-    IF              reduce using rule 40 (asgn -> varname INCR SEMI .)
-    ATOMIC          reduce using rule 40 (asgn -> varname INCR SEMI .)
-    REACHAVOID      reduce using rule 40 (asgn -> varname INCR SEMI .)
-    LID             reduce using rule 40 (asgn -> varname INCR SEMI .)
-    CID             reduce using rule 40 (asgn -> varname INCR SEMI .)
-    RCURLY          reduce using rule 40 (asgn -> varname INCR SEMI .)
-
-
-state 159
-
-    (39) asgn -> varname EQLS funcCall .
-
-    IF              reduce using rule 39 (asgn -> varname EQLS funcCall .)
-    ATOMIC          reduce using rule 39 (asgn -> varname EQLS funcCall .)
-    REACHAVOID      reduce using rule 39 (asgn -> varname EQLS funcCall .)
-    LID             reduce using rule 39 (asgn -> varname EQLS funcCall .)
-    CID             reduce using rule 39 (asgn -> varname EQLS funcCall .)
-    RCURLY          reduce using rule 39 (asgn -> varname EQLS funcCall .)
-
-
-state 160
-
-    (59) expr -> varname .
-    (36) funcCall -> varname . LPAREN RPAREN SEMI
-
-    SEMI            reduce using rule 59 (expr -> varname .)
-    PLUS            reduce using rule 59 (expr -> varname .)
-    MINUS           reduce using rule 59 (expr -> varname .)
-    TIMES           reduce using rule 59 (expr -> varname .)
-    BY              reduce using rule 59 (expr -> varname .)
-    LPAREN          shift and go to state 137
-
-
-state 161
-
-    (38) asgn -> varname EQLS expr . SEMI
-    (60) expr -> expr . PLUS expr
-    (61) expr -> expr . MINUS expr
-    (62) expr -> expr . TIMES expr
-    (63) expr -> expr . BY expr
-
-    SEMI            shift and go to state 166
-    PLUS            shift and go to state 125
-    MINUS           shift and go to state 127
-    TIMES           shift and go to state 122
-    BY              shift and go to state 121
-
-
-state 162
-
-    (36) funcCall -> varname LPAREN RPAREN . SEMI
-
-    SEMI            shift and go to state 167
-
-
-state 163
-
-    (34) callreachavoid -> REACHAVOID LPAREN varname . COMMA val RPAREN
-
-    COMMA           shift and go to state 168
-
-
-state 164
-
-    (37) atomic -> ATOMIC LCURLY stmts RCURLY .
-
-    IF              reduce using rule 37 (atomic -> ATOMIC LCURLY stmts RCURLY .)
-    ATOMIC          reduce using rule 37 (atomic -> ATOMIC LCURLY stmts RCURLY .)
-    REACHAVOID      reduce using rule 37 (atomic -> ATOMIC LCURLY stmts RCURLY .)
-    LID             reduce using rule 37 (atomic -> ATOMIC LCURLY stmts RCURLY .)
-    CID             reduce using rule 37 (atomic -> ATOMIC LCURLY stmts RCURLY .)
-    RCURLY          reduce using rule 37 (atomic -> ATOMIC LCURLY stmts RCURLY .)
-
-
-state 165
-
-    (35) ite -> IF LPAREN cond RPAREN . LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-
-    LCURLY          shift and go to state 169
-
-
-state 166
-
-    (38) asgn -> varname EQLS expr SEMI .
-
-    IF              reduce using rule 38 (asgn -> varname EQLS expr SEMI .)
-    ATOMIC          reduce using rule 38 (asgn -> varname EQLS expr SEMI .)
-    REACHAVOID      reduce using rule 38 (asgn -> varname EQLS expr SEMI .)
-    LID             reduce using rule 38 (asgn -> varname EQLS expr SEMI .)
-    CID             reduce using rule 38 (asgn -> varname EQLS expr SEMI .)
-    RCURLY          reduce using rule 38 (asgn -> varname EQLS expr SEMI .)
-
-
-state 167
-
-    (36) funcCall -> varname LPAREN RPAREN SEMI .
-
-    IF              reduce using rule 36 (funcCall -> varname LPAREN RPAREN SEMI .)
-    ATOMIC          reduce using rule 36 (funcCall -> varname LPAREN RPAREN SEMI .)
-    REACHAVOID      reduce using rule 36 (funcCall -> varname LPAREN RPAREN SEMI .)
-    LID             reduce using rule 36 (funcCall -> varname LPAREN RPAREN SEMI .)
-    CID             reduce using rule 36 (funcCall -> varname LPAREN RPAREN SEMI .)
-    RCURLY          reduce using rule 36 (funcCall -> varname LPAREN RPAREN SEMI .)
-
-
-state 168
-
-    (34) callreachavoid -> REACHAVOID LPAREN varname COMMA . val RPAREN
-    (54) val -> . INUM
-    (55) val -> . FNUM
-    (56) val -> . TRUE
-    (57) val -> . FALSE
-
-    INUM            shift and go to state 41
-    FNUM            shift and go to state 40
-    TRUE            shift and go to state 42
-    FALSE           shift and go to state 38
-
-    val                            shift and go to state 170
-
-state 169
-
-    (35) ite -> IF LPAREN cond RPAREN LCURLY . stmts RCURLY ELSE LCURLY stmts RCURLY
-    (27) stmts -> . stmt stmts
-    (28) stmts -> . empty
-    (29) stmt -> . asgn
-    (30) stmt -> . ite
-    (31) stmt -> . atomic
-    (32) stmt -> . funcCall
-    (33) stmt -> . callreachavoid
-    (46) empty -> .
-    (38) asgn -> . varname EQLS expr SEMI
-    (39) asgn -> . varname EQLS funcCall
-    (40) asgn -> . varname INCR SEMI
-    (35) ite -> . IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-    (37) atomic -> . ATOMIC LCURLY stmts RCURLY
-    (36) funcCall -> . varname LPAREN RPAREN SEMI
-    (34) callreachavoid -> . REACHAVOID LPAREN varname COMMA val RPAREN
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    RCURLY          reduce using rule 46 (empty -> .)
-    IF              shift and go to state 107
-    ATOMIC          shift and go to state 102
-    REACHAVOID      shift and go to state 111
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    funcCall                       shift and go to state 108
-    stmts                          shift and go to state 171
-    varname                        shift and go to state 109
-    ite                            shift and go to state 101
-    stmt                           shift and go to state 106
-    asgn                           shift and go to state 104
-    atomic                         shift and go to state 112
-    callreachavoid                 shift and go to state 110
-    empty                          shift and go to state 105
-
-state 170
-
-    (34) callreachavoid -> REACHAVOID LPAREN varname COMMA val . RPAREN
-
-    RPAREN          shift and go to state 172
-=======
   ! AND             [ reduce using rule 18 (cond -> cond AND cond .) ]
   ! OR              [ reduce using rule 18 (cond -> cond AND cond .) ]
 
@@ -5577,100 +2992,9 @@ state 170
 state 168
 
     (12) pre -> PRE LPAREN cond RPAREN SEMI .
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
     EFF             reduce using rule 12 (pre -> PRE LPAREN cond RPAREN SEMI .)
 
-<<<<<<< HEAD
-state 171
-
-    (35) ite -> IF LPAREN cond RPAREN LCURLY stmts . RCURLY ELSE LCURLY stmts RCURLY
-
-    RCURLY          shift and go to state 173
-
-
-state 172
-
-    (34) callreachavoid -> REACHAVOID LPAREN varname COMMA val RPAREN .
-
-    IF              reduce using rule 34 (callreachavoid -> REACHAVOID LPAREN varname COMMA val RPAREN .)
-    ATOMIC          reduce using rule 34 (callreachavoid -> REACHAVOID LPAREN varname COMMA val RPAREN .)
-    REACHAVOID      reduce using rule 34 (callreachavoid -> REACHAVOID LPAREN varname COMMA val RPAREN .)
-    LID             reduce using rule 34 (callreachavoid -> REACHAVOID LPAREN varname COMMA val RPAREN .)
-    CID             reduce using rule 34 (callreachavoid -> REACHAVOID LPAREN varname COMMA val RPAREN .)
-    RCURLY          reduce using rule 34 (callreachavoid -> REACHAVOID LPAREN varname COMMA val RPAREN .)
-
-
-state 173
-
-    (35) ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY . ELSE LCURLY stmts RCURLY
-
-    ELSE            shift and go to state 174
-
-
-state 174
-
-    (35) ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE . LCURLY stmts RCURLY
-
-    LCURLY          shift and go to state 175
-
-
-state 175
-
-    (35) ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY . stmts RCURLY
-    (27) stmts -> . stmt stmts
-    (28) stmts -> . empty
-    (29) stmt -> . asgn
-    (30) stmt -> . ite
-    (31) stmt -> . atomic
-    (32) stmt -> . funcCall
-    (33) stmt -> . callreachavoid
-    (46) empty -> .
-    (38) asgn -> . varname EQLS expr SEMI
-    (39) asgn -> . varname EQLS funcCall
-    (40) asgn -> . varname INCR SEMI
-    (35) ite -> . IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY
-    (37) atomic -> . ATOMIC LCURLY stmts RCURLY
-    (36) funcCall -> . varname LPAREN RPAREN SEMI
-    (34) callreachavoid -> . REACHAVOID LPAREN varname COMMA val RPAREN
-    (69) varname -> . LID
-    (70) varname -> . CID
-
-    RCURLY          reduce using rule 46 (empty -> .)
-    IF              shift and go to state 107
-    ATOMIC          shift and go to state 102
-    REACHAVOID      shift and go to state 111
-    LID             shift and go to state 23
-    CID             shift and go to state 24
-
-    funcCall                       shift and go to state 108
-    stmts                          shift and go to state 176
-    varname                        shift and go to state 109
-    ite                            shift and go to state 101
-    stmt                           shift and go to state 106
-    asgn                           shift and go to state 104
-    atomic                         shift and go to state 112
-    callreachavoid                 shift and go to state 110
-    empty                          shift and go to state 105
-
-state 176
-
-    (35) ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts . RCURLY
-
-    RCURLY          shift and go to state 177
-
-
-state 177
-
-    (35) ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .
-
-    IF              reduce using rule 35 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
-    ATOMIC          reduce using rule 35 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
-    REACHAVOID      reduce using rule 35 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
-    LID             reduce using rule 35 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
-    CID             reduce using rule 35 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
-    RCURLY          reduce using rule 35 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
-=======
 
 state 169
 
@@ -6651,23 +3975,13 @@ state 233
     RETURN          reduce using rule 54 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
     LOG             reduce using rule 54 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
     RCURLY          reduce using rule 54 (ite -> IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY .)
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d
 
 WARNING: 
 WARNING: Conflicts:
 WARNING: 
-<<<<<<< HEAD
-WARNING: shift/reduce conflict for RPAREN in state 93 resolved as shift
-WARNING: shift/reduce conflict for RPAREN in state 118 resolved as shift
-WARNING: shift/reduce conflict for AND in state 139 resolved as shift
-WARNING: shift/reduce conflict for OR in state 139 resolved as shift
-WARNING: shift/reduce conflict for AND in state 141 resolved as shift
-WARNING: shift/reduce conflict for OR in state 141 resolved as shift
-=======
 WARNING: shift/reduce conflict for RPAREN in state 100 resolved as shift
 WARNING: shift/reduce conflict for RPAREN in state 141 resolved as shift
 WARNING: shift/reduce conflict for AND in state 167 resolved as shift
 WARNING: shift/reduce conflict for OR in state 167 resolved as shift
 WARNING: shift/reduce conflict for AND in state 169 resolved as shift
 WARNING: shift/reduce conflict for OR in state 169 resolved as shift
->>>>>>> 94e658513ea050ac71727bf5c5d9de49132e2c9d

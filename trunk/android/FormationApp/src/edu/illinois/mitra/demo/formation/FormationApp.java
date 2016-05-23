@@ -134,8 +134,7 @@ public class FormationApp extends LogicThread {
 				if(stage ==Stage.DONE) {
 					System.out.println(gvh.log.getLog());
 
-					return null;
-
+					continue;
 				}
 
 
