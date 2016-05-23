@@ -1,0 +1,81 @@
+Agent::Dummy	
+
+MW{
+	int NumAdded = 0; 
+	int Changed = 0;
+	int CurrentTotal = 0;
+	Map destinations;	
+
+}
+
+boolean isFinal = false;
+boolean Added = false;
+ItemPosition currentDestination;
+ObstacleList obs;
+int FinalSum = 0;
+enum Stage  {PICK,GO,FAIL,DONE} stage = Stage.PICK;
+
+
+Init() {
+	getRobotIndex();
+	adding() {
+		pre(Added == false);
+		eff {
+			atomic{
+				Added = true;
+				CurrentTotal = CurrentTotal +robotIndex;
+				NumAdded = NumAdded+1;
+				
+			}
+		}
+	}
+
+
+	allAdded() {
+		pre(NumAdded == NumBots && isFinal == false);
+		eff {
+			FinalSum = CurrentTotal; isFinal = true;
+		}
+	
+	}
+
+	ra1(){
+		pre(stage == Stage.PICK);
+		eff{
+			destinations = getInput();
+			if(isEmpty(destinations)){
+				stage = Stage.DONE;
+			}
+			else{
+				currentDestination = getRandomElement(destinations);
+				Added = true;
+				doReachAvoid(currentDestination,obs);
+				stage = Stage.GO;
+			}
+		}
+	}
+	ra2(){
+
+		pre(stage == Stage.GO);
+		eff{
+			if(doneFlag){
+				stage = Stage.PICK;
+			}
+			else {}
+			if(failFlag){
+				stage = Stage.FAIL;
+			}
+			else{}
+
+		}
+	}
+	exit() {
+		pre(stage == Stage.DONE);
+		eff {
+			CurrentTotal = 1000; 
+			stage = Stage.PICK;
+		}
+	}
+
+}
+ 

@@ -1,0 +1,8 @@
+echo "enter full path for installation:"
+
+read filepath 
+
+cd $filepath
+
+git clone https://github.com/lin187/StarL1.5.git
+

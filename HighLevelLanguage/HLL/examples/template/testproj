@@ -1,0 +1,21 @@
+Agent::<App name here starting with uppercase letter>
+
+MW {
+	<Multi writer variables declared here>	
+}
+
+<Local variables declared here>
+
+Init() {
+	<event name>(){
+		pre(<condition>);
+		eff {
+			<statements to be executed on event trigger here>
+		}
+
+	}
+
+	<more events>
+
+
+}

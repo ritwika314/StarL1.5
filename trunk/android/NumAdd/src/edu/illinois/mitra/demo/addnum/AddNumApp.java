@@ -4,6 +4,7 @@ import java.util.List;
 
 import edu.illinois.mitra.starl.comms.RobotMessage;
 import edu.illinois.mitra.starl.functions.DSMMultipleAttr;
+import edu.illinois.mitra.starl.functions.GroupSetMutex;
 import edu.illinois.mitra.starl.functions.SingleHopMutualExclusion;
 import edu.illinois.mitra.starl.gvh.GlobalVarHolder;
 import edu.illinois.mitra.starl.interfaces.DSM;
@@ -25,8 +26,9 @@ public class AddNumApp extends LogicThread {
 	private boolean isFinal = false;
 	public AddNumApp(GlobalVarHolder gvh){
 		super(gvh);
-		robotIndex = Integer.parseInt(name.substring(3,name.length()));
-		mutex = new SingleHopMutualExclusion(1, gvh, "bot0");
+		robotIndex = Integer.parseInt(name.replaceAll("[^0-9]", ""));
+		mutex = new GroupSetMutex(gvh, 0);
+		//mutex = new SingleHopMutualExclusion(1, gvh, "bot0");
 		dsm = new DSMMultipleAttr(gvh);
 	}
 		@Override
@@ -38,15 +40,15 @@ public class AddNumApp extends LogicThread {
 				sleep(100);
 				//stage adding
 				if(!added){
-					if(!wait){
+					if(!wait){	
 						// get total number of robots
-						numBots = gvh.gps.getPositions().getNumPositions();
+						numBots = gvh.gps.get_robot_Positions().getNumPositions();
 						// call mutex and then wait
 						mutex.requestEntry(0);
 						wait = true;
 					}
 					if(mutex.clearToEnter(0)){
-						System.out.println("This is robot" + name);
+						System.out.println(name);
 						added = true;
 						numAdded = (Integer.parseInt(dsm.get("numAdded","*")));
 						dsm.put("numAdded", "*", numAdded + 1);
@@ -57,6 +59,7 @@ public class AddNumApp extends LogicThread {
 					continue;
 				}
 				//stage allAdded
+				numAdded = Integer.parseInt(dsm.get("numAdded", "*"));
 				if(!isFinal && Integer.parseInt(dsm.get("numAdded", "*")) == numBots){
 					finalSum = Integer.parseInt(dsm.get("currentTotal", "*"));
 					isFinal = true;

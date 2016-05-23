@@ -1,0 +1,78 @@
+Agent::Dummy	
+
+MW{
+	int NumAdded = 0; 
+	int CurrentTotal = 0;
+	
+
+}
+
+boolean isFinal = false;
+boolean Added = false;
+int FinalSum = 0;
+enum Stage  {PICK,GO,FAIL,DONE} stage = PICK;
+ItemPosition position;
+ItemPosition Target;
+
+
+Init() {
+	getRobotIndex();
+	position = getmypos();
+	adding() {
+		pre(Added == false);
+		eff {
+			atomic{
+				Added = true;
+				CurrentTotal = CurrentTotal +robotIndex;
+				NumAdded = NumAdded+1;
+				
+			}
+		}
+	}
+
+
+	allAdded() {
+		pre(NumAdded == NumBots && isFinal == false);
+		eff {
+			FinalSum = CurrentTotal; isFinal = true;
+		}
+	
+	}
+
+	ra1(){
+		pre(stage == Stage.PICK);
+		eff{
+			if(emptydest()){
+				stage = Stage.DONE;
+			}
+			else{
+				currentdestination.x = position.getX()+400;
+				currentdestination.y = position.getY()+400;
+				doreachavoid(currentdestination,0)
+				stage = Stage.GO;
+			}
+		}
+	}
+	ra2(){
+
+		pre(stage == Stage.GO);
+		eff{
+			if(doneflag){
+				stage = Stage.PICK;
+			}
+			else if(failflag){
+				stage - Stage.FAIL;
+			}
+
+		}
+	}
+	exit() {
+		pre(stage == Stage.DONE);
+		eff {
+			CurrentTotal = 1000; 
+			stage = Stage.PICK;
+		}
+	}
+
+}
+ 

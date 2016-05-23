@@ -1,0 +1,68 @@
+Agent::Formation 
+
+
+MW{
+	Map destinations;
+}
+
+
+enum Stage {PICK, GO , DONE, FAIL } stage = Stage.PICK;
+ItemPosition currentDestination;
+ObstacleList obs;
+Init() {
+
+	event1(){
+	pre(stage == Stage.PICK);
+	eff {
+		if (isEmpty(destinations)) {
+			stage = Stage.DONE;
+		}
+		else {
+			currentDestination = getRandomElement(destinations);
+			doReachAvoid(currentDestination,obs);
+			stage = Stage.GO;	
+		}
+
+	
+
+	}
+	}
+	event2(){
+	pre(stage == Stage.GO);
+	eff {
+		if (doneFlag) {
+			if (currentDestination != null) {
+				remove(currentDestination);
+			}
+			else{}
+			msg(currentDestination);
+			stage = Stage.PICK;
+
+		} 
+		else {}
+		if (failFlag) {
+			log(failFlag);
+			stage = Stage.FAIL;
+
+		}
+		else {}
+
+		}
+	}
+	event3(){
+	pre(stage == Stage.FAIL);
+	eff {
+		log();
+	}
+	}
+	event4(){
+	pre(stage == Stage.DONE);
+	eff{
+		log();
+		return null;
+	}
+	}
+	}
+
+
+

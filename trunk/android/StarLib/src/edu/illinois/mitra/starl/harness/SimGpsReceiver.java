@@ -5,6 +5,7 @@ import java.util.Vector;
 import edu.illinois.mitra.starl.gvh.GlobalVarHolder;
 import edu.illinois.mitra.starl.interfaces.GpsReceiver;
 import edu.illinois.mitra.starl.interfaces.RobotEventListener.Event;
+import edu.illinois.mitra.starl.interfaces.TrackedRobot;
 import edu.illinois.mitra.starl.objects.Common;
 import edu.illinois.mitra.starl.objects.ItemPosition;
 import edu.illinois.mitra.starl.objects.ObstacleList;
@@ -19,12 +20,12 @@ public class SimGpsReceiver implements GpsReceiver {
 	
 	private SimGpsProvider provider;
 	
-	public SimGpsReceiver(GlobalVarHolder gvh, SimGpsProvider provider, ItemPosition initpos) {
+	public SimGpsReceiver(GlobalVarHolder gvh, SimGpsProvider provider, TrackedRobot initpos) {
 		this.gvh = gvh;
 		this.provider = provider;
 		provider.registerReceiver(gvh.id.getName(), this);
 		provider.addRobot(initpos);
-	}
+	}	
 	
 	@Override
 	public void start() {
@@ -48,12 +49,12 @@ public class SimGpsReceiver implements GpsReceiver {
 	}
 
 	@Override
-	public PositionList getRobots() {
-		return provider.getRobotPositions();
+	public PositionList<ItemPosition> get_robots() {
+		return provider.getAllPositions();
 	}
 
 	@Override
-	public PositionList getWaypoints() {
+	public PositionList<ItemPosition> getWaypoints() {
 		return provider.getWaypointPositions();
 	}
 	@Override
@@ -65,8 +66,9 @@ public class SimGpsReceiver implements GpsReceiver {
 	public Vector<ObstacleList> getViews() {
 		return provider.getViews() ;
 	}
-	
-	
-	
-	
+
+	@Override
+	public PositionList<ItemPosition> getSensepoints() {
+		return provider.getSensePositions();
+	}
 }

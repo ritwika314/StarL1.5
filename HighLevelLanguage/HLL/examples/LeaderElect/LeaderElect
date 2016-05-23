@@ -1,0 +1,68 @@
+Agent::LeaderElect
+
+
+MW{
+	int numVotes = 0;
+	int candidate = -1;
+
+}
+
+
+	int LeaderId = -1;
+	boolean elected = false;
+	boolean voted = false;
+	boolean added = false;
+
+
+Init() {
+	getRobotIndex();
+voting(){
+	pre(!voted && robotIndex > candidate) ;
+	eff {
+		atomic{
+			if (robotIndex > candidate) {
+				candidate = robotIndex;
+			}	
+
+			else {}
+			
+		}
+		
+	}
+}
+
+voted(){
+	pre(!voted && robotIndex < candidate);
+	eff {
+		voted = true;
+	}
+
+
+}
+
+adding(){
+	pre(!added);
+	eff{
+		atomic{
+			added = true;
+			numVotes = numVotes+1;
+		}
+
+	}
+
+}
+
+electing(){
+	pre(numVotes == NumBots && !elected);
+	eff{
+		elected = true;
+		LeaderId = candidate;
+	}
+
+}
+exit(){
+	pre(elected);
+	eff{
+	}
+}
+}

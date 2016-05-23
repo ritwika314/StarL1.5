@@ -2,12 +2,12 @@ import ply.lex as lex
 
 
 reserved = { "Agent" : 'AGENT' , "MW" : 'MW', 'Init' : 'INIT','pre': 'PRE','eff' : 'EFF', 'exit' : 'EXIT',
-	     "int" : 'INT', 'float' : 'FLOAT', 'boolean' : 'BOOL', 'true' : 'TRUE', 'false' : 'FALSE', 'shared': 'SHARED',
-	     "atomic" : 'ATOMIC', 'getRobotIndex' : 'ROBOT','if' : 'IF' , 'else':'ELSE'
+	     "int" : 'INT', 'float' : 'FLOAT', 'boolean' : 'BOOL', 'true' : 'TRUE', 'false' : 'FALSE', 'shared': 'SHARED', 'enum': 'ENUM', 'ItemPosition':'ITEMPOSITION',
+	     "atomic" : 'ATOMIC', 'getRobotIndex' : 'ROBOT','if' : 'IF' , 'else':'ELSE','getmypos' :'GETMYPOS', 'reachavoid': 'REACHAVOID', 'failflag':'FAILFLAG', 'doneflag':'DONEFLAG',
 	   }
 
 
-tokens = ['BR','SEMI',
+tokens = ['BR','SEMI','COMMA',
 	'CID','LID',
 	'RCURLY','LCURLY','RPAREN','LPAREN',
 	'INCR','PLUS','MINUS','TIMES','BY',
@@ -24,6 +24,7 @@ t_LCURLY = r'\{'
 t_LPAREN = r'\('
 t_RPAREN = r'\)'
 t_SEMI	 = r';'
+t_COMMA	 = r','
 
 
 #relational operators
@@ -51,13 +52,13 @@ t_BY 	= r'\/'
 
 #capitalized identifiers 
 def t_CID(t):
-	r'[A-Z][a-zA-Z0-9]*'
+	r'[A-Z][.a-zA-Z0-9]*'
 	t.type = reserved.get(t.value,'CID') #Check for reserved words 
 	return t
 
 #lowercase identifiers	
 def t_LID(t):
-	r'[a-z][a-zA-Z0-9]*'
+	r'[a-z][.a-zA-Z0-9]*'
 	t.type = reserved.get(t.value,'LID') #Check for reserved words 
 	return t
 

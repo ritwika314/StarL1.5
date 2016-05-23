@@ -1,0 +1,41 @@
+result=${PWD}
+cd ../../../
+installpath=${PWD}
+cd $installpath
+echo ${PWD}
+cd StarL1.5/trunk/android
+#echo "enter appname"
+#read appname
+j="App"
+an=$1$j
+mkdir $an
+pn="$(echo $1 | tr '[A-Z]' '[a-z]')"
+#echo "enter packagename"
+#read packagename
+
+cd $an 
+mkdir bin 
+mkdir bin/edu
+mkdir bin/edu/illinois
+mkdir bin/edu/illinois/mitra
+mkdir bin/edu/illinois/mitra/demo
+mkdir bin/edu/illinois/mitra/demo/$pn
+mkdir src
+mkdir src/edu
+mkdir src/edu/illinois
+mkdir src/edu/illinois/mitra
+mkdir src/edu/illinois/mitra/demo
+mkdir src/edu/illinois/mitra/demo/$pn
+mkdir waypts 
+cp $installpath/StarL1.5/trunk/android/RaceApp/RaceApp.iml $an".iml"
+
+
+#cp ../NumAdd/src/edu/illinois/mitra/demo/numadd/Main.java src/edu/illinois/mitra/demo/$packagename/Main.java
+cp -avr $installpath/StarL1.5/trunk/android/RaceApp/waypoints .
+cd $result
+cp ../examples/$1/$1 . 
+python parser.py $1
+rm $1 
+mv *.java $installpath/StarL1.5/trunk/android/$an/src/edu/illinois/mitra/demo/$pn/
+rm *.ast
+rm *.sym

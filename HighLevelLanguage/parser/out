@@ -1,0 +1,1610 @@
+race
+RaceApp
+reachAvoid failed, safty 
+reachAvoid failed, safty 
+nulliRobot0	1461665697283	d	MotionAutomaton : STARTED!
+iRobot0	1461665697283	i	GPSReceiver : Starting GPS receiver
+iRobot0	1461665697358	d	ReachAvoid : STARTED!
+iRobot0	1461665697358	i	DoReachAvoid : 3100 800
+iRobot0	1461665697358	i	ReachAvoid : RRT has found a solution
+iRobot0	1461665697458	i	ReachAvoid :  go to called to: midpoint: 698, -499, 0. index 0
+iRobot0	1461665697478	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665697478	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665697538	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665697538	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665697598	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665697598	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665697598	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665697598	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665697758	i	ReachAvoid :  go to called to: midpoint: 3100, 800, 0. index 0
+iRobot0	1461665697778	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665697778	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665697838	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665698378	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot0	1461665698378	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665698438	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665698438	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665701874	d	SmartCommsHandler : Received data message: M|2298|quadcopter1|ALL|22|D`|&
+iRobot0	1461665701874	d	SmartCommsHandler : Sending ACK: M|2298|iRobot0|quadcopter1|0|ACK`|&
+iRobot0	1461665701958	i	DoReachAvoid : 294 258
+iRobot0	1461665702058	i	ReachAvoid : RRT has found a solution
+iRobot0	1461665702158	i	ReachAvoid :  go to called to: midpoint: 1485, -102, 0. index 0
+iRobot0	1461665702218	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665702218	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665702278	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665702278	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665702338	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665702338	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665702338	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665702338	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665702458	i	ReachAvoid :  go to called to: midpoint: 294, 258, 0. index 0
+iRobot0	1461665702518	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665702518	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665702578	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665703898	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot0	1461665703898	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665703958	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665703958	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665705038	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665705098	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665705158	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665705218	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665705218	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665705278	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665705338	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665705398	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665705458	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665705458	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665705698	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665705758	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665705818	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665705878	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665705878	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665705938	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665705998	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665706118	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665706178	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665706178	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665706298	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665706298	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665706358	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665706418	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665706478	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665706478	i	MotionAutomaton : Straight at velocity 246
+iRobot0	1461665706538	i	MotionAutomaton : Straight at velocity 244
+iRobot0	1461665706598	i	MotionAutomaton : Straight at velocity 242
+iRobot0	1461665706658	i	MotionAutomaton : Straight at velocity 242
+iRobot0	1461665706718	i	MotionAutomaton : Straight at velocity 240
+iRobot0	1461665706778	i	MotionAutomaton : Straight at velocity 238
+iRobot0	1461665706838	i	MotionAutomaton : Straight at velocity 236
+iRobot0	1461665706898	i	MotionAutomaton : Straight at velocity 234
+iRobot0	1461665706958	i	MotionAutomaton : Straight at velocity 234
+iRobot0	1461665707018	i	MotionAutomaton : Straight at velocity 232
+iRobot0	1461665707078	i	MotionAutomaton : Straight at velocity 230
+iRobot0	1461665707138	i	MotionAutomaton : Straight at velocity 228
+iRobot0	1461665707198	i	MotionAutomaton : Straight at velocity 226
+iRobot0	1461665707258	i	MotionAutomaton : Straight at velocity 226
+iRobot0	1461665707318	i	MotionAutomaton : Straight at velocity 224
+iRobot0	1461665707378	i	MotionAutomaton : Straight at velocity 223
+iRobot0	1461665707438	i	MotionAutomaton : Straight at velocity 221
+iRobot0	1461665707498	i	MotionAutomaton : Straight at velocity 219
+iRobot0	1461665707558	i	MotionAutomaton : Straight at velocity 219
+iRobot0	1461665707618	i	MotionAutomaton : Straight at velocity 217
+iRobot0	1461665707678	i	MotionAutomaton : Straight at velocity 216
+iRobot0	1461665707738	i	MotionAutomaton : Straight at velocity 213
+iRobot0	1461665707798	i	MotionAutomaton : Straight at velocity 212
+iRobot0	1461665707858	i	MotionAutomaton : Straight at velocity 212
+iRobot0	1461665707918	i	MotionAutomaton : Straight at velocity 210
+iRobot0	1461665707978	i	MotionAutomaton : Straight at velocity 208
+iRobot0	1461665708038	i	MotionAutomaton : Straight at velocity 206
+iRobot0	1461665708098	i	MotionAutomaton : Straight at velocity 204
+iRobot0	1461665708158	i	MotionAutomaton : Straight at velocity 204
+iRobot0	1461665708218	i	MotionAutomaton : Straight at velocity 203
+iRobot0	1461665708278	i	MotionAutomaton : Straight at velocity 201
+iRobot0	1461665708338	i	MotionAutomaton : Straight at velocity 200
+iRobot0	1461665708398	i	MotionAutomaton : Straight at velocity 198
+iRobot0	1461665708458	i	MotionAutomaton : Straight at velocity 198
+iRobot0	1461665708518	i	MotionAutomaton : Straight at velocity 196
+iRobot0	1461665708578	i	MotionAutomaton : Straight at velocity 194
+iRobot0	1461665708638	i	MotionAutomaton : Straight at velocity 193
+iRobot0	1461665708698	i	MotionAutomaton : Straight at velocity 191
+iRobot0	1461665708758	i	MotionAutomaton : Straight at velocity 191
+iRobot0	1461665708818	i	MotionAutomaton : Straight at velocity 189
+iRobot0	1461665708878	i	MotionAutomaton : Straight at velocity 187
+iRobot0	1461665708938	i	MotionAutomaton : Straight at velocity 186
+iRobot0	1461665708998	i	MotionAutomaton : Straight at velocity 185
+iRobot0	1461665709058	i	MotionAutomaton : Straight at velocity 185
+iRobot0	1461665709118	i	MotionAutomaton : Straight at velocity 183
+iRobot0	1461665709118	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665709178	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665709298	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665709358	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665709358	i	MotionAutomaton : Straight at velocity 178
+iRobot0	1461665709418	i	MotionAutomaton : Straight at velocity 177
+iRobot0	1461665709478	i	MotionAutomaton : Straight at velocity 176
+iRobot0	1461665709538	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665709598	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665709598	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665709658	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665709658	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665709658	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665709658	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665709858	i	ReachAvoid :  dest Reached: A: 294, 258, 600. index 0
+iRobot0	1461665709958	i	DoneFlag : read
+iRobot0	1461665710058	i	DoReachAvoid : 650 2430
+iRobot0	1461665710158	i	ReachAvoid : RRT has found a solution
+iRobot0	1461665710258	i	ReachAvoid :  go to called to: midpoint: 347, 242, 0. index 0
+iRobot0	1461665710318	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665710318	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665710378	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665710378	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665710438	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665710438	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665710438	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665710438	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665710558	i	ReachAvoid :  go to called to: midpoint: 265, 599, 0. index 0
+iRobot0	1461665710618	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665710618	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665710678	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665711518	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot0	1461665711518	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665711578	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665711578	i	MotionAutomaton : Straight at velocity 208
+iRobot0	1461665711638	i	MotionAutomaton : Straight at velocity 206
+iRobot0	1461665711698	i	MotionAutomaton : Straight at velocity 204
+iRobot0	1461665711758	i	MotionAutomaton : Straight at velocity 204
+iRobot0	1461665711818	i	MotionAutomaton : Straight at velocity 203
+iRobot0	1461665711878	i	MotionAutomaton : Straight at velocity 201
+iRobot0	1461665711938	i	MotionAutomaton : Straight at velocity 199
+iRobot0	1461665711998	i	MotionAutomaton : Straight at velocity 197
+iRobot0	1461665712058	i	MotionAutomaton : Straight at velocity 197
+iRobot0	1461665712118	i	MotionAutomaton : Straight at velocity 195
+iRobot0	1461665712178	i	MotionAutomaton : Straight at velocity 193
+iRobot0	1461665712238	i	MotionAutomaton : Straight at velocity 192
+iRobot0	1461665712298	i	MotionAutomaton : Straight at velocity 190
+iRobot0	1461665712358	i	MotionAutomaton : Straight at velocity 190
+iRobot0	1461665712418	i	MotionAutomaton : Straight at velocity 189
+iRobot0	1461665712478	i	MotionAutomaton : Straight at velocity 187
+iRobot0	1461665712538	i	MotionAutomaton : Straight at velocity 185
+iRobot0	1461665712598	i	MotionAutomaton : Straight at velocity 184
+iRobot0	1461665712658	i	MotionAutomaton : Straight at velocity 184
+iRobot0	1461665712718	i	MotionAutomaton : Straight at velocity 182
+iRobot0	1461665712718	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665712778	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665712838	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665712898	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665712898	i	MotionAutomaton : Straight at velocity 177
+iRobot0	1461665712958	i	MotionAutomaton : Straight at velocity 177
+iRobot0	1461665713018	i	MotionAutomaton : Straight at velocity 176
+iRobot0	1461665713078	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665713138	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665713138	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665713138	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665713138	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665713258	i	ReachAvoid :  go to called to: midpoint: 261, 698, 0. index 0
+iRobot0	1461665713318	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665713318	i	MotionAutomaton : Stage transition to ARCING
+iRobot0	1461665713378	e	MotionAutomaton : Stage is: ARCING
+iRobot0	1461665713438	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665713498	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665713498	i	MotionAutomaton : Straight at velocity 181
+iRobot0	1461665713558	i	MotionAutomaton : Straight at velocity 181
+iRobot0	1461665713558	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665713618	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665713678	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665713738	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665713738	i	MotionAutomaton : Straight at velocity 176
+iRobot0	1461665713798	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665713858	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665713858	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665713918	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665713918	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665713918	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665713918	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665714058	i	ReachAvoid :  go to called to: midpoint: 113, 923, 0. index 0
+iRobot0	1461665714098	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665714098	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665714158	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665714518	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot0	1461665714518	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665714578	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665714578	i	MotionAutomaton : Straight at velocity 205
+iRobot0	1461665714638	i	MotionAutomaton : Straight at velocity 203
+iRobot0	1461665714698	i	MotionAutomaton : Straight at velocity 201
+iRobot0	1461665714758	i	MotionAutomaton : Straight at velocity 201
+iRobot0	1461665714818	i	MotionAutomaton : Straight at velocity 200
+iRobot0	1461665714878	i	MotionAutomaton : Straight at velocity 197
+iRobot0	1461665714938	i	MotionAutomaton : Straight at velocity 196
+iRobot0	1461665714998	i	MotionAutomaton : Straight at velocity 194
+iRobot0	1461665715058	i	MotionAutomaton : Straight at velocity 194
+iRobot0	1461665715118	i	MotionAutomaton : Straight at velocity 192
+iRobot0	1461665715178	i	MotionAutomaton : Straight at velocity 191
+iRobot0	1461665715238	i	MotionAutomaton : Straight at velocity 189
+iRobot0	1461665715238	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665715298	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665715418	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665715478	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665715478	i	MotionAutomaton : Straight at velocity 184
+iRobot0	1461665715538	i	MotionAutomaton : Straight at velocity 182
+iRobot0	1461665715598	i	MotionAutomaton : Straight at velocity 180
+iRobot0	1461665715658	i	MotionAutomaton : Straight at velocity 180
+iRobot0	1461665715718	i	MotionAutomaton : Straight at velocity 178
+iRobot0	1461665715778	i	MotionAutomaton : Straight at velocity 177
+iRobot0	1461665715838	i	MotionAutomaton : Straight at velocity 175
+iRobot0	1461665715838	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665715898	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665715898	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665715958	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665715958	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665715958	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665715958	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665716058	i	ReachAvoid :  go to called to: midpoint: 140, 1523, 0. index 0
+iRobot0	1461665716078	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665716078	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665716138	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665716558	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot0	1461665716558	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665716618	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665716618	i	MotionAutomaton : Straight at velocity 244
+iRobot0	1461665716678	i	MotionAutomaton : Straight at velocity 241
+iRobot0	1461665716738	i	MotionAutomaton : Straight at velocity 240
+iRobot0	1461665716798	i	MotionAutomaton : Straight at velocity 238
+iRobot0	1461665716858	i	MotionAutomaton : Straight at velocity 238
+iRobot0	1461665716858	i	ReachAvoid :  Failed: B: 650, 2430, 600. index 0
+iRobot0	1461665716918	i	MotionAutomaton : Straight at velocity 236
+iRobot0	1461665716958	i	ReachAvoid :  Failed: B: 650, 2430, 600. index 0
+iRobot0	1461665716978	d	MotionAutomaton : Imminent collision detected!
+iRobot0	1461665716978	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665716978	d	MotionAutomaton : Colliding: sending turn command
+iRobot0	1461665716978	d	MotionAutomaton : colliding with detected - true - 164
+iRobot0	1461665717038	i	MotionAutomaton : Advancing stage to STRAIGHT
+iRobot0	1461665717098	d	MotionAutomaton : Colliding: sending straight command
+iRobot0	1461665717098	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665717872	d	SmartCommsHandler : Received data message: M|8823|iRobot1|ALL|22|B`|&
+iRobot0	1461665717872	d	SmartCommsHandler : Sending ACK: M|8823|iRobot0|iRobot1|0|ACK`|&
+iRobot0	1461665717958	i	DoReachAvoid : 3517 2534
+iRobot0	1461665717958	i	ReachAvoid : RRT has found a solution
+iRobot0	1461665718058	i	ReachAvoid :  go to called to: midpoint: 84, 1136, 0. index 0
+iRobot0	1461665718118	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665718118	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665718178	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665718178	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665718238	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665718238	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665718238	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665718238	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665718358	i	ReachAvoid :  go to called to: midpoint: -1253, 1961, 0. index 0
+iRobot0	1461665718418	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665718418	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665718478	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665719078	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot0	1461665719078	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665719138	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665719138	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665722678	i	MotionAutomaton : Straight at velocity 248
+iRobot0	1461665722738	i	MotionAutomaton : Straight at velocity 246
+iRobot0	1461665722798	i	MotionAutomaton : Straight at velocity 244
+iRobot0	1461665722858	i	MotionAutomaton : Straight at velocity 244
+iRobot0	1461665722918	i	MotionAutomaton : Straight at velocity 242
+iRobot0	1461665722978	i	MotionAutomaton : Straight at velocity 240
+iRobot0	1461665723038	i	MotionAutomaton : Straight at velocity 237
+iRobot0	1461665723098	i	MotionAutomaton : Straight at velocity 236
+iRobot0	1461665723158	i	MotionAutomaton : Straight at velocity 236
+iRobot0	1461665723218	i	MotionAutomaton : Straight at velocity 234
+iRobot0	1461665723278	i	MotionAutomaton : Straight at velocity 232
+iRobot0	1461665723338	i	MotionAutomaton : Straight at velocity 229
+iRobot0	1461665723398	i	MotionAutomaton : Straight at velocity 228
+iRobot0	1461665723458	i	MotionAutomaton : Straight at velocity 228
+iRobot0	1461665723518	i	MotionAutomaton : Straight at velocity 225
+iRobot0	1461665723578	i	MotionAutomaton : Straight at velocity 223
+iRobot0	1461665723638	i	MotionAutomaton : Straight at velocity 221
+iRobot0	1461665723638	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665723698	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665723758	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665723818	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665723818	i	MotionAutomaton : Straight at velocity 217
+iRobot0	1461665723878	i	MotionAutomaton : Straight at velocity 215
+iRobot0	1461665723938	i	MotionAutomaton : Straight at velocity 214
+iRobot0	1461665723998	i	MotionAutomaton : Straight at velocity 212
+iRobot0	1461665723998	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665724058	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665724118	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665724178	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665724178	i	MotionAutomaton : Straight at velocity 208
+iRobot0	1461665724238	i	MotionAutomaton : Straight at velocity 206
+iRobot0	1461665724298	i	MotionAutomaton : Straight at velocity 204
+iRobot0	1461665724358	i	MotionAutomaton : Straight at velocity 204
+iRobot0	1461665724418	i	MotionAutomaton : Straight at velocity 202
+iRobot0	1461665724478	i	MotionAutomaton : Straight at velocity 200
+iRobot0	1461665724538	i	MotionAutomaton : Straight at velocity 198
+iRobot0	1461665724598	i	MotionAutomaton : Straight at velocity 197
+iRobot0	1461665724658	i	MotionAutomaton : Straight at velocity 197
+iRobot0	1461665724718	i	MotionAutomaton : Straight at velocity 195
+iRobot0	1461665724778	i	MotionAutomaton : Straight at velocity 194
+iRobot0	1461665724838	i	MotionAutomaton : Straight at velocity 192
+iRobot0	1461665724898	i	MotionAutomaton : Straight at velocity 191
+iRobot0	1461665724958	i	MotionAutomaton : Straight at velocity 191
+iRobot0	1461665725018	i	MotionAutomaton : Straight at velocity 189
+iRobot0	1461665725078	i	MotionAutomaton : Straight at velocity 187
+iRobot0	1461665725078	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665725138	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665725198	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665725258	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665725258	i	MotionAutomaton : Straight at velocity 184
+iRobot0	1461665725318	i	MotionAutomaton : Straight at velocity 183
+iRobot0	1461665725378	i	MotionAutomaton : Straight at velocity 181
+iRobot0	1461665725378	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665725438	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665725498	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665725558	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665725558	i	MotionAutomaton : Straight at velocity 177
+iRobot0	1461665725618	i	MotionAutomaton : Straight at velocity 176
+iRobot0	1461665725618	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot0	1461665725678	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot0	1461665725678	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665725738	e	MotionAutomaton : Stage is: GOAL
+iRobot0	1461665725738	i	MotionAutomaton : At goal, done flag set!
+iRobot0	1461665725738	i	MotionAutomaton : Straight at velocity 0
+iRobot0	1461665725738	i	MotionAutomaton : Stage transition to GOAL
+iRobot0	1461665725858	i	ReachAvoid :  go to called to: midpoint: 3517, 2534, 0. index 0
+iRobot0	1461665725918	e	MotionAutomaton : Stage is: INIT
+iRobot0	1461665725918	i	MotionAutomaton : Stage transition to TURN
+iRobot0	1461665725978	e	MotionAutomaton : Stage is: TURN
+iRobot0	1461665727538	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot0	1461665727538	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot0	1461665727598	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot0	1461665727598	i	MotionAutomaton : Straight at velocity 250
+iRobot0	1461665732571	d	SmartCommsHandler : Received data message: M|8824|iRobot1|ALL|22|C`|&
+iRobot0	1461665732571	d	SmartCommsHandler : Sending ACK: M|8824|iRobot0|iRobot1|0|ACK`|&
+
+nullquadcopter0	1461665697283	d	MotionAutomaton : STARTED!
+quadcopter0	1461665697283	i	GPSReceiver : Starting GPS receiver
+quadcopter0	1461665697358	i	WIND : 0.0 2.0981916260403777
+quadcopter0	1461665697358	d	ReachAvoid : STARTED!
+quadcopter0	1461665697358	i	DoReachAvoid : 3100 800
+quadcopter0	1461665697358	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665697458	i	WIND : -2.8523231032105185 -1.6925231192558394
+quadcopter0	1461665697458	i	ReachAvoid :  go to called to: midpoint: 0, 4, 0. index 0
+quadcopter0	1461665697478	i	MotionAutomaton : Drone taking off
+quadcopter0	1461665697478	i	MotionAutomaton : Stage transition to TAKEOFF
+quadcopter0	1461665697558	i	WIND : -0.7986097634972928 -1.2578180137012671
+quadcopter0	1461665697658	i	WIND : -3.8455796972382466 3.5528512751265735
+quadcopter0	1461665697758	i	WIND : -2.7113543009110304 -3.731672576941638
+quadcopter0	1461665697858	i	WIND : 3.915435494261576 0.14660545762478172
+quadcopter0	1461665697958	i	WIND : 3.1498666135608957 -2.986545028119707
+quadcopter0	1461665698058	i	WIND : -2.4806800252662793 0.38893914327217427
+quadcopter0	1461665698158	i	WIND : -3.1601827491603487 -1.9720990187506793
+quadcopter0	1461665698258	i	WIND : 2.438524395504868 1.3987095955666256
+quadcopter0	1461665698358	i	WIND : -1.4616698787055338 0.3632571608756283
+quadcopter0	1461665698458	i	WIND : 1.346567149991385 1.6946266849316212
+quadcopter0	1461665698558	i	WIND : -3.100295695282277 -0.08450768496641103
+quadcopter0	1461665698658	i	WIND : 0.7275059080614863 1.6103711619313499
+quadcopter0	1461665698738	i	MotionAutomaton : Drone hovering
+quadcopter0	1461665698738	i	MotionAutomaton : Stage transition to INIT
+quadcopter0	1461665698758	i	WIND : 1.9074808170361894 3.3260540802726686
+quadcopter0	1461665698798	i	MotionAutomaton : Stage transition to GOAL
+quadcopter0	1461665698858	i	MotionAutomaton : At goal!
+quadcopter0	1461665698858	i	DoneFlag : write
+quadcopter0	1461665698858	i	MotionAutomaton : Drone hovering
+quadcopter0	1461665698858	i	MotionAutomaton : Stage transition to HOVER
+quadcopter0	1461665698858	i	WIND : -2.881501038155962 3.67954189617521
+quadcopter0	1461665698958	i	WIND : 1.2048538912137694 3.4622608039008345
+quadcopter0	1461665698958	i	ReachAvoid :  go to called to: midpoint: 3100, 800, 0. index 0
+quadcopter0	1461665698978	i	MotionAutomaton : Stage transition to MOVE
+quadcopter0	1461665699058	i	WIND : 3.279909092431115 -3.8947739424695147
+quadcopter0	1461665699158	i	WIND : 0.9543865325354419 2.0438273682113888
+quadcopter0	1461665699258	i	WIND : -3.0912131234991573 2.6327892676044566
+quadcopter0	1461665699358	i	WIND : 0.7237982879204719 2.633263102074988
+quadcopter0	1461665699458	i	WIND : -2.8589158797243623 -3.791832987328978
+quadcopter0	1461665699558	i	WIND : -2.28639784881818 1.9679475193149463
+quadcopter0	1461665699658	i	WIND : 1.2499817898435737 -2.3750806581921955
+quadcopter0	1461665699758	i	WIND : -3.082348611223556 0.11009785389234317
+quadcopter0	1461665699858	i	WIND : -2.4237899054529146 -3.5226517302946387
+quadcopter0	1461665699958	i	WIND : 3.8997210426472915 0.8853899156631577
+quadcopter0	1461665700058	i	WIND : 1.6908436390844654 -3.4030054814477877
+quadcopter0	1461665700158	i	WIND : 3.7141123921622086 -3.3530297146973345
+quadcopter0	1461665700258	i	WIND : -0.9445036701640417 0.5683673386086783
+quadcopter0	1461665700358	i	WIND : -1.2712836916483203 -3.1205614032873887
+quadcopter0	1461665700458	i	WIND : -0.1853692520962147 -2.966847126367049
+quadcopter0	1461665700558	i	WIND : -1.2169523496181656 -1.2846517659470296
+quadcopter0	1461665700658	i	WIND : -3.1145226264041153 -0.7341622704760278
+quadcopter0	1461665700758	i	WIND : -0.7246143234453211 -1.8621608288484932
+quadcopter0	1461665700858	i	WIND : -1.7953334153341949 -0.9238104604097357
+quadcopter0	1461665700958	i	WIND : 2.357591534752931 3.1782944831899638
+quadcopter0	1461665701058	i	WIND : 0.47602460209827857 -2.434928964623989
+quadcopter0	1461665701158	i	WIND : -0.09626400909785193 -2.789083846964572
+quadcopter0	1461665701258	i	WIND : 2.4711334948117116 2.449725903263424
+quadcopter0	1461665701358	i	WIND : 0.08120015578145612 2.458733097432427
+quadcopter0	1461665701458	i	WIND : 1.3605223600235803 0.8727762636567258
+quadcopter0	1461665701558	i	WIND : 1.5003915887294674 1.902232378366607
+quadcopter0	1461665701658	i	WIND : -3.625200193565539 3.2215463922461094
+quadcopter0	1461665701758	i	WIND : -2.580784237368203 -3.3274510418360475
+quadcopter0	1461665701858	i	WIND : 0.517721105476288 -2.7932830541760163
+quadcopter0	1461665701873	d	SmartCommsHandler : Received data message: M|2298|quadcopter1|ALL|22|D`|&
+quadcopter0	1461665701873	d	SmartCommsHandler : Sending ACK: M|2298|quadcopter0|quadcopter1|0|ACK`|&
+quadcopter0	1461665701958	i	WIND : 2.6254229487458467 0.5153128180756683
+quadcopter0	1461665701958	i	DoReachAvoid : 294 258
+quadcopter0	1461665701958	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665702058	i	ReachAvoid :  go to called to: midpoint: 1719, 812, 0. index 0
+quadcopter0	1461665702098	i	MotionAutomaton : Stage transition to MOVE
+quadcopter0	1461665702158	i	WIND : -2.7253518027214882 2.023754264347226
+quadcopter0	1461665702258	i	WIND : 2.483110277468664 1.5424097697384846
+quadcopter0	1461665702358	i	WIND : 3.559701378102713 -2.6288086345025423
+quadcopter0	1461665702458	i	WIND : 2.1142230051541695 -1.574289971367242
+quadcopter0	1461665702558	i	WIND : 3.4073222885117316 -2.391466663797514
+quadcopter0	1461665702658	i	WIND : -1.2096367816475357 1.6955319585405135
+quadcopter0	1461665702758	i	WIND : 1.9146233716473136 -1.3998904258256841
+quadcopter0	1461665702818	i	FailFlag : write
+quadcopter0	1461665702858	i	WIND : 0.12616768177638082 -1.0333067784096617
+quadcopter0	1461665702958	i	WIND : -2.926496183663244 2.3060900305643344
+quadcopter0	1461665702958	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665703058	i	WIND : -3.93599199172702 -2.1657425991747594
+quadcopter0	1461665703058	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665703118	i	FailFlag : write
+quadcopter0	1461665703158	i	WIND : -3.873118632284556 2.9424563497591887
+quadcopter0	1461665703258	i	WIND : -0.8277012932495751 3.909647494315485
+quadcopter0	1461665703258	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665703358	i	WIND : -3.5333793922110948 -1.2188932789591878
+quadcopter0	1461665703358	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665703418	i	FailFlag : write
+quadcopter0	1461665703458	i	WIND : -0.8224460746415287 3.340441238618503
+quadcopter0	1461665703558	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665703558	i	WIND : -2.3276561836682097 -2.0373936744526713
+quadcopter0	1461665703658	i	WIND : 3.580143053550003 -0.9936220996876184
+quadcopter0	1461665703658	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665703718	i	FailFlag : write
+quadcopter0	1461665703758	i	WIND : 2.8801093527570156 -2.8679376306743585
+quadcopter0	1461665703858	i	WIND : -3.332554159381444 1.304045760623227
+quadcopter0	1461665703858	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665703958	i	WIND : 2.484298739224567 1.8169276375372894
+quadcopter0	1461665703958	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665704018	i	FailFlag : write
+quadcopter0	1461665704058	i	WIND : -1.7454659695224404 0.42452401391734984
+quadcopter0	1461665704158	i	WIND : -1.5233362109521105 1.0700284310150092
+quadcopter0	1461665704158	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665704258	i	WIND : -1.0192935838952897 -1.6296314126986529
+quadcopter0	1461665704258	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665704318	i	FailFlag : write
+quadcopter0	1461665704358	i	WIND : 3.354354931188828 -2.2889357037624425
+quadcopter0	1461665704458	i	WIND : 1.3925999698659624 1.8891578784871657
+quadcopter0	1461665704458	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665704558	i	WIND : 3.723983554732092 -2.9340619468329523
+quadcopter0	1461665704558	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665704618	i	FailFlag : write
+quadcopter0	1461665704658	i	WIND : 2.9133682078317236 -3.5975504542338737
+quadcopter0	1461665704758	i	WIND : -3.5390591679205183 3.359384053502003
+quadcopter0	1461665704758	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665704858	i	WIND : 0.38409975728070744 0.21661759971149763
+quadcopter0	1461665704858	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665704918	i	FailFlag : write
+quadcopter0	1461665704958	i	WIND : 2.0236178623486625 -1.3602814728839645
+quadcopter0	1461665705058	i	WIND : -0.7087522759461535 -0.19393897122445392
+quadcopter0	1461665705058	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665705158	i	WIND : -2.1600194812800018 -3.9974983836392086
+quadcopter0	1461665705158	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665705218	i	FailFlag : write
+quadcopter0	1461665705258	i	WIND : -2.1553756838416165 -1.6118237528242236
+quadcopter0	1461665705358	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665705358	i	WIND : 0.8989984628276142 -1.678747184736313
+quadcopter0	1461665705458	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665705458	i	FailFlag : write
+quadcopter0	1461665705558	i	WIND : 1.3438625843529959 -0.1873614084054971
+quadcopter0	1461665705658	i	WIND : 1.5788782240271377 3.084290558834062
+quadcopter0	1461665705658	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665705758	i	WIND : 2.079887640613344 2.2247915428985516
+quadcopter0	1461665705758	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665705818	i	FailFlag : write
+quadcopter0	1461665705858	i	WIND : 1.0684910668962386 -3.0660742955526334
+quadcopter0	1461665705958	i	WIND : 3.8093202888231943 1.9635789122517782
+quadcopter0	1461665705958	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665706058	i	WIND : -1.1535246794374174 3.8747743324251136
+quadcopter0	1461665706058	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665706118	i	FailFlag : write
+quadcopter0	1461665706158	i	WIND : 0.9483298243346931 -1.433393087500657
+quadcopter0	1461665706258	i	WIND : 0.18829706516211075 -0.6003471658234547
+quadcopter0	1461665706258	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665706358	i	WIND : -3.0200926988417454 -0.5373966329824649
+quadcopter0	1461665706358	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665706418	i	FailFlag : write
+quadcopter0	1461665706458	i	WIND : 0.1300895897194856 -1.462005368932184
+quadcopter0	1461665706558	i	WIND : 0.4003613236667434 3.569483682682959
+quadcopter0	1461665706558	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665706658	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665706658	i	WIND : -0.5983091655684456 0.6482261376166019
+quadcopter0	1461665706718	i	FailFlag : write
+quadcopter0	1461665706758	i	WIND : -1.1571504502147842 -0.8116119736556788
+quadcopter0	1461665706858	i	WIND : -2.7850626498159157 3.8320370470943645
+quadcopter0	1461665706858	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665706958	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665706958	i	WIND : -3.0700284051400333 -2.323130160603217
+quadcopter0	1461665707018	i	FailFlag : write
+quadcopter0	1461665707058	i	WIND : 2.2947865775951106 -3.847432075708456
+quadcopter0	1461665707158	i	WIND : 3.5158614785376976 -1.5449220330087554
+quadcopter0	1461665707158	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665707258	i	WIND : 0.3428275763360302 1.8426498806163725
+quadcopter0	1461665707258	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665707318	i	FailFlag : write
+quadcopter0	1461665707358	i	WIND : 2.6011534728619825 0.4225402839065735
+quadcopter0	1461665707458	i	WIND : -3.6378267448174793 -3.3767713952110796
+quadcopter0	1461665707458	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665707558	i	WIND : -2.4800065400436964 0.6089616027764642
+quadcopter0	1461665707558	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665707618	i	FailFlag : write
+quadcopter0	1461665707658	i	WIND : -1.256493134403934 -2.308469321359155
+quadcopter0	1461665707758	i	WIND : -3.919843181470479 -1.2727256216266136
+quadcopter0	1461665707758	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665707858	i	WIND : -2.7804076335475276 2.1760766441333512
+quadcopter0	1461665707858	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665707918	i	FailFlag : write
+quadcopter0	1461665707958	i	WIND : 2.560186869242324 0.9792285342792271
+quadcopter0	1461665708058	i	WIND : -3.6133681627108896 -1.0652793600421768
+quadcopter0	1461665708058	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665708158	i	WIND : -2.0666988211158195 0.7055232297754861
+quadcopter0	1461665708158	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665708218	i	FailFlag : write
+quadcopter0	1461665708258	i	WIND : 2.7680448474238686 0.5382811828828968
+quadcopter0	1461665708358	i	WIND : -2.456506170980613 -1.9583999200262525
+quadcopter0	1461665708358	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665708458	i	WIND : -0.4461097566894159 0.2755036051196358
+quadcopter0	1461665708458	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665708518	i	FailFlag : write
+quadcopter0	1461665708558	i	WIND : 3.0154223341283934 -0.9579624460179161
+quadcopter0	1461665708658	i	WIND : 2.5435060642510665 -1.3944723030493957
+quadcopter0	1461665708658	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665708758	i	WIND : -0.05617106886868495 -1.7907377001406095
+quadcopter0	1461665708818	i	FailFlag : write
+quadcopter0	1461665708858	i	WIND : 1.9663787827564718 0.05354299313477373
+quadcopter0	1461665708958	i	WIND : -3.672659983647798 2.3600093534529334
+quadcopter0	1461665708958	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665709058	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665709118	i	FailFlag : write
+quadcopter0	1461665709158	i	WIND : -0.5838289353406916 1.7757831216888382
+quadcopter0	1461665709258	i	WIND : 0.03186692013243597 -2.0900030556683227
+quadcopter0	1461665709258	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665709358	i	WIND : 1.960490597371681 -0.37472675753987694
+quadcopter0	1461665709358	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665709418	i	FailFlag : write
+quadcopter0	1461665709458	i	WIND : 0.4379814389104837 0.08317775102652192
+quadcopter0	1461665709558	i	WIND : -3.730301885394365 -1.2913040410598429
+quadcopter0	1461665709558	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665709658	i	WIND : -1.2844270554086412 3.872051540194951
+quadcopter0	1461665709658	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665709658	i	FailFlag : write
+quadcopter0	1461665709758	i	WIND : -2.4391039205257394 -3.1656744930575975
+quadcopter0	1461665709858	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665709858	i	WIND : 1.439976256073459 -0.684378436987175
+quadcopter0	1461665709958	i	WIND : -2.147320172026447 1.6371482690326138
+quadcopter0	1461665709958	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665709973	d	SmartCommsHandler : Received data message: M|6218|iRobot0|ALL|22|A`|&
+quadcopter0	1461665709973	d	SmartCommsHandler : Sending ACK: M|6218|quadcopter0|iRobot0|0|ACK`|&
+quadcopter0	1461665710058	i	WIND : -1.0208661382527682 1.4659974356201078
+quadcopter0	1461665710058	i	DoReachAvoid : 650 2430
+quadcopter0	1461665710158	i	WIND : 1.0704168650880828 -2.0640943560027836
+quadcopter0	1461665710158	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665710258	i	WIND : -3.294427368554066 1.238309581078421
+quadcopter0	1461665710258	i	ReachAvoid :  go to called to: midpoint: 2872, 769, 0. index 0
+quadcopter0	1461665710358	i	WIND : 2.7925246336129144 -2.131618441838917
+quadcopter0	1461665710458	i	WIND : 0.19059883638723019 1.2408530913044062
+quadcopter0	1461665710558	i	WIND : -1.3544180412889908 1.1147890214767022
+quadcopter0	1461665710658	i	WIND : 1.2782375074511068 0.5415767643399816
+quadcopter0	1461665710758	i	WIND : 0.7365052827083431 -0.5302513176151988
+quadcopter0	1461665710858	i	WIND : -2.1310394889502327 0.12446691879397331
+quadcopter0	1461665710958	i	WIND : 3.1937601863809677 -3.966662583506471
+quadcopter0	1461665711058	i	WIND : -2.013684631867001 3.812913561350306
+quadcopter0	1461665711158	i	WIND : 0.21548762520780507 -0.8777803191271492
+quadcopter0	1461665711258	i	WIND : -1.8888734766804962 -2.3419335418290146
+quadcopter0	1461665711358	i	WIND : 0.027443971915377396 -1.9239877957874647
+quadcopter0	1461665711458	i	WIND : -3.9816782837286695 -2.180461540285073
+quadcopter0	1461665711558	i	WIND : 2.7823957103202286 1.4970607826388402
+quadcopter0	1461665711658	i	WIND : 2.254834368398895 0.625608619039526
+quadcopter0	1461665711758	i	WIND : 0.9851044998349385 -1.0746009668634144
+quadcopter0	1461665711858	i	WIND : 1.5363804159829701 -0.3199954898993367
+quadcopter0	1461665711958	i	WIND : 0.9004979029518703 0.6159730327285038
+quadcopter0	1461665712058	i	WIND : 1.110314430461444 -0.4316198982205419
+quadcopter0	1461665712158	i	WIND : 0.7066255994695316 -1.0522863096938417
+quadcopter0	1461665712258	i	WIND : 1.594305491898452 -3.502860876000671
+quadcopter0	1461665712358	i	WIND : -2.381129987915143 -1.9999667202690166
+quadcopter0	1461665712458	i	WIND : 1.0906366302183716 0.49612998675897746
+quadcopter0	1461665712558	i	WIND : 2.956028741072953 -3.1957900451353476
+quadcopter0	1461665712658	i	WIND : 3.9409832783797327 3.579501500499605
+quadcopter0	1461665712758	i	WIND : -3.5596415581069962 1.1015648326394238
+quadcopter0	1461665712858	i	WIND : -0.7813687805606042 3.2279149251579193
+quadcopter0	1461665712958	i	WIND : -1.2817362588798886 -1.9606113602370865
+quadcopter0	1461665713058	i	WIND : 1.9839031575643915 3.5271943564652597
+quadcopter0	1461665713158	i	WIND : -2.1171917215491476 3.966416140793804
+quadcopter0	1461665713258	i	WIND : -1.1589288027973552 -3.9671217312738394
+quadcopter0	1461665713358	i	WIND : -3.0214707740357865 0.21080215686303116
+quadcopter0	1461665713458	i	WIND : 0.40277976828765816 -2.6416341949134967
+quadcopter0	1461665713558	i	WIND : 0.5171200765429198 0.9621031474165687
+quadcopter0	1461665713658	i	WIND : 1.2948703402743202 -1.7662253647831632
+quadcopter0	1461665713758	i	WIND : -2.0966703690946344 1.7972120701261458
+quadcopter0	1461665713858	i	WIND : 0.3713320525895254 -3.9122354361562577
+quadcopter0	1461665713958	i	WIND : 2.0324125301269467 1.571344892683359
+quadcopter0	1461665714058	i	WIND : 1.9280976747058363 -0.07324444641481431
+quadcopter0	1461665714158	i	WIND : -3.423059329451533 -1.0799996134620464
+quadcopter0	1461665714258	i	WIND : -1.833775745208067 2.624086204852098
+quadcopter0	1461665714358	i	WIND : 2.219120490994574 -2.8820429426034258
+quadcopter0	1461665714458	i	WIND : -1.982156477030406 -1.1094944144410963
+quadcopter0	1461665714558	i	WIND : -0.7750660456810294 3.030657041004102
+quadcopter0	1461665714658	i	WIND : -0.47237795133388794 -1.773006909161034
+quadcopter0	1461665714758	i	WIND : -2.5177930801194703 -1.6940994867919645
+quadcopter0	1461665714858	i	WIND : -2.000041067063206 3.7617943497137167
+quadcopter0	1461665714958	i	WIND : -2.5439445427664307 2.6345633107494404
+quadcopter0	1461665715058	i	WIND : 0.8873188215383507 0.5823503419091445
+quadcopter0	1461665715158	i	WIND : 1.2859836077560391 0.4955587466767053
+quadcopter0	1461665715258	i	WIND : -2.6686067840066396 -2.433553876228874
+quadcopter0	1461665715358	i	WIND : -3.464307641619863 -2.238566069277412
+quadcopter0	1461665715458	i	WIND : 2.652688493682593 -3.726172388746482
+quadcopter0	1461665715558	i	WIND : 0.1096686315340758 1.6953066825655032
+quadcopter0	1461665715658	i	WIND : -3.5975802406415145 1.3072636106092173
+quadcopter0	1461665715758	i	WIND : -2.752271923202543 3.440039966029632
+quadcopter0	1461665715858	i	WIND : 3.3117669134734182 3.0237526864317337
+quadcopter0	1461665715958	i	WIND : 1.4537753177551282 0.18485320623501167
+quadcopter0	1461665716058	i	WIND : 2.630959900784254 -1.1418100196532102
+quadcopter0	1461665716158	i	WIND : -3.00953399197218 3.0486406685420357
+quadcopter0	1461665716258	i	WIND : -1.0029306385740435 2.2197386454554895
+quadcopter0	1461665716358	i	WIND : 1.6399230186604123 -3.586928339195139
+quadcopter0	1461665716458	i	WIND : 2.7287274674379987 3.2066340214906504
+quadcopter0	1461665716558	i	WIND : -3.9382485010572568 2.7388458516665066
+quadcopter0	1461665716658	i	WIND : 3.2865659886259406 0.7917730001996182
+quadcopter0	1461665716758	i	WIND : -0.33076198909849364 1.601008171598738
+quadcopter0	1461665716858	i	WIND : -3.188235964298772 -3.507389610630204
+quadcopter0	1461665716958	i	WIND : 1.6852257849366357 -1.4535804747081995
+quadcopter0	1461665717058	i	WIND : -2.4248001899409726 -3.990292389257845
+quadcopter0	1461665717158	i	WIND : -0.010853903562617617 -3.1416534616278806
+quadcopter0	1461665717258	i	WIND : -2.9881433894772407 -1.56183078963927
+quadcopter0	1461665717358	i	WIND : -3.0776279379658753 -2.825346465995435
+quadcopter0	1461665717458	i	WIND : -3.611113870429299 2.324866571478389
+quadcopter0	1461665717558	i	WIND : 2.494507836492798 -2.937544164085116
+quadcopter0	1461665717658	i	WIND : 0.022361644654593782 0.37229904331899455
+quadcopter0	1461665717758	i	WIND : 2.3650265484671333 2.2583496992369794
+quadcopter0	1461665717858	i	WIND : 1.435052797057014 1.7554837131870311
+quadcopter0	1461665717874	d	SmartCommsHandler : Received data message: M|8823|iRobot1|ALL|22|B`|&
+quadcopter0	1461665717874	d	SmartCommsHandler : Sending ACK: M|8823|quadcopter0|iRobot1|0|ACK`|&
+quadcopter0	1461665717958	i	WIND : -2.822835298400589 -0.7345636125537895
+quadcopter0	1461665717958	i	DoReachAvoid : 3517 2534
+quadcopter0	1461665717958	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665718058	i	WIND : -2.6319837223081084 1.9494615758068816
+quadcopter0	1461665718058	i	ReachAvoid :  go to called to: midpoint: 4432, 615, 0. index 0
+quadcopter0	1461665718118	i	FailFlag : write
+quadcopter0	1461665718158	i	WIND : 2.262167307382521 2.781971688251353
+quadcopter0	1461665718258	i	WIND : 3.864956952099406 -1.9637458478726728
+quadcopter0	1461665718258	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665718358	i	WIND : 1.513315316972614 -1.0582776010065613
+quadcopter0	1461665718358	i	ReachAvoid :  go to called to: midpoint: 4757, 616, 0. index 0
+quadcopter0	1461665718418	i	FailFlag : write
+quadcopter0	1461665718458	i	WIND : 3.6155579639845508 2.804147081413644
+quadcopter0	1461665718558	i	WIND : 0.957134811354245 1.8006429102945463
+quadcopter0	1461665718558	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665718658	i	WIND : 1.1812467333152386 2.6411278363824264
+quadcopter0	1461665718658	i	ReachAvoid :  go to called to: midpoint: 5037, 649, 0. index 0
+quadcopter0	1461665718718	i	FailFlag : write
+quadcopter0	1461665718758	i	WIND : 1.4614411217235572 3.6319900983164013
+quadcopter0	1461665718858	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665718858	i	WIND : -2.033392857148221 -2.696247389404525
+quadcopter0	1461665718958	i	WIND : -1.3518982562861632 -2.7929837193337868
+quadcopter0	1461665718958	i	ReachAvoid :  go to called to: midpoint: 5247, 703, 0. index 0
+quadcopter0	1461665719018	i	FailFlag : write
+quadcopter0	1461665719058	i	WIND : 2.23927093808277 2.254728057107698
+quadcopter0	1461665719158	i	WIND : -0.6726645627821064 -0.10320121639656055
+quadcopter0	1461665719158	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665719258	i	WIND : -2.251507654777547 3.724189288696139
+quadcopter0	1461665719258	i	ReachAvoid :  go to called to: midpoint: 5391, 773, 0. index 0
+quadcopter0	1461665719318	i	FailFlag : write
+quadcopter0	1461665719358	i	WIND : -1.9602817867391105 0.15357865681347338
+quadcopter0	1461665719458	i	WIND : -2.294875019403391 2.795119413457778
+quadcopter0	1461665719458	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665719558	i	WIND : 1.5689551282722727 -2.3437197429244065
+quadcopter0	1461665719558	i	ReachAvoid :  go to called to: midpoint: 5452, 895, 0. index 0
+quadcopter0	1461665719618	i	FailFlag : write
+quadcopter0	1461665719658	i	WIND : 3.813898655173083 -2.1042545540405984
+quadcopter0	1461665719758	i	WIND : -1.6603335238814019 0.6174818192830198
+quadcopter0	1461665719758	i	ReachAvoid : RRT has found a solution
+quadcopter0	1461665719858	i	WIND : 2.1728046639087104 -2.4196266987529134
+quadcopter0	1461665719858	i	ReachAvoid :  go to called to: midpoint: 5455, 1033, 0. index 0
+quadcopter0	1461665719918	i	MotionAutomaton : Drone taking off
+quadcopter0	1461665719918	i	MotionAutomaton : Stage transition to TAKEOFF
+quadcopter0	1461665719958	i	WIND : 0.6138513442206861 3.009661021093989
+quadcopter0	1461665720058	i	WIND : -1.5821738484951284 3.206638413898701
+quadcopter0	1461665720158	i	WIND : -1.6437628794004846 1.2028731129336752
+quadcopter0	1461665720258	i	WIND : -3.1357319465193267 -0.8585185281130698
+quadcopter0	1461665720358	i	WIND : -2.5218124881482185 3.7311343796566963
+quadcopter0	1461665720458	i	WIND : -2.5643164258279123 -3.343376647855675
+quadcopter0	1461665720558	i	WIND : 3.6654701460594685 0.4928304634773255
+quadcopter0	1461665720658	i	WIND : 2.8468419361790556 1.0683635063134602
+quadcopter0	1461665720758	i	WIND : -2.9335863334689005 -2.920723863257077
+quadcopter0	1461665720858	i	WIND : 0.12763906968018368 3.5397932540949837
+quadcopter0	1461665720958	i	WIND : 2.104429846275547 0.46887558840190735
+quadcopter0	1461665721058	i	WIND : -0.9076104464482269 -1.5270888605351773
+quadcopter0	1461665721158	i	WIND : -3.2637067636587087 0.033161542024469526
+quadcopter0	1461665721178	i	MotionAutomaton : Drone hovering
+quadcopter0	1461665721178	i	MotionAutomaton : Stage transition to INIT
+quadcopter0	1461665721238	i	MotionAutomaton : Stage transition to MOVE
+quadcopter0	1461665721258	i	WIND : 2.5844319114009116 -3.4980677769432234
+quadcopter0	1461665721358	i	WIND : 3.4273685328234125 0.8449050672413136
+quadcopter0	1461665721458	i	WIND : 0.7490174263251417 -0.720073540297105
+quadcopter0	1461665721558	i	WIND : -2.0972904860171866 -1.7176857134510604
+quadcopter0	1461665721658	i	WIND : 1.967257152661488 0.6300500327158804
+quadcopter0	1461665721758	i	WIND : -0.3765591577456062 -0.29397641074664627
+quadcopter0	1461665721858	i	WIND : 1.5182963240536616 -3.021622069517532
+quadcopter0	1461665721958	i	WIND : 0.5337147162257105 -1.6060767382572996
+quadcopter0	1461665722058	i	WIND : -1.5235341006410472 1.7003267211985484
+quadcopter0	1461665722158	i	WIND : -0.6745609845264076 -0.39863869697366905
+quadcopter0	1461665722258	i	WIND : 0.8490064787673148 1.817506289123382
+quadcopter0	1461665722358	i	WIND : 3.574746977093021 1.7398920848892914
+quadcopter0	1461665722458	i	WIND : 1.2768883756372382 -2.9240583028425053
+quadcopter0	1461665722558	i	WIND : 2.542107670493807 3.9630538213958877
+quadcopter0	1461665722658	i	WIND : 3.8564183572418678 3.7964527526246785
+quadcopter0	1461665722758	i	WIND : -3.9615594893589385 -1.4079581257821232
+quadcopter0	1461665722858	i	WIND : -2.813943741111393 -3.1787871968825616
+quadcopter0	1461665722958	i	WIND : 2.484072838634466 -3.9758380342336297
+quadcopter0	1461665723058	i	WIND : -3.325272748158419 0.237886218436258
+quadcopter0	1461665723158	i	WIND : -1.63344250967753 0.1393919846646181
+quadcopter0	1461665723258	i	WIND : -1.571009031142676 0.7285885418931768
+quadcopter0	1461665723358	i	WIND : -2.6337419116143614 3.914308212531261
+quadcopter0	1461665723458	i	WIND : -0.21816366334522463 -2.4686192601468457
+quadcopter0	1461665723558	i	WIND : 2.0866184491790865 1.6169597734382766
+quadcopter0	1461665723658	i	WIND : -2.8422897717520543 2.530306790604974
+quadcopter0	1461665723758	i	WIND : 1.3737418403358852 -0.13178197255297253
+quadcopter0	1461665723858	i	WIND : 0.9232958254064032 0.32965640736674207
+quadcopter0	1461665723958	i	WIND : -1.2625298147593238 -0.5201476568124201
+quadcopter0	1461665724058	i	WIND : 3.490099841336529 -0.04968772858269155
+quadcopter0	1461665724158	i	WIND : -0.8457644825144648 -1.747043691571407
+quadcopter0	1461665724258	i	WIND : 2.248425044251105 2.3999444605955844
+quadcopter0	1461665724358	i	WIND : -2.9216825166310345 -1.5391905222583055
+quadcopter0	1461665724458	i	WIND : -0.5472476728718876 3.6130288921499645
+quadcopter0	1461665724558	i	WIND : -1.869997608571662 3.2099178979295804
+quadcopter0	1461665724658	i	WIND : 1.9102359827258848 1.2002133428373716
+quadcopter0	1461665724758	i	WIND : 2.690739853671168 3.8511790758648443
+quadcopter0	1461665724858	i	WIND : 2.9914627836210412 -3.5680010329165874
+quadcopter0	1461665724958	i	WIND : -3.1617658964725184 -0.3977462822561231
+quadcopter0	1461665725058	i	WIND : -2.2895994928293897 3.280341403438463
+quadcopter0	1461665725158	i	WIND : -1.483560547747218 -0.20688710779345154
+quadcopter0	1461665725258	i	WIND : 2.082582279772053 2.5310059910556744
+quadcopter0	1461665725358	i	WIND : 1.1272235754961804 2.0228246417055766
+quadcopter0	1461665725458	i	WIND : 1.398730308029795 1.1079402808756633
+quadcopter0	1461665725558	i	WIND : -2.4499543443445635 3.359260258116204
+quadcopter0	1461665725658	i	WIND : -0.8357866876188398 0.22930488167034913
+quadcopter0	1461665725758	i	WIND : -3.6906618662393225 3.4432230089986664
+quadcopter0	1461665725858	i	WIND : 1.1837376534846706 -1.6718594255033805
+quadcopter0	1461665725958	i	WIND : 3.51736841733368 -0.4209288620209559
+quadcopter0	1461665726058	i	WIND : -0.10523751803794124 -3.4366779175491153
+quadcopter0	1461665726158	i	WIND : -0.6557763480466035 -3.812026361891867
+quadcopter0	1461665726258	i	WIND : 1.2524091523169796 -1.9384817389385685
+quadcopter0	1461665726358	i	WIND : 3.806539760576194 2.6570230050950645
+quadcopter0	1461665726458	i	WIND : -2.9359264108204712 0.7246134512719005
+quadcopter0	1461665726558	i	WIND : 2.7327572808027414 -1.9611086061293275
+quadcopter0	1461665726658	i	WIND : 0.7620347850559641 0.3455934811613979
+quadcopter0	1461665726758	i	WIND : 1.28046904788767 -1.0582144789872867
+quadcopter0	1461665726858	i	WIND : -0.4212362371973235 -0.4097193976851212
+quadcopter0	1461665726958	i	WIND : 1.6364821874918478 2.972089577685673
+quadcopter0	1461665727058	i	WIND : 1.7320500579375118 0.587755154406131
+quadcopter0	1461665727158	i	WIND : -3.3418123966568833 -0.8631355723172183
+quadcopter0	1461665727258	i	WIND : -0.4137238073352316 -0.8280879244597514
+quadcopter0	1461665727358	i	WIND : -1.8734044543055983 -3.7925405107623886
+quadcopter0	1461665727458	i	WIND : 2.1079238874293473 -2.6515956719831966
+quadcopter0	1461665727558	i	WIND : -2.7964868878361306 -0.2753859776631913
+quadcopter0	1461665727658	i	WIND : -1.5284782694987946 2.569091653959208
+quadcopter0	1461665727758	i	WIND : 3.386983087662223 -3.669011124054726
+quadcopter0	1461665727858	i	WIND : -3.298218986662741 2.6869560897361495
+quadcopter0	1461665727958	i	WIND : 0.6359899653484273 -0.32861621578669364
+quadcopter0	1461665728058	i	WIND : -2.6392811569112062 -1.903972823468009
+quadcopter0	1461665728158	i	WIND : -2.8667981321108815 0.8072145631412226
+quadcopter0	1461665728258	i	WIND : 0.11505684649882841 -1.9298924757639595
+quadcopter0	1461665728358	i	WIND : -1.5836933469226535 0.3104944257707176
+quadcopter0	1461665728458	i	WIND : 2.6367219481933724 3.220736897378629
+quadcopter0	1461665728558	i	WIND : -3.9213710813098714 -0.5894974400181887
+quadcopter0	1461665728658	i	WIND : -3.3905269310156294 1.3284247817483932
+quadcopter0	1461665728758	i	WIND : -2.282347442513485 3.426749189507629
+quadcopter0	1461665728858	i	WIND : 2.9502466145244126 -3.728916252386222
+quadcopter0	1461665728958	i	WIND : -2.157527060176996 2.50365578040683
+quadcopter0	1461665729058	i	WIND : -2.4415378927814677 1.5464119328733545
+quadcopter0	1461665729158	i	WIND : 3.8541843006731424 -0.6889187507377503
+quadcopter0	1461665729258	i	WIND : -1.9266806985093954 3.7838228057867873
+quadcopter0	1461665729358	i	WIND : 1.3608157864693133 -3.137872550131058
+quadcopter0	1461665729458	i	WIND : -0.42718193987099173 -0.465295295912739
+quadcopter0	1461665729558	i	WIND : -0.44373939525793826 -3.4143964448502393
+quadcopter0	1461665729658	i	WIND : -3.2811319909653696 2.6380964404069003
+quadcopter0	1461665729758	i	WIND : -1.162298542242337 0.24772260607711072
+quadcopter0	1461665729858	i	WIND : 1.1135103483036648 -2.0487892295571877
+quadcopter0	1461665729958	i	WIND : 3.0238019757404624 -0.7778760558770994
+quadcopter0	1461665730058	i	WIND : 1.5819467312937299 -1.586129152128935
+quadcopter0	1461665730158	i	WIND : -1.5617751148022627 1.9861380640826418
+quadcopter0	1461665730258	i	WIND : -2.1003781047824166 -2.5713231975254134
+quadcopter0	1461665730358	i	WIND : 3.526314442473854 3.703577663410922
+quadcopter0	1461665730458	i	WIND : -1.5712679155129488 -3.4218471810101994
+quadcopter0	1461665730558	i	WIND : 2.670193154369527 0.20318970010779047
+quadcopter0	1461665730658	i	WIND : 1.281158358638253 -1.907912308643402
+quadcopter0	1461665730758	i	WIND : 3.5540100735786533 1.397541110058543
+quadcopter0	1461665730858	i	WIND : 2.857533955207928 2.567622348489886
+quadcopter0	1461665730958	i	WIND : -1.800415039174144 2.837448472222671
+quadcopter0	1461665731058	i	WIND : 2.250415524645282 3.178601368806876
+quadcopter0	1461665731158	i	WIND : 3.7113559742648263 1.8472657256477145
+quadcopter0	1461665731258	i	WIND : 1.345695803739936 -1.7716045153749373
+quadcopter0	1461665731358	i	WIND : 1.3496622600247754 0.28238875816006015
+quadcopter0	1461665731458	i	WIND : 0.7698552962794771 -1.821201376292377
+quadcopter0	1461665731558	i	WIND : 2.3823020834592175 -2.038044782148562
+quadcopter0	1461665731658	i	WIND : 0.5380497593649389 0.5407092440886174
+quadcopter0	1461665731758	i	WIND : -2.548246079817133 -2.7004053169484585
+quadcopter0	1461665731858	i	WIND : -2.426277823771221 0.2909477372160554
+quadcopter0	1461665731958	i	WIND : 0.8469415089092402 0.3813636621240697
+quadcopter0	1461665732058	i	WIND : 1.6795899896359794 3.6182788998101536
+quadcopter0	1461665732158	i	WIND : -2.213702950683956 1.8572782709181572
+quadcopter0	1461665732258	i	WIND : 3.1744940869930023 -2.7653578040150943
+quadcopter0	1461665732358	i	WIND : -2.4657400928320374 -0.43346585686505357
+quadcopter0	1461665732458	i	WIND : -0.4742570213730586 -3.7609426954950083
+quadcopter0	1461665732558	i	WIND : 0.8386346611689399 -0.7789321025940321
+quadcopter0	1461665732570	d	SmartCommsHandler : Received data message: M|8824|iRobot1|ALL|22|C`|&
+quadcopter0	1461665732570	d	SmartCommsHandler : Sending ACK: M|8824|quadcopter0|iRobot1|0|ACK`|&
+quadcopter0	1461665732658	i	WIND : -0.05919201922487094 3.232157622644504
+quadcopter0	1461665732758	i	WIND : 0.005755687985977254 3.7789697463405716
+
+nulliRobot1	1461665697283	d	MotionAutomaton : STARTED!
+iRobot1	1461665697283	i	GPSReceiver : Starting GPS receiver
+iRobot1	1461665697358	d	ReachAvoid : STARTED!
+iRobot1	1461665697358	i	DoReachAvoid : 3100 800
+iRobot1	1461665697358	i	ReachAvoid : RRT has found a solution
+iRobot1	1461665697458	i	ReachAvoid :  go to called to: midpoint: 3000, 2501, 0. index 0
+iRobot1	1461665697478	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665697478	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665697538	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665697538	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665697598	e	MotionAutomaton : Stage is: GOAL
+iRobot1	1461665697598	i	MotionAutomaton : At goal, done flag set!
+iRobot1	1461665697598	i	MotionAutomaton : Straight at velocity 0
+iRobot1	1461665697598	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665697758	i	ReachAvoid :  go to called to: midpoint: 3100, 800, 0. index 0
+iRobot1	1461665697778	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665697778	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665697838	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665698738	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot1	1461665698738	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665698798	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665698798	i	MotionAutomaton : Straight at velocity 250
+iRobot1	1461665701870	d	SmartCommsHandler : Received data message: M|2298|quadcopter1|ALL|22|D`|&
+iRobot1	1461665701870	d	SmartCommsHandler : Sending ACK: M|2298|iRobot1|quadcopter1|0|ACK`|&
+iRobot1	1461665701958	i	DoReachAvoid : 294 258
+iRobot1	1461665702058	i	ReachAvoid : RRT has found a solution
+iRobot1	1461665702158	i	ReachAvoid :  go to called to: midpoint: 3018, 1728, 0. index 0
+iRobot1	1461665702218	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665702218	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665702278	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665702278	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665702338	e	MotionAutomaton : Stage is: GOAL
+iRobot1	1461665702338	i	MotionAutomaton : At goal, done flag set!
+iRobot1	1461665702338	i	MotionAutomaton : Straight at velocity 0
+iRobot1	1461665702338	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665702458	i	ReachAvoid :  go to called to: midpoint: 1898, 1480, 0. index 0
+iRobot1	1461665702518	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665702518	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665702578	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665703538	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot1	1461665703538	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665703598	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665703598	i	MotionAutomaton : Straight at velocity 250
+iRobot1	1461665705518	i	MotionAutomaton : Straight at velocity 247
+iRobot1	1461665705578	i	MotionAutomaton : Straight at velocity 245
+iRobot1	1461665705638	i	MotionAutomaton : Straight at velocity 243
+iRobot1	1461665705698	i	MotionAutomaton : Straight at velocity 240
+iRobot1	1461665705758	i	MotionAutomaton : Straight at velocity 240
+iRobot1	1461665705818	i	MotionAutomaton : Straight at velocity 238
+iRobot1	1461665705878	i	MotionAutomaton : Straight at velocity 235
+iRobot1	1461665705938	i	MotionAutomaton : Straight at velocity 234
+iRobot1	1461665705998	i	MotionAutomaton : Straight at velocity 232
+iRobot1	1461665706058	i	MotionAutomaton : Straight at velocity 232
+iRobot1	1461665706118	i	MotionAutomaton : Straight at velocity 230
+iRobot1	1461665706178	i	MotionAutomaton : Straight at velocity 228
+iRobot1	1461665706238	i	MotionAutomaton : Straight at velocity 227
+iRobot1	1461665706298	i	MotionAutomaton : Straight at velocity 224
+iRobot1	1461665706358	i	MotionAutomaton : Straight at velocity 224
+iRobot1	1461665706418	i	MotionAutomaton : Straight at velocity 222
+iRobot1	1461665706478	i	MotionAutomaton : Straight at velocity 220
+iRobot1	1461665706538	i	MotionAutomaton : Straight at velocity 218
+iRobot1	1461665706598	i	MotionAutomaton : Straight at velocity 215
+iRobot1	1461665706598	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665706658	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665706718	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665706778	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665706778	i	MotionAutomaton : Straight at velocity 212
+iRobot1	1461665706838	i	MotionAutomaton : Straight at velocity 209
+iRobot1	1461665706898	i	MotionAutomaton : Straight at velocity 207
+iRobot1	1461665706958	i	MotionAutomaton : Straight at velocity 207
+iRobot1	1461665707018	i	MotionAutomaton : Straight at velocity 205
+iRobot1	1461665707078	i	MotionAutomaton : Straight at velocity 203
+iRobot1	1461665707138	i	MotionAutomaton : Straight at velocity 201
+iRobot1	1461665707198	i	MotionAutomaton : Straight at velocity 200
+iRobot1	1461665707258	i	MotionAutomaton : Straight at velocity 200
+iRobot1	1461665707318	i	MotionAutomaton : Straight at velocity 198
+iRobot1	1461665707378	i	MotionAutomaton : Straight at velocity 196
+iRobot1	1461665707438	i	MotionAutomaton : Straight at velocity 194
+iRobot1	1461665707498	i	MotionAutomaton : Straight at velocity 193
+iRobot1	1461665707558	i	MotionAutomaton : Straight at velocity 193
+iRobot1	1461665707618	i	MotionAutomaton : Straight at velocity 191
+iRobot1	1461665707678	i	MotionAutomaton : Straight at velocity 188
+iRobot1	1461665707678	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665707738	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665707798	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665707858	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665707858	i	MotionAutomaton : Straight at velocity 185
+iRobot1	1461665707918	i	MotionAutomaton : Straight at velocity 184
+iRobot1	1461665707918	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665707978	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665708038	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665708098	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665708098	i	MotionAutomaton : Straight at velocity 179
+iRobot1	1461665708158	i	MotionAutomaton : Straight at velocity 179
+iRobot1	1461665708218	i	MotionAutomaton : Straight at velocity 178
+iRobot1	1461665708218	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665708278	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665708338	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665708398	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665708398	i	MotionAutomaton : Straight at velocity 175
+iRobot1	1461665708398	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665708458	e	MotionAutomaton : Stage is: GOAL
+iRobot1	1461665708458	i	MotionAutomaton : At goal, done flag set!
+iRobot1	1461665708458	i	MotionAutomaton : Straight at velocity 0
+iRobot1	1461665708458	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665708558	i	ReachAvoid :  go to called to: midpoint: -135, 1339, 0. index 0
+iRobot1	1461665708578	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665708578	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665708638	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665708698	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot1	1461665708698	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665708758	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665708758	i	MotionAutomaton : Straight at velocity 250
+iRobot1	1461665709969	d	SmartCommsHandler : Received data message: M|6218|iRobot0|ALL|22|A`|&
+iRobot1	1461665709969	d	SmartCommsHandler : Sending ACK: M|6218|iRobot1|iRobot0|0|ACK`|&
+iRobot1	1461665710058	i	DoReachAvoid : 650 2430
+iRobot1	1461665710158	i	ReachAvoid : RRT has found a solution
+iRobot1	1461665710258	i	ReachAvoid :  go to called to: midpoint: 1622, 1448, 0. index 0
+iRobot1	1461665710318	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665710318	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665710378	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665710378	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665710438	e	MotionAutomaton : Stage is: GOAL
+iRobot1	1461665710438	i	MotionAutomaton : At goal, done flag set!
+iRobot1	1461665710438	i	MotionAutomaton : Straight at velocity 0
+iRobot1	1461665710438	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665710558	i	ReachAvoid :  go to called to: midpoint: 650, 2430, 0. index 0
+iRobot1	1461665710618	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665710618	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665710678	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665711398	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot1	1461665711398	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665711458	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665711458	i	MotionAutomaton : Straight at velocity 250
+iRobot1	1461665714218	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665714278	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665714338	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665714398	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665714398	i	MotionAutomaton : Straight at velocity 243
+iRobot1	1461665714458	i	MotionAutomaton : Straight at velocity 243
+iRobot1	1461665714518	i	MotionAutomaton : Straight at velocity 242
+iRobot1	1461665714578	i	MotionAutomaton : Straight at velocity 240
+iRobot1	1461665714638	i	MotionAutomaton : Straight at velocity 237
+iRobot1	1461665714698	i	MotionAutomaton : Straight at velocity 235
+iRobot1	1461665714758	i	MotionAutomaton : Straight at velocity 235
+iRobot1	1461665714818	i	MotionAutomaton : Straight at velocity 233
+iRobot1	1461665714878	i	MotionAutomaton : Straight at velocity 231
+iRobot1	1461665714938	i	MotionAutomaton : Straight at velocity 230
+iRobot1	1461665714998	i	MotionAutomaton : Straight at velocity 227
+iRobot1	1461665715058	i	MotionAutomaton : Straight at velocity 227
+iRobot1	1461665715118	i	MotionAutomaton : Straight at velocity 225
+iRobot1	1461665715178	i	MotionAutomaton : Straight at velocity 223
+iRobot1	1461665715238	i	MotionAutomaton : Straight at velocity 221
+iRobot1	1461665715298	i	MotionAutomaton : Straight at velocity 219
+iRobot1	1461665715358	i	MotionAutomaton : Straight at velocity 219
+iRobot1	1461665715418	i	MotionAutomaton : Straight at velocity 217
+iRobot1	1461665715478	i	MotionAutomaton : Straight at velocity 215
+iRobot1	1461665715538	i	MotionAutomaton : Straight at velocity 214
+iRobot1	1461665715598	i	MotionAutomaton : Straight at velocity 212
+iRobot1	1461665715658	i	MotionAutomaton : Straight at velocity 212
+iRobot1	1461665715718	i	MotionAutomaton : Straight at velocity 211
+iRobot1	1461665715778	i	MotionAutomaton : Straight at velocity 209
+iRobot1	1461665715838	i	MotionAutomaton : Straight at velocity 207
+iRobot1	1461665715898	i	MotionAutomaton : Straight at velocity 206
+iRobot1	1461665715958	i	MotionAutomaton : Straight at velocity 206
+iRobot1	1461665716018	i	MotionAutomaton : Straight at velocity 204
+iRobot1	1461665716078	i	MotionAutomaton : Straight at velocity 202
+iRobot1	1461665716138	i	MotionAutomaton : Straight at velocity 200
+iRobot1	1461665716198	i	MotionAutomaton : Straight at velocity 199
+iRobot1	1461665716258	i	MotionAutomaton : Straight at velocity 199
+iRobot1	1461665716318	i	MotionAutomaton : Straight at velocity 197
+iRobot1	1461665716378	i	MotionAutomaton : Straight at velocity 196
+iRobot1	1461665716378	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665716438	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665716618	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665716678	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665716678	i	MotionAutomaton : Straight at velocity 190
+iRobot1	1461665716738	i	MotionAutomaton : Straight at velocity 188
+iRobot1	1461665716798	i	MotionAutomaton : Straight at velocity 187
+iRobot1	1461665716798	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665716858	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665716918	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665716978	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665716978	i	MotionAutomaton : Straight at velocity 184
+iRobot1	1461665717038	i	MotionAutomaton : Straight at velocity 182
+iRobot1	1461665717098	i	MotionAutomaton : Straight at velocity 181
+iRobot1	1461665717158	i	MotionAutomaton : Straight at velocity 181
+iRobot1	1461665717218	i	MotionAutomaton : Straight at velocity 179
+iRobot1	1461665717278	i	MotionAutomaton : Straight at velocity 178
+iRobot1	1461665717338	i	MotionAutomaton : Straight at velocity 176
+iRobot1	1461665717398	i	MotionAutomaton : Straight at velocity 175
+iRobot1	1461665717458	i	MotionAutomaton : Straight at velocity 175
+iRobot1	1461665717518	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665717578	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665717578	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665717638	e	MotionAutomaton : Stage is: GOAL
+iRobot1	1461665717638	i	MotionAutomaton : At goal, done flag set!
+iRobot1	1461665717638	i	MotionAutomaton : Straight at velocity 0
+iRobot1	1461665717638	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665717758	i	ReachAvoid :  dest Reached: B: 650, 2430, 600. index 0
+iRobot1	1461665717858	i	DoneFlag : read
+iRobot1	1461665717958	i	DoReachAvoid : 3517 2534
+iRobot1	1461665718058	i	ReachAvoid : RRT has found a solution
+iRobot1	1461665718158	i	ReachAvoid :  go to called to: midpoint: 689, 2414, 0. index 0
+iRobot1	1461665718178	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665718178	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665718238	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665718238	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665718298	e	MotionAutomaton : Stage is: GOAL
+iRobot1	1461665718298	i	MotionAutomaton : At goal, done flag set!
+iRobot1	1461665718298	i	MotionAutomaton : Straight at velocity 0
+iRobot1	1461665718298	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665718458	i	ReachAvoid :  go to called to: midpoint: 3517, 2534, 0. index 0
+iRobot1	1461665718478	e	MotionAutomaton : Stage is: INIT
+iRobot1	1461665718478	i	MotionAutomaton : Stage transition to TURN
+iRobot1	1461665718538	e	MotionAutomaton : Stage is: TURN
+iRobot1	1461665719978	i	MotionAutomaton : Turn stage: within angle bounds!
+iRobot1	1461665719978	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665720038	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665720038	i	MotionAutomaton : Straight at velocity 250
+iRobot1	1461665728978	i	MotionAutomaton : Straight at velocity 248
+iRobot1	1461665729038	i	MotionAutomaton : Straight at velocity 246
+iRobot1	1461665729098	i	MotionAutomaton : Straight at velocity 244
+iRobot1	1461665729158	i	MotionAutomaton : Straight at velocity 244
+iRobot1	1461665729218	i	MotionAutomaton : Straight at velocity 242
+iRobot1	1461665729278	i	MotionAutomaton : Straight at velocity 240
+iRobot1	1461665729338	i	MotionAutomaton : Straight at velocity 238
+iRobot1	1461665729398	i	MotionAutomaton : Straight at velocity 236
+iRobot1	1461665729458	i	MotionAutomaton : Straight at velocity 236
+iRobot1	1461665729518	i	MotionAutomaton : Straight at velocity 233
+iRobot1	1461665729518	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665729578	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665729638	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665729698	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665729698	i	MotionAutomaton : Straight at velocity 228
+iRobot1	1461665729758	i	MotionAutomaton : Straight at velocity 228
+iRobot1	1461665729818	i	MotionAutomaton : Straight at velocity 226
+iRobot1	1461665729878	i	MotionAutomaton : Straight at velocity 224
+iRobot1	1461665729938	i	MotionAutomaton : Straight at velocity 222
+iRobot1	1461665729998	i	MotionAutomaton : Straight at velocity 220
+iRobot1	1461665730058	i	MotionAutomaton : Straight at velocity 220
+iRobot1	1461665730118	i	MotionAutomaton : Straight at velocity 218
+iRobot1	1461665730178	i	MotionAutomaton : Straight at velocity 216
+iRobot1	1461665730178	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665730238	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665730298	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665730358	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665730358	i	MotionAutomaton : Straight at velocity 211
+iRobot1	1461665730418	i	MotionAutomaton : Straight at velocity 211
+iRobot1	1461665730418	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665730478	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665730538	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665730598	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665730598	i	MotionAutomaton : Straight at velocity 205
+iRobot1	1461665730658	i	MotionAutomaton : Straight at velocity 205
+iRobot1	1461665730718	i	MotionAutomaton : Straight at velocity 204
+iRobot1	1461665730778	i	MotionAutomaton : Straight at velocity 202
+iRobot1	1461665730838	i	MotionAutomaton : Straight at velocity 200
+iRobot1	1461665730898	i	MotionAutomaton : Straight at velocity 198
+iRobot1	1461665730958	i	MotionAutomaton : Straight at velocity 198
+iRobot1	1461665731018	i	MotionAutomaton : Straight at velocity 197
+iRobot1	1461665731078	i	MotionAutomaton : Straight at velocity 195
+iRobot1	1461665731138	i	MotionAutomaton : Straight at velocity 193
+iRobot1	1461665731198	i	MotionAutomaton : Straight at velocity 192
+iRobot1	1461665731258	i	MotionAutomaton : Straight at velocity 192
+iRobot1	1461665731318	i	MotionAutomaton : Straight at velocity 190
+iRobot1	1461665731378	i	MotionAutomaton : Straight at velocity 189
+iRobot1	1461665731438	i	MotionAutomaton : Straight at velocity 187
+iRobot1	1461665731438	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665731498	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665731558	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665731618	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665731618	i	MotionAutomaton : Straight at velocity 184
+iRobot1	1461665731678	i	MotionAutomaton : Straight at velocity 183
+iRobot1	1461665731678	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665731738	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665731798	i	MotionAutomaton : Stage transition to STRAIGHT
+iRobot1	1461665731858	e	MotionAutomaton : Stage is: STRAIGHT
+iRobot1	1461665731858	i	MotionAutomaton : Straight at velocity 180
+iRobot1	1461665731918	i	MotionAutomaton : Straight at velocity 178
+iRobot1	1461665731978	i	MotionAutomaton : Straight at velocity 177
+iRobot1	1461665732038	i	MotionAutomaton : Straight at velocity 176
+iRobot1	1461665732098	i	MotionAutomaton : Straight at velocity 175
+iRobot1	1461665732098	i	MotionAutomaton : Stage transition to SMALLTURN
+iRobot1	1461665732158	e	MotionAutomaton : Stage is: SMALLTURN
+iRobot1	1461665732218	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665732278	e	MotionAutomaton : Stage is: GOAL
+iRobot1	1461665732278	i	MotionAutomaton : At goal, done flag set!
+iRobot1	1461665732278	i	MotionAutomaton : Straight at velocity 0
+iRobot1	1461665732278	i	MotionAutomaton : Stage transition to GOAL
+iRobot1	1461665732458	i	ReachAvoid :  dest Reached: C: 3517, 2534, 600. index 0
+iRobot1	1461665732558	i	DoneFlag : read
+
+nullquadcopter1	1461665697283	d	MotionAutomaton : STARTED!
+quadcopter1	1461665697283	i	GPSReceiver : Starting GPS receiver
+quadcopter1	1461665697358	i	WIND : 0.0 -0.9212083091123482
+quadcopter1	1461665697358	d	ReachAvoid : STARTED!
+quadcopter1	1461665697358	i	DoReachAvoid : 3100 800
+quadcopter1	1461665697358	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665697458	i	WIND : -3.425319489202125 -3.9029808387868643
+quadcopter1	1461665697458	i	ReachAvoid :  go to called to: midpoint: 1497, 1999, 0. index 0
+quadcopter1	1461665697478	i	MotionAutomaton : Drone taking off
+quadcopter1	1461665697478	i	MotionAutomaton : Stage transition to TAKEOFF
+quadcopter1	1461665697558	i	WIND : -3.7698223939530573 -0.6184716193221185
+quadcopter1	1461665697658	i	WIND : -3.3008100239818665 -0.516475456738525
+quadcopter1	1461665697758	i	WIND : -3.4231009984052116 -3.555303696122788
+quadcopter1	1461665697858	i	WIND : -0.6988534026142874 -2.58581494937929
+quadcopter1	1461665697958	i	WIND : 3.157500346229069 -0.4199400743618158
+quadcopter1	1461665698058	i	WIND : 1.9240466716590845 -2.3573998434987766
+quadcopter1	1461665698158	i	WIND : 0.2971481652098529 2.7336495528837395
+quadcopter1	1461665698258	i	WIND : -1.9856434289013265 0.08722929664275814
+quadcopter1	1461665698358	i	WIND : 1.272597468784677 -0.4622848033006681
+quadcopter1	1461665698458	i	WIND : 2.9344635034596758 0.5733620504095933
+quadcopter1	1461665698558	i	WIND : 3.0122932471937194 -2.7966863909563857
+quadcopter1	1461665698658	i	WIND : 2.272008302989174 -1.7236404228858966
+quadcopter1	1461665698738	i	MotionAutomaton : Drone hovering
+quadcopter1	1461665698738	i	MotionAutomaton : Stage transition to INIT
+quadcopter1	1461665698758	i	WIND : 0.6973205691282143 -0.2564985530725945
+quadcopter1	1461665698798	i	MotionAutomaton : Stage transition to GOAL
+quadcopter1	1461665698858	i	MotionAutomaton : At goal!
+quadcopter1	1461665698858	i	DoneFlag : write
+quadcopter1	1461665698858	i	MotionAutomaton : Drone hovering
+quadcopter1	1461665698858	i	MotionAutomaton : Stage transition to HOVER
+quadcopter1	1461665698958	i	ReachAvoid :  go to called to: midpoint: 3100, 800, 0. index 0
+quadcopter1	1461665698958	i	WIND : -3.636208740404455 -0.16822741784930528
+quadcopter1	1461665698978	i	MotionAutomaton : Stage transition to MOVE
+quadcopter1	1461665699058	i	WIND : -3.3552225181711846 1.9788852902523697
+quadcopter1	1461665699158	i	WIND : -1.278193204822677 3.550919288106215
+quadcopter1	1461665699258	i	WIND : -2.888164323193638 2.3129529960101713
+quadcopter1	1461665699358	i	WIND : 1.7488587233840605 -2.931879934656216
+quadcopter1	1461665699458	i	WIND : 3.9640557266624663 -2.289539931039985
+quadcopter1	1461665699558	i	WIND : -3.9360194949968834 -0.9452529888848611
+quadcopter1	1461665699658	i	WIND : -0.23606080974951738 3.76400217514482
+quadcopter1	1461665699758	i	WIND : 1.1318733064149216 -2.484869250630145
+quadcopter1	1461665699858	i	WIND : 0.14483700737525673 -1.510814382676961
+quadcopter1	1461665699958	i	WIND : 2.6273791386159777 0.47516752304144383
+quadcopter1	1461665700058	i	WIND : 1.1828304231035025 -2.7648028927972943
+quadcopter1	1461665700158	i	WIND : 2.5798599541349647 0.7980730812525154
+quadcopter1	1461665700258	i	WIND : 0.3914087704723572 -2.2610072632226226
+quadcopter1	1461665700358	i	WIND : -2.8384028790077664 1.2599611373316213
+quadcopter1	1461665700458	i	WIND : 3.350671303828868 -0.6531755704397098
+quadcopter1	1461665700558	i	WIND : 1.6862629971048593 0.47574487477892013
+quadcopter1	1461665700658	i	WIND : -1.0791103436730003 3.4222231486465757
+quadcopter1	1461665700758	i	WIND : 3.181631424561168 2.899553783912536
+quadcopter1	1461665700858	i	WIND : 0.7145669164404023 0.023982058680077856
+quadcopter1	1461665700958	i	WIND : 3.373668222877466 -2.896004899810012
+quadcopter1	1461665701058	i	WIND : -0.9423386281977688 2.6154115806974563
+quadcopter1	1461665701158	i	WIND : 2.7769690836270113 -0.042795981230978164
+quadcopter1	1461665701258	i	WIND : 0.2765834988902762 -3.876536790536349
+quadcopter1	1461665701358	i	WIND : 1.2733160439687081 -0.1738269999397586
+quadcopter1	1461665701458	i	WIND : 0.32902823728564545 -0.3182476264580387
+quadcopter1	1461665701558	i	WIND : 1.5446743400346845 -1.5967987961860999
+quadcopter1	1461665701618	i	MotionAutomaton : Stage transition to GOAL
+quadcopter1	1461665701658	i	WIND : -3.9868944664338377 2.595075875725678
+quadcopter1	1461665701678	i	MotionAutomaton : At goal!
+quadcopter1	1461665701678	i	DoneFlag : write
+quadcopter1	1461665701678	i	MotionAutomaton : Drone hovering
+quadcopter1	1461665701678	i	MotionAutomaton : Stage transition to HOVER
+quadcopter1	1461665701758	i	WIND : -0.4306540883554417 3.815960941387642
+quadcopter1	1461665701858	i	WIND : 2.0973152474337784 0.4196326055696096
+quadcopter1	1461665701858	i	DoneFlag : read
+quadcopter1	1461665701958	i	WIND : 1.4630677137310935 3.056908145213076
+quadcopter1	1461665701958	i	DoReachAvoid : 294 258
+quadcopter1	1461665701958	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665702058	i	WIND : -2.4410466611889037 -2.649443855992887
+quadcopter1	1461665702058	i	ReachAvoid :  go to called to: midpoint: 3188, 750, 0. index 0
+quadcopter1	1461665702098	i	MotionAutomaton : Stage transition to GOAL
+quadcopter1	1461665702158	i	WIND : -3.7645868064512067 2.433744375514168
+quadcopter1	1461665702158	i	MotionAutomaton : At goal!
+quadcopter1	1461665702158	i	DoneFlag : write
+quadcopter1	1461665702158	i	MotionAutomaton : Drone hovering
+quadcopter1	1461665702158	i	MotionAutomaton : Stage transition to HOVER
+quadcopter1	1461665702258	i	WIND : -2.5464095491530507 3.5393463305596162
+quadcopter1	1461665702278	i	MotionAutomaton : Stage transition to MOVE
+quadcopter1	1461665702358	i	WIND : 1.8719444753446073 2.590307680382712
+quadcopter1	1461665702458	i	WIND : -2.450144823176661 0.5030493516916952
+quadcopter1	1461665702558	i	WIND : -3.366515901114785 -0.5344575134475864
+quadcopter1	1461665702658	i	WIND : 0.7773616500367266 -2.123071899610582
+quadcopter1	1461665702758	i	WIND : 2.3612052533899988 1.2747989736636391
+quadcopter1	1461665702818	i	FailFlag : write
+quadcopter1	1461665702858	i	WIND : -2.8246964993888 3.0379634907711797
+quadcopter1	1461665702958	i	WIND : -0.04766944535640594 -1.906775205277368
+quadcopter1	1461665702958	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665703058	i	WIND : -3.3093478216724446 -0.43955317134246563
+quadcopter1	1461665703118	i	FailFlag : write
+quadcopter1	1461665703158	i	WIND : -2.988079491066518 -0.2965223909532959
+quadcopter1	1461665703258	i	WIND : 1.7264438027096096 -3.0515017381360403
+quadcopter1	1461665703258	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665703358	i	ReachAvoid :  go to called to: midpoint: 3203, 808, 0. index 0
+quadcopter1	1461665703358	i	WIND : 2.7622064047713035 2.6913606950267948
+quadcopter1	1461665703458	i	WIND : 1.6043457766994678 1.3996930451020768
+quadcopter1	1461665703558	i	WIND : 2.8573972884125105 -0.9548055397065269
+quadcopter1	1461665703558	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665703658	i	ReachAvoid :  go to called to: midpoint: 3199, 821, 0. index 0
+quadcopter1	1461665703718	i	FailFlag : write
+quadcopter1	1461665703758	i	WIND : -2.7591984565282273 0.5825459113769318
+quadcopter1	1461665703858	i	WIND : -1.162126197802194 1.7268037953678421
+quadcopter1	1461665703858	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665703958	i	WIND : 3.773719809843297 -2.9829408920618823
+quadcopter1	1461665703958	i	ReachAvoid :  go to called to: midpoint: 3199, 821, 0. index 0
+quadcopter1	1461665704018	i	FailFlag : write
+quadcopter1	1461665704058	i	WIND : -2.1329561900399936 -2.9648623193606474
+quadcopter1	1461665704158	i	WIND : -1.266322103286238 2.707012522514894
+quadcopter1	1461665704158	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665704258	i	WIND : -3.866916049738249 3.613068872352012
+quadcopter1	1461665704258	i	ReachAvoid :  go to called to: midpoint: 3197, 822, 0. index 0
+quadcopter1	1461665704318	i	FailFlag : write
+quadcopter1	1461665704358	i	WIND : 1.4479340789218975 -2.5421765107077237
+quadcopter1	1461665704458	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665704458	i	WIND : -1.4468782949762709 -2.519898022813061
+quadcopter1	1461665704558	i	WIND : -3.2034905318786775 -1.9630293078800625
+quadcopter1	1461665704558	i	ReachAvoid :  go to called to: midpoint: 3197, 822, 0. index 0
+quadcopter1	1461665704618	i	FailFlag : write
+quadcopter1	1461665704658	i	WIND : 3.860262629487041 -0.16045031695102185
+quadcopter1	1461665704758	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665704858	i	WIND : 2.1288240443961834 -3.1008509301160965
+quadcopter1	1461665704858	i	ReachAvoid :  go to called to: midpoint: 3195, 829, 0. index 0
+quadcopter1	1461665704858	i	FailFlag : write
+quadcopter1	1461665704958	i	WIND : 2.3168194506013515 -1.3895577856969439
+quadcopter1	1461665705058	i	WIND : 2.643766683827704 -3.783817411701479
+quadcopter1	1461665705158	i	ReachAvoid :  go to called to: midpoint: 3191, 834, 0. index 0
+quadcopter1	1461665705158	i	WIND : 1.867111422529173 -2.129569402999585
+quadcopter1	1461665705218	i	FailFlag : write
+quadcopter1	1461665705258	i	WIND : 0.3217178999870356 -1.4243561949696586
+quadcopter1	1461665705358	i	WIND : 1.406088061762202 -2.2981804789207
+quadcopter1	1461665705358	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665705458	i	ReachAvoid :  go to called to: midpoint: 3191, 834, 0. index 0
+quadcopter1	1461665705518	i	FailFlag : write
+quadcopter1	1461665705558	i	WIND : 2.156966141432555 1.6304024382224558
+quadcopter1	1461665705658	i	WIND : -2.468191308377631 -0.6848198989023748
+quadcopter1	1461665705658	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665705758	i	WIND : 1.2281472602216175 3.853845621926748
+quadcopter1	1461665705758	i	ReachAvoid :  go to called to: midpoint: 3191, 834, 0. index 0
+quadcopter1	1461665705818	i	FailFlag : write
+quadcopter1	1461665705858	i	WIND : 0.9002892810401892 2.2564088532708837
+quadcopter1	1461665705958	i	WIND : -1.1237044327418593 -3.0467189178066985
+quadcopter1	1461665705958	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665706058	i	WIND : 1.8311145086593354 1.836258090414499
+quadcopter1	1461665706158	i	WIND : 3.974202142826541 3.7993850122548247
+quadcopter1	1461665706258	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665706258	i	WIND : 1.6099814671515915 2.1623869688093524
+quadcopter1	1461665706358	i	WIND : 2.8986363319070545 -2.5764932506564664
+quadcopter1	1461665706358	i	ReachAvoid :  go to called to: midpoint: 3183, 860, 0. index 0
+quadcopter1	1461665706418	i	FailFlag : write
+quadcopter1	1461665706458	i	WIND : -3.7736686872308374 3.5279213317609726
+quadcopter1	1461665706558	i	WIND : 1.3064986170831574 0.0171610801851676
+quadcopter1	1461665706558	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665706658	i	ReachAvoid :  go to called to: midpoint: 3183, 860, 0. index 0
+quadcopter1	1461665706718	i	FailFlag : write
+quadcopter1	1461665706758	i	WIND : -3.459012535421741 -1.5264351143929238
+quadcopter1	1461665706858	i	WIND : 2.56206473558667 0.7810652757734307
+quadcopter1	1461665706858	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665706958	i	ReachAvoid :  go to called to: midpoint: 3183, 860, 0. index 0
+quadcopter1	1461665706958	i	WIND : -3.635746088237087 3.1729462886111044
+quadcopter1	1461665707018	i	FailFlag : write
+quadcopter1	1461665707058	i	WIND : 3.9819874307516656 0.05215732677175389
+quadcopter1	1461665707158	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665707258	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665707258	i	WIND : -2.9938903152687386 -1.394122697562426
+quadcopter1	1461665707318	i	FailFlag : write
+quadcopter1	1461665707358	i	WIND : -2.5332732062265118 -2.5335775310741058
+quadcopter1	1461665707458	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665707458	i	WIND : 0.6831970350713181 0.46525949041471293
+quadcopter1	1461665707558	i	WIND : 1.5479142800387438 -1.1369742235390214
+quadcopter1	1461665707558	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665707618	i	FailFlag : write
+quadcopter1	1461665707658	i	WIND : 0.9715018649681468 1.889804779263204
+quadcopter1	1461665707758	i	WIND : -2.1339141563180366 3.737571775833942
+quadcopter1	1461665707758	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665707858	i	WIND : 2.6497299135579224 0.8354810274038948
+quadcopter1	1461665707858	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665707918	i	FailFlag : write
+quadcopter1	1461665707958	i	WIND : 2.2680820642887864 -0.5684434227419635
+quadcopter1	1461665708058	i	WIND : -1.7998117845589094 2.4126093672252793
+quadcopter1	1461665708058	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665708158	i	WIND : -0.42045714505425735 2.0501979842363127
+quadcopter1	1461665708218	i	FailFlag : write
+quadcopter1	1461665708258	i	WIND : 1.1915320453889704 0.883076502350228
+quadcopter1	1461665708358	i	WIND : 0.27916755423408013 -2.0524151422067476
+quadcopter1	1461665708358	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665708458	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665708458	i	WIND : -1.3732354928841355 -3.8675841324292817
+quadcopter1	1461665708518	i	FailFlag : write
+quadcopter1	1461665708558	i	WIND : -0.5607155399526889 0.24549704518508708
+quadcopter1	1461665708658	i	WIND : -1.4081688677198843 0.3571618056652657
+quadcopter1	1461665708658	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665708758	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665708758	i	WIND : -0.8330714111804847 3.22386994720586
+quadcopter1	1461665708818	i	FailFlag : write
+quadcopter1	1461665708858	i	WIND : -0.09853848579892954 -1.9614774866846423
+quadcopter1	1461665708958	i	WIND : -1.1397357815403026 0.3426058167111936
+quadcopter1	1461665708958	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665709058	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665709058	i	WIND : -0.7423608348044413 -0.8177443287165618
+quadcopter1	1461665709118	i	FailFlag : write
+quadcopter1	1461665709158	i	WIND : 3.5224475209605686 -2.609482985867338
+quadcopter1	1461665709258	i	WIND : -0.09078460266193922 3.2021840501681877
+quadcopter1	1461665709258	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665709358	i	WIND : 0.7657668440807397 3.5619403390815103
+quadcopter1	1461665709358	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665709418	i	FailFlag : write
+quadcopter1	1461665709458	i	WIND : -0.30628844346525863 0.9098423954237571
+quadcopter1	1461665709558	i	WIND : 2.066730754303366 0.5228163061168809
+quadcopter1	1461665709558	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665709658	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665709658	i	WIND : 2.025896773963461 2.3759270262115457
+quadcopter1	1461665709658	i	FailFlag : write
+quadcopter1	1461665709758	i	WIND : 2.1778793249981696 -3.6625540352623194
+quadcopter1	1461665709858	i	WIND : -1.9039608678084914 3.652975370227834
+quadcopter1	1461665709858	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665709958	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665709973	d	SmartCommsHandler : Received data message: M|6218|iRobot0|ALL|22|A`|&
+quadcopter1	1461665709973	d	SmartCommsHandler : Sending ACK: M|6218|quadcopter1|iRobot0|0|ACK`|&
+quadcopter1	1461665710058	i	WIND : -1.4359451124493257 -1.019301952831566
+quadcopter1	1461665710058	i	DoReachAvoid : 650 2430
+quadcopter1	1461665710158	i	WIND : -1.341313388346439 -1.0431630861985415
+quadcopter1	1461665710158	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665710258	i	ReachAvoid :  go to called to: midpoint: 3181, 867, 0. index 0
+quadcopter1	1461665710258	i	WIND : 0.14850868651151483 2.6372340035429254
+quadcopter1	1461665710358	i	WIND : 1.2543945808506205 2.928480871669315
+quadcopter1	1461665710458	i	WIND : 0.30892134775409996 -3.150319679991764
+quadcopter1	1461665710558	i	WIND : -0.6177421469680402 2.30947792581068
+quadcopter1	1461665710658	i	WIND : 3.981927342771396 -2.952474253937978
+quadcopter1	1461665710758	i	WIND : -3.9806712968042195 2.6145390654224085
+quadcopter1	1461665710858	i	WIND : -2.8538120594423875 -3.4178910791731525
+quadcopter1	1461665710958	i	WIND : -0.1403716998848017 1.7600007261123807
+quadcopter1	1461665711058	i	WIND : 0.2377150688447296 1.000100954872365
+quadcopter1	1461665711158	i	WIND : 3.5839147258125337 -0.41021269373240443
+quadcopter1	1461665711258	i	WIND : 0.9607405518893435 2.6023490766959245
+quadcopter1	1461665711358	i	WIND : -3.5247562309784657 -1.4001417307876363
+quadcopter1	1461665711458	i	WIND : -0.5862985669352323 1.848548818154434
+quadcopter1	1461665711558	i	WIND : -0.569652884901644 0.5653770349371996
+quadcopter1	1461665711658	i	WIND : 3.425819058046602 0.012508958503851808
+quadcopter1	1461665711758	i	WIND : 1.3056570650279324 1.5418044637871748
+quadcopter1	1461665711858	i	WIND : 2.128194165540103 -0.784408469026098
+quadcopter1	1461665711958	i	WIND : -0.3832786329139104 1.78360595997877
+quadcopter1	1461665712058	i	WIND : 2.790182601499776 -2.4676960112697204
+quadcopter1	1461665712158	i	WIND : -1.1972377046494946 -3.4022121932588174
+quadcopter1	1461665712258	i	WIND : -1.409508761701347 0.1284587535053534
+quadcopter1	1461665712358	i	WIND : 2.6976689400396108 -2.844651920471196
+quadcopter1	1461665712458	i	WIND : 3.796589423180156 1.9188880652643867
+quadcopter1	1461665712558	i	WIND : -1.3819346562522163 0.4362826842080523
+quadcopter1	1461665712658	i	WIND : 2.1491764241999043 -0.6993188245015478
+quadcopter1	1461665712758	i	WIND : -0.7171575636247445 1.0130289450883652
+quadcopter1	1461665712858	i	WIND : 2.943159999522086 0.555599926543497
+quadcopter1	1461665712958	i	WIND : 2.9599692785209175 -2.76894141531192
+quadcopter1	1461665713058	i	WIND : 0.03314024737187271 2.587899071540898
+quadcopter1	1461665713158	i	WIND : 2.557907122248996 -0.1391102347486548
+quadcopter1	1461665713258	i	WIND : -3.12971119264102 3.7934993085343542
+quadcopter1	1461665713358	i	WIND : 3.716625343675945 1.2523275788998989
+quadcopter1	1461665713458	i	WIND : -2.490261961555686 -1.8995109127502943
+quadcopter1	1461665713558	i	WIND : -2.0872754373830844 1.263209740000864
+quadcopter1	1461665713658	i	WIND : -1.269713367152681 -2.67487824427958
+quadcopter1	1461665713758	i	WIND : -3.260481455837712 -3.9742575711759835
+quadcopter1	1461665713858	i	WIND : 1.6068252289824176 1.5801910438514684
+quadcopter1	1461665713958	i	WIND : 1.5605312579066792 -2.5748455310274556
+quadcopter1	1461665714058	i	WIND : 0.4509337248301364 1.8014029490162384
+quadcopter1	1461665714158	i	WIND : 1.5665620317436826 -1.677477132345981
+quadcopter1	1461665714258	i	WIND : -0.32399312671850033 -0.1572971428937171
+quadcopter1	1461665714358	i	WIND : 1.0111230717088109 -0.8027177569482262
+quadcopter1	1461665714458	i	WIND : -1.34122269156211 -2.031673768653296
+quadcopter1	1461665714558	i	WIND : 3.9516744408956415 0.6920357290437584
+quadcopter1	1461665714658	i	WIND : -1.6174354759268335 1.5611510819666847
+quadcopter1	1461665714758	i	WIND : -1.4221813433011636 1.96912324968506
+quadcopter1	1461665714858	i	WIND : -1.3758699437135 0.8452515168426569
+quadcopter1	1461665714958	i	WIND : 2.086209523274115 3.57288934990052
+quadcopter1	1461665715058	i	WIND : -0.358201724652921 -0.5764308927448614
+quadcopter1	1461665715158	i	WIND : 0.7781769372379328 1.647366245589148
+quadcopter1	1461665715258	i	WIND : -0.3041316961776337 2.779887384426594
+quadcopter1	1461665715358	i	WIND : -2.6058334845943687 -1.0153750990031085
+quadcopter1	1461665715458	i	WIND : 1.3646485882079462 1.41265134170634
+quadcopter1	1461665715558	i	WIND : -0.13615606862234753 -1.0863046775450238
+quadcopter1	1461665715658	i	WIND : -0.962217174903194 -1.0549386767314743
+quadcopter1	1461665715758	i	WIND : -0.2505198992857611 -3.297778303089223
+quadcopter1	1461665715858	i	WIND : 1.8778174122245668 -1.012076150827065
+quadcopter1	1461665715958	i	WIND : -1.325698856816814 -3.4435992909740065
+quadcopter1	1461665716058	i	WIND : -0.2059690128576257 0.3828733321658975
+quadcopter1	1461665716158	i	WIND : -0.2510176158810866 0.17739497911601632
+quadcopter1	1461665716258	i	WIND : -1.234820587332499 -0.051765088152667005
+quadcopter1	1461665716358	i	WIND : 3.4666571041861287 0.4671711980742419
+quadcopter1	1461665716458	i	WIND : 0.8314299249463568 2.4785418560907875
+quadcopter1	1461665716558	i	WIND : -3.9911227067039734 -1.1410632058131558
+quadcopter1	1461665716658	i	WIND : -2.014466486335982 -0.2652121134311942
+quadcopter1	1461665716758	i	WIND : -1.0272168188298467 -0.8489402226789
+quadcopter1	1461665716858	i	WIND : 2.749303053101146 2.1476246852886574
+quadcopter1	1461665716958	i	WIND : -3.5072738054505797 -3.8649099051426425
+quadcopter1	1461665717058	i	WIND : 2.196082471719061 -3.0591941211818394
+quadcopter1	1461665717158	i	WIND : 3.915510771471295 2.0873741443184217
+quadcopter1	1461665717258	i	WIND : 0.2595138579118501 3.9709775503866567
+quadcopter1	1461665717358	i	WIND : -1.087080503591408 -1.9160501934444598
+quadcopter1	1461665717458	i	WIND : -2.5073522058563213 -2.560318858566376
+quadcopter1	1461665717558	i	WIND : -1.5770380490680607 -0.1360287622195928
+quadcopter1	1461665717658	i	WIND : 2.6678228542674622 -3.9076252822019617
+quadcopter1	1461665717758	i	WIND : 2.5241520228872227 -0.6898248333235992
+quadcopter1	1461665717858	i	WIND : 1.2537428299210136 -2.499450085528027
+quadcopter1	1461665717872	d	SmartCommsHandler : Received data message: M|8823|iRobot1|ALL|22|B`|&
+quadcopter1	1461665717872	d	SmartCommsHandler : Sending ACK: M|8823|quadcopter1|iRobot1|0|ACK`|&
+quadcopter1	1461665717958	i	WIND : 3.413892070350947 -2.6796734735781635
+quadcopter1	1461665717958	i	DoReachAvoid : 3517 2534
+quadcopter1	1461665718058	i	WIND : -1.354801019728872 -0.21441815054366042
+quadcopter1	1461665718058	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665718158	i	WIND : -1.044790566283444 -0.8402606146197664
+quadcopter1	1461665718158	i	ReachAvoid :  go to called to: midpoint: 2486, 948, 0. index 0
+quadcopter1	1461665718178	i	FailFlag : write
+quadcopter1	1461665718258	i	WIND : -2.6803170675405763 0.31231514731855015
+quadcopter1	1461665718358	i	WIND : 1.147399424379401 3.351936340320809
+quadcopter1	1461665718358	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665718458	i	WIND : 1.9937169142216131 -3.978050529766257
+quadcopter1	1461665718458	i	ReachAvoid :  go to called to: midpoint: 2204, 807, 0. index 0
+quadcopter1	1461665718478	i	FailFlag : write
+quadcopter1	1461665718558	i	WIND : 3.107341574762409 0.9322647000463089
+quadcopter1	1461665718658	i	WIND : 3.574746023355245 -2.905954750359041
+quadcopter1	1461665718658	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665718758	i	WIND : -1.03980485528428 -2.740937819782733
+quadcopter1	1461665718778	i	FailFlag : write
+quadcopter1	1461665718858	i	WIND : -3.0780097710443526 3.2739138042161127
+quadcopter1	1461665718958	i	WIND : -0.14918858564353332 -0.32379934011257117
+quadcopter1	1461665718958	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665719058	i	ReachAvoid :  go to called to: midpoint: 1378, 304, 0. index 0
+quadcopter1	1461665719058	i	WIND : 3.9629709734491083 3.9057700906617168
+quadcopter1	1461665719078	i	FailFlag : write
+quadcopter1	1461665719158	i	WIND : 1.7323608878586603 0.3524656685902281
+quadcopter1	1461665719258	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665719358	i	ReachAvoid :  go to called to: midpoint: 802, -42, 0. index 0
+quadcopter1	1461665719358	i	WIND : -2.448159479456595 3.512163300452075
+quadcopter1	1461665719378	i	FailFlag : write
+quadcopter1	1461665719458	i	WIND : -0.7373190058267687 0.5774894640087682
+quadcopter1	1461665719558	i	WIND : 1.023219486983149 -2.7317294140013226
+quadcopter1	1461665719558	i	ReachAvoid : RRT has found a solution
+quadcopter1	1461665719658	i	WIND : -2.826609018242963 -2.422431743591223
+quadcopter1	1461665719678	i	MotionAutomaton : Drone taking off
+quadcopter1	1461665719678	i	MotionAutomaton : Stage transition to TAKEOFF
+quadcopter1	1461665719758	i	WIND : -3.544192243061925 0.007069463470382509
+quadcopter1	1461665719858	i	WIND : -3.7531198867167266 3.2681093295324954
+quadcopter1	1461665719958	i	WIND : -2.842426332349974 1.7656348067592207
+quadcopter1	1461665720058	i	WIND : 2.4676128242143935 0.38320618129686945
+quadcopter1	1461665720158	i	WIND : -1.0529599759272648 1.5180193565467501
+quadcopter1	1461665720258	i	WIND : -1.764474165642259 -1.0993251188358553
+quadcopter1	1461665720358	i	WIND : 0.19261749081624835 -3.0515330516180397
+quadcopter1	1461665720458	i	WIND : 0.44687809779371257 -3.3658395174142495
+quadcopter1	1461665720558	i	WIND : 2.5886427960897374 0.7452496382527203
+quadcopter1	1461665720658	i	WIND : -3.67912304903036 -3.956114374498939
+quadcopter1	1461665720758	i	WIND : 3.3685871104561746 -2.897295168825819
+quadcopter1	1461665720858	i	WIND : 2.4289003789583097 -1.4409918794967753
+quadcopter1	1461665720958	i	WIND : 1.9261152052256874 2.488113302425945
+quadcopter1	1461665720998	i	MotionAutomaton : Drone hovering
+quadcopter1	1461665720998	i	MotionAutomaton : Stage transition to INIT
+quadcopter1	1461665721058	i	MotionAutomaton : Stage transition to MOVE
+quadcopter1	1461665721058	i	WIND : 0.4793193261227957 -0.2707000167775515
+quadcopter1	1461665721158	i	WIND : -1.8895723434678704 -1.561225742576875
+quadcopter1	1461665721258	i	WIND : 3.585110204395403 -3.262180911225288
+quadcopter1	1461665721358	i	WIND : 1.0683850215256445 -3.130218780210501
+quadcopter1	1461665721458	i	WIND : 1.7723282385802657 1.4398857337026252
+quadcopter1	1461665721558	i	WIND : 1.0283283364364024 1.8293396256901966
+quadcopter1	1461665721658	i	WIND : -3.487755670826184 -3.9179113797032894
+quadcopter1	1461665721758	i	WIND : -1.4872468471565412 -3.521219032750955
+quadcopter1	1461665721858	i	WIND : 3.3218089119426146 -3.898419522607009
+quadcopter1	1461665721958	i	WIND : -1.58013463752122 -2.092176932714904
+quadcopter1	1461665722058	i	WIND : -2.905776766329896 2.0168375945667796
+quadcopter1	1461665722158	i	WIND : 3.5802994230974043 3.7001656475164637
+quadcopter1	1461665722258	i	WIND : 1.2271958938860301 1.9056878338630545
+quadcopter1	1461665722358	i	WIND : -1.8197991612970128 0.5254602581110026
+quadcopter1	1461665722458	i	WIND : 0.2116399667646709 -1.1371612631021843
+quadcopter1	1461665722558	i	WIND : 0.017757578858733858 -3.5112193219702963
+quadcopter1	1461665722658	i	WIND : -3.897087258639221 1.7324183512661806
+quadcopter1	1461665722758	i	WIND : -3.30760179737522 3.9861125837790032
+quadcopter1	1461665722858	i	WIND : 2.954974152290233 0.3802090523685351
+quadcopter1	1461665722958	i	WIND : 2.1624218745331234 -1.350565981027362
+quadcopter1	1461665723058	i	WIND : -0.12524604771436998 1.4731700686265397
+quadcopter1	1461665723158	i	WIND : -1.8677555853718975 -1.1680925971396547
+quadcopter1	1461665723258	i	WIND : -2.543049869138798 -3.618980241649923
+quadcopter1	1461665723358	i	WIND : -3.1753656665614542 -0.6369851681273673
+quadcopter1	1461665723458	i	WIND : 1.6805058118892147 -2.864011174229111
+quadcopter1	1461665723558	i	WIND : 3.2444497758133037 -2.2854328905658283
+quadcopter1	1461665723658	i	WIND : 2.1910979389428675 -1.2591289894920026
+quadcopter1	1461665723758	i	WIND : 0.39543151858908576 2.105457090621571
+quadcopter1	1461665723858	i	WIND : 0.8354268710201929 -2.5083167230199406
+quadcopter1	1461665723958	i	WIND : -3.8930299722074757 2.929833841270314
+quadcopter1	1461665724058	i	WIND : -2.0927010794296397 -1.8084738065539314
+quadcopter1	1461665724158	i	WIND : 1.017012475940457 -2.239219607900324
+quadcopter1	1461665724258	i	WIND : -3.3792727621515484 0.4637702363586804
+quadcopter1	1461665724358	i	WIND : -3.68641764403461 3.250054236669196
+quadcopter1	1461665724458	i	WIND : 3.0082855021577766 -0.2890876526618884
+quadcopter1	1461665724558	i	WIND : -1.3403678816398932 -2.1585308471398923
+quadcopter1	1461665724658	i	WIND : 1.514107963309387 -3.0804370980511884
+quadcopter1	1461665724758	i	WIND : -1.0531552234803376 0.38686343711879356
+quadcopter1	1461665724858	i	WIND : -0.47588162365427333 2.062041577074134
+quadcopter1	1461665724958	i	WIND : 3.8490444647220254 2.67339425984646
+quadcopter1	1461665725058	i	WIND : 3.9066315648152017 -1.8145145939072886
+quadcopter1	1461665725158	i	WIND : 2.913424989087355 -3.05842850535762
+quadcopter1	1461665725258	i	WIND : 3.500785286991797 -0.34893337562233295
+quadcopter1	1461665725358	i	WIND : 3.447001423503578 3.1332863028564644
+quadcopter1	1461665725458	i	WIND : -2.517518254259638 -2.7889838820516433
+quadcopter1	1461665725558	i	WIND : -3.0094359409262417 3.1330575853831624
+quadcopter1	1461665725658	i	WIND : -1.306953249599828 -0.05473237763492467
+quadcopter1	1461665725758	i	WIND : 1.9300430590112754 0.39535590722931957
+quadcopter1	1461665725858	i	WIND : -1.039392109349638 3.281133844507279
+quadcopter1	1461665725958	i	WIND : 0.9471690210412973 3.8650126576671617
+quadcopter1	1461665726058	i	WIND : -3.381926198003441 0.47399516026055366
+quadcopter1	1461665726158	i	WIND : 3.3235968480986164 2.619320419737006
+quadcopter1	1461665726258	i	WIND : 3.831901008750796 -2.7139759059907984
+quadcopter1	1461665726358	i	WIND : 1.7223828190432497 3.3224128725888695
+quadcopter1	1461665726458	i	WIND : -2.79339788712017 -2.4688700002979944
+quadcopter1	1461665726558	i	WIND : 0.9639788095945478 -0.8456877837842933
+quadcopter1	1461665726658	i	WIND : 1.9145094154448659 -0.06493750259152709
+quadcopter1	1461665726758	i	WIND : 3.600621745176668 -2.7620317029490753
+quadcopter1	1461665726858	i	WIND : -2.8403350760795565 -0.8477678799800898
+quadcopter1	1461665726958	i	WIND : 1.5748559714384003 -2.5704776663860827
+quadcopter1	1461665727058	i	WIND : 1.9459421496130807 2.4471931049440636
+quadcopter1	1461665727158	i	WIND : 1.1713193546469336 0.6635726095539649
+quadcopter1	1461665727258	i	WIND : -1.4629252728705158 -0.16810339836522825
+quadcopter1	1461665727358	i	WIND : 1.3114526998824907 2.093108105691968
+quadcopter1	1461665727458	i	WIND : 3.955222596602071 0.5198933835339252
+quadcopter1	1461665727558	i	WIND : 0.3637012877650889 -1.3565349983198436
+quadcopter1	1461665727658	i	WIND : -3.071906764349974 -1.0260738392095181
+quadcopter1	1461665727758	i	WIND : 2.470648073122594 -2.471886926860795
+quadcopter1	1461665727858	i	WIND : -0.8469602034606929 1.188583555811448
+quadcopter1	1461665727958	i	WIND : -1.7464488442735924 2.169981217476119
+quadcopter1	1461665728058	i	WIND : 1.0101839603084324 1.7793471183075908
+quadcopter1	1461665728158	i	WIND : -3.1227023112303653 -3.2561647562729696
+quadcopter1	1461665728258	i	WIND : -3.431791594463273 -1.7568078899427872
+quadcopter1	1461665728358	i	WIND : 2.061305293002274 0.7389957804689908
+quadcopter1	1461665728458	i	WIND : -2.748029555323738 0.4484296573987212
+quadcopter1	1461665728558	i	WIND : -3.897660866255502 1.2177749777653766
+quadcopter1	1461665728658	i	WIND : -1.3008028726453906 -1.8819182447238498
+quadcopter1	1461665728758	i	WIND : 0.13647640036904019 2.995854118350291
+quadcopter1	1461665728858	i	WIND : 0.6945566471241396 1.3422063852898551
+quadcopter1	1461665728958	i	WIND : -3.4891742798626604 1.5258386370298638
+quadcopter1	1461665729058	i	WIND : 2.466041438228155 -1.8932266630494983
+quadcopter1	1461665729158	i	WIND : -2.9815250230605415 -1.740848701518357
+quadcopter1	1461665729258	i	WIND : -2.9497386393106932 2.903548267845392
+quadcopter1	1461665729358	i	WIND : 1.714833616283193 3.783180772766821
+quadcopter1	1461665729458	i	WIND : -0.8811640297430365 3.1963498144710547
+quadcopter1	1461665729558	i	WIND : 2.8252505309125704 3.7396287000948076
+quadcopter1	1461665729658	i	WIND : -2.109651726967636 1.3437980600964936
+quadcopter1	1461665729758	i	WIND : 0.03334666251238083 -3.6605173826022277
+quadcopter1	1461665729858	i	WIND : -0.1849612357737067 1.0659721164741534
+quadcopter1	1461665729958	i	WIND : -1.940957405577051 -3.7592738654417124
+quadcopter1	1461665730058	i	WIND : 2.20648614763694 -1.548018920306939
+quadcopter1	1461665730158	i	WIND : 1.5194414020598996 2.2355331249279438
+quadcopter1	1461665730258	i	WIND : 3.4032204178533334 -3.342654979091953
+quadcopter1	1461665730358	i	WIND : 2.989023563901874 1.6768169234394872
+quadcopter1	1461665730458	i	WIND : -1.4608324473010788 0.4811660575241685
+quadcopter1	1461665730558	i	WIND : -1.1908329056172873 1.8874646066591874
+quadcopter1	1461665730658	i	WIND : -2.5080023467088104 1.0985581568899532
+quadcopter1	1461665730758	i	WIND : 1.6873914708329565 3.255713121023793
+quadcopter1	1461665730858	i	WIND : -3.013466365711934 -3.5042748501894065
+quadcopter1	1461665730958	i	WIND : 1.7389290379832927 0.27753746991465
+quadcopter1	1461665731058	i	WIND : -1.3674254831480521 -2.6466576141342086
+quadcopter1	1461665731158	i	WIND : -2.881027420241149 2.25924686503083
+quadcopter1	1461665731258	i	WIND : -3.9757611443449763 3.6549053625724097
+quadcopter1	1461665731358	i	WIND : -3.9274615292488653 -1.1878646844555112
+quadcopter1	1461665731458	i	WIND : -1.9539781503632092 -0.10946837186444291
+quadcopter1	1461665731558	i	WIND : 2.902973965470391 -3.047247730990863
+quadcopter1	1461665731658	i	WIND : -0.5602131968200599 -0.40207467350466874
+quadcopter1	1461665731758	i	WIND : -2.0237600463344974 -3.4583879099088133
+quadcopter1	1461665731858	i	WIND : -2.6132595797596565 2.4451170834106835
+quadcopter1	1461665731958	i	WIND : -1.8619224604818774 -0.9306150653013461
+quadcopter1	1461665732058	i	WIND : 0.7315906092967044 3.089453028521044
+quadcopter1	1461665732158	i	WIND : 0.40090356757347134 -1.4256095242772808
+quadcopter1	1461665732258	i	WIND : 0.31024527318875883 -3.775635828789552
+quadcopter1	1461665732358	i	WIND : 0.5230772974947842 -2.7973988183786203
+quadcopter1	1461665732458	i	WIND : 3.818035286007915 -1.9117213042241534
+quadcopter1	1461665732558	i	WIND : 1.137273222277721 2.7274781804575783
+quadcopter1	1461665732568	d	SmartCommsHandler : Received data message: M|8824|iRobot1|ALL|22|C`|&
+quadcopter1	1461665732568	d	SmartCommsHandler : Sending ACK: M|8824|quadcopter1|iRobot1|0|ACK`|&
+quadcopter1	1461665732658	i	WIND : -2.742371348390585 -3.8109145877687576
+quadcopter1	1461665732758	i	WIND : -0.977388824957198 -3.041984482906124
+

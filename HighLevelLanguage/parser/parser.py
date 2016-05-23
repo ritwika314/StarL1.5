@@ -49,6 +49,7 @@ def p_events(p):
 
 def p_event(p):
 	'''event : robotinit
+		 | getpos SEMI
 		 | varname LPAREN RPAREN LCURLY pre eff RCURLY
 		 | EXIT LPAREN RPAREN LCURLY pre eff RCURLY
 	'''
@@ -56,8 +57,15 @@ def p_event(p):
 		global symtab
 		symtab.append(symEntry('int','robotIndex','local'))
 		p[0] = p[1]		 
+	elif len(p) is 3:
+		p[0] = getAst(p[1])
 	else:
 		p[0] = eventAst(p[1],p[5],p[6])
+
+
+def p_getpos(p):
+	'''getpos : varname EQLS GETMYPOS LPAREN RPAREN'''
+	p[0] = p[1]
 
 def p_robotinit(p):
 	'''robotinit : ROBOT LPAREN RPAREN SEMI'''
@@ -119,9 +127,14 @@ def p_stmt(p):
 		| ite 
 		| atomic
 		| funcCall
+		| callreachavoid
 	'''
 	p[0] = p[1]
 
+def p_callreachavoid(p):
+	'''callreachavoid : REACHAVOID LPAREN varname COMMA val RPAREN
+	'''
+	p[0] = raAst(p[3],p[5])
 
 def p_ite(p):
 	'''ite : IF LPAREN cond RPAREN LCURLY stmts RCURLY ELSE LCURLY stmts RCURLY'''
@@ -166,6 +179,7 @@ def p_mwblock(p):
 def p_decls(p): 
 	''' decls : decl decls
 		  | sharedecl decls
+		  | enumdecl decls
 		  | empty
 	'''
 	dlist = []
@@ -194,6 +208,27 @@ def p_decl(p):
 	global symtab 	
 	symtab.append(p[0])
 
+def p_enumdecl(p):
+	'''enumdecl : ENUM varname LCURLY varnames RCURLY varname EQLS varname SEMI
+	'''
+	print(p[4])
+	p[0] = declAst(p[2],p[6],p[8],'local',p[4])
+
+	global symtab 	
+	symtab.append(p[0])
+
+
+def p_varnames(p):
+	'''varnames : varname COMMA varnames 
+		    | varname 
+	'''
+	if len(p) is 4:
+		l = [p[1]]
+		l.extend(p[3])
+		p[0]= l
+	else:
+		p[0] = [p[1]]
+
 def p_sharedecl(p):
 	'''sharedecl : SHARED type varname SEMI
 		| SHARED type varname EQLS val SEMI
@@ -205,7 +240,6 @@ def p_sharedecl(p):
 
 	global symtab 	
 	symtab.append(p[0])
-
 
 #value types
 def p_val(p):
@@ -246,6 +280,7 @@ def p_type(p):
 	'''type : INT 
 		| FLOAT 
 		| BOOL	
+		| ITEMPOSITION
 		'''
 	p[0] = str(p[1])
 
@@ -286,7 +321,7 @@ def parse(infile):
 		drawcode+='			g.drawString("'+str(decl.name)+'"+" = "+String.valueOf(app.'+str(decl.name)+"),app.position.x,app.position.y+"+str(position)+");\n"					
 		position+=50
 	drawcode+="\n                }\n        }\n\n}"
-	maincode = "package edu.illinois.mitra.demo."+str(infile).lower()+";\nimport edu.illinois.mitra.starlSim.main.SimSettings;\nimport edu.illinois.mitra.starlSim.main.Simulation;\n\npublic class Main {\n        public static void main(String[] args) {\n                SimSettings.Builder settings = new SimSettings.Builder();\n                settings.N_BOTS(4);\n                settings.TIC_TIME_RATE(1.5);\n        settings.WAYPOINT_FILE("+'"four.wpt"'+");\n                settings.DRAW_WAYPOINTS(false);\n                settings.DRAW_WAYPOINT_NAMES(false);\n                settings.DRAWER(new "+str(infile)+"Drawer());\n\n                Simulation sim = new Simulation("+str(infile)+".class, settings.build());\n                sim.start();\n        }\n}"
+	maincode = "package edu.illinois.mitra.demo."+str(infile).lower()+";\nimport edu.illinois.mitra.starlSim.main.SimSettings;\nimport edu.illinois.mitra.starlSim.main.Simulation;\n\npublic class Main {\n        public static void main(String[] args) {\n                SimSettings.Builder settings = new SimSettings.Builder();\n                settings.N_IROBOTS(4);\n                settings.TIC_TIME_RATE(1.5);\n        settings.WAYPOINT_FILE("+'"four.wpt"'+");\n                settings.DRAW_WAYPOINTS(false);\n                settings.DRAW_WAYPOINT_NAMES(false);\n                settings.DRAWER(new "+str(infile)+"Drawer());\n\n                Simulation sim = new Simulation("+str(infile)+".class, settings.build());\n                sim.start();\n        }\n}"
 	mainfile = "Main.java"	
 	open(mainfile,"w").write(maincode)
 	open(drawer,"w").write(drawcode)
